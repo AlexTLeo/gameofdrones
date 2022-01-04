@@ -1,11 +1,11 @@
 # gameofdrones
 
-Group 0: Michele Pestarino + Federico Sacco
-Group 1: Elea Papin + Paul Raingeard
-Group 2: Ebru Baglan + Tachadol Suthisomboon + Yusuke Kido
-Group 3: Antonio Bucciero + Marco Limone
-Group 4: Simone Contorno + Gabriele Russo
-Group 5: Alex Thanaphon Leonardi
+- Group 0: Michele Pestarino + Federico Sacco
+- Group 1: Elea Papin + Paul Raingeard
+- Group 2: Ebru Baglan + Tachadol Suthisomboon + Yusuke Kido
+- Group 3: Antonio Bucciero + Marco Limone
+- Group 4: Simone Contorno + Gabriele Russo
+- Group 5: Alex Thanaphon Leonardi
 
 Remember to set sockopt to reuse address port
 
