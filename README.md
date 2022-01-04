@@ -17,7 +17,7 @@ Directions: 0 (up), 1 (top-right), 2 (right), ... , 7 (top-left)
 See values.h for communication messages specifications
 
 # TIMELINE
-**07/01** 
+**07/01**
 - simple client/server communication
 <br>
 **14/01**
