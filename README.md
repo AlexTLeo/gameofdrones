@@ -17,12 +17,12 @@ Directions: 0 (up), 1 (top-right), 2 (right), ... , 7 (top-left)
 See values.h for communication messages specifications
 
 # TIMELINE
-##07/01
+## 07/01
 - simple client/server communication
-##14/01
+## 14/01
 - drone: able to generate trajectory (path + direction, see README), send next step to master, wait for master response before moving, if not start timeout (see values.h)
 - master: receive all movements, check for collisions, respond to all drones 1 by 1 sequentially, draw map
-##21/01##
+## 21/01
 - drone: able to manage its own power/fuel, sends master "out of fuel" message
 - master: mark drones as landed or not
 <br>
