@@ -14,6 +14,7 @@ const int MASTER_COL = 0;
 
 const int DRONE_TIMEOUT = 3;
 const int TIMESTEP = 200; // milliseconds
+const int STEPS = 300;
 // map size = 40x80
 
 /**
