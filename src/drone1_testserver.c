@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	while ((read_size = recv(client_sock, client_message, 15, 0)) > 0)
 	{
 		//Send the message back to client
-        int test = 0;
+        int test = 1;
         char test_char = test + '0';
         //char test_char[] = "15,10";
 		//write(client_sock, &test_char, 10);

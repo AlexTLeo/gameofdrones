@@ -1,19 +1,28 @@
-#include "../includes/values.h"
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>  
+#include "drone1_com.c"
 
 int main(int argc, char *argv[]){
 
+    // The 8 possible directions 
     const int INCREMENTS[8][2] = {{-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1, -1}, {1, 0}, {1,-1}};
-    srand(time(NULL)); 
-    struct timespec remaining, request = {2, TIMESTEP};
-
+    // Initialisation of the positions
     struct CoordinatePair current_pos = START1;
     struct CoordinatePair next_pos;
     //random fuel value between 150 and 250
     int fuel = (int)rand()%100 +150;
+
+    srand(time(NULL)); 
+    struct timespec remaining, request = {2, TIMESTEP}; //!!!! TO MODIFY!!! seconds = 0 normally
+
+    int sock;
+    int response;
+    if (create_and_connect_to_server(&sock) == 1){
+        printf("connect error\n");
+    }
     
 
     printf("Started loop..\n");
@@ -31,46 +40,43 @@ int main(int argc, char *argv[]){
 
         while (current_step<max_steps){
         
-            //printf("current position : %d, %d\n",current_pos.x, current_pos.y);
             next_pos.x = current_pos.x + INCREMENTS[inc][0];
             next_pos.y = current_pos.y + INCREMENTS[inc][1];   
-            //printf("next position : %d, %d\n",next_pos.x, next_pos.y);
+            
 
-            int response =2;
+            //Send the requested next position for approval
+            
             if (fuel>0)
-                //response = send(next_pos);
-                response =0;
+                response = send_message(sock,next_pos.x,next_pos.y);
             else
-                //response = send(current_pos);
-                response = 0;
+                response = send_message(sock,current_pos.x,current_pos.y);
                  
 
-            
-            //attention what happend if landing ?
+            //Reception of the answer
+            printf("response ====> %i\n", response);
             if (response == MASTER_OK){
                 if (fuel>0){ 
                     current_pos = next_pos;
                     fuel--;
                 }
-                //printf("communication OK\n");
+                nb_colisions = 0;
+                printf("communication OK\n");
             }
             else if (response == MASTER_COL){
                 nb_colisions++;
                 printf("a collision happend, %d in a row\n", nb_colisions);
             }
             else{
-                printf("communication between drone 1 and master failed\n");
-                exit(EXIT_FAILURE);
+                printf("socket error for send\n");
             }
 
-
+            // Handling of succesive colisions
             if (nb_colisions==DRONE_TIMEOUT)
                 current_step = max_steps;
 
             current_step++;
 
-            printf("current step is %d \n", current_step);
-            
+                       
             nanosleep(&request, &remaining);
         }    
         
