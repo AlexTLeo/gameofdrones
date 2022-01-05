@@ -56,7 +56,9 @@ int main(int argc, char *argv[])
 		//Send the message back to client
         int test = 0;
         char test_char = test + '0';
-		write(client_sock, &test_char, strlen(&test_char));
+        //char test_char[] = "15,10";
+		//write(client_sock, &test_char, 10);
+        write(client_sock, &test_char, 10);
 	}
 	free(client_message);
 

@@ -59,20 +59,20 @@ int send_message(int sock,int x,int y){
     return response;
 }
 
-int main(int argc, char *argv[])
-{
-    int x = atoi(argv[1]);
-    int y = atoi(argv[2]);
-
-    int sock;
-    if (create_and_connect_to_server(&sock) == 1){
-        printf("connect error\n");
+struct CoordinatePair get_coords(int sock){
+    struct CoordinatePair coords;
+     char *server_reply;
+    if (NULL == (server_reply = malloc(2 * LENGTH_MSG)))
+    {
+        perror("malloc error");
     }
-    int response = send_message(sock,x,y);
-    printf("%i\n", response);
-    if (response == 2){
-        printf("socket error for send\n");
-    }
-       
-    return 0;
+      //Receive a reply from the server
+        if (recv(sock, server_reply, 2 * LENGTH_MSG, 0) < 0)
+        {
+            puts("Client: recv failed");
+        }
+    coords.x = atoi(strsep(&server_reply, ","));
+    coords.y = atoi(strsep(&server_reply, ","));
+    free(server_reply);
+    return coords;
 }
