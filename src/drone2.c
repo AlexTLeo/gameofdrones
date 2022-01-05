@@ -71,5 +71,6 @@ int main()
     // close the socket
     errorPrompt(close(sockfd), "close failed...");
     errorPrompt(select(1, NULL, NULL, NULL, &tv), "select failed...");
+    //Using select insead of sleep for preciser timing ref: https://stackoverflow.com/questions/3125645/why-use-select-instead-of-sleep
   }
 }
