@@ -24,24 +24,25 @@ int main(int argc, char *argv[]){
         //random number of steps between 3 and 10
         int max_steps = (int)rand()%8 +3; 
         int current_step = 0;
+        int nb_colisions = 0;
+        
 
         printf("Trajectory set : %d steps, in the direction %d\n", max_steps, inc);
 
         while (current_step<max_steps){
-            int nb_colisions = 0;
         
-            printf("current position : %d, %d\n",current_pos.x, current_pos.y);
+            //printf("current position : %d, %d\n",current_pos.x, current_pos.y);
             next_pos.x = current_pos.x + INCREMENTS[inc][0];
             next_pos.y = current_pos.y + INCREMENTS[inc][1];   
-            printf("next position : %d, %d\n",next_pos.x, next_pos.y);
+            //printf("next position : %d, %d\n",next_pos.x, next_pos.y);
 
             int response =2;
             if (fuel>0)
                 //response = send(next_pos);
-                response =1;
+                response =0;
             else
                 //response = send(current_pos);
-                response = 1;
+                response = 0;
                  
 
             
@@ -51,7 +52,7 @@ int main(int argc, char *argv[]){
                     current_pos = next_pos;
                     fuel--;
                 }
-                printf("communication OK\n");
+                //printf("communication OK\n");
             }
             else if (response == MASTER_COL){
                 nb_colisions++;
