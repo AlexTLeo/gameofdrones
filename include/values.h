@@ -1,10 +1,7 @@
 const int PORTNO = 4000; // example: group 1 has portno = (PORTNO+1)
 const char* HOSTNAME = "localhost";
 
-struct CoordinatePair {
-  int x;
-  int y;
-};
+int coordinatePair[2]; // (x, y)
 
 /**
 * TCP CODES
@@ -20,11 +17,11 @@ const int STEPS = 300;
 /**
 * STARTING POSITIONS (TEMPORARY)
 */
-const struct CoordinatePair START0 = {.x = 0, .y = 0};
-const struct CoordinatePair START1 = {.x = 40, .y = 0};
-const struct CoordinatePair START2 = {.x = 0, .y = 80};
-const struct CoordinatePair START3 = {.x = 40, .y = 80};
-const struct CoordinatePair START4 = {.x = 20, .y = 40};
+const int START0 = {0, 0};
+const int START1 = {40, 0};
+const int START2 = {0, 80};
+const int START3 = {40, 80};
+const int START4 = {20, 40};
 
 /*
 Group 0: Michele Pestarino + Federico Sacco
