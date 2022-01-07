@@ -12,7 +12,7 @@
 /**
  * Headers
  */
-#include "../includes/values.h"
+#include "../include/values.h"
 #include <stdio.h>
 #include <netdb.h> 
 #include <stdlib.h>
@@ -45,26 +45,20 @@ void error(char *msg) {
 void socketConnection(const int portno, const char * hostname) {
     struct sockaddr_in serv_addr; // Server address
     struct hostent *server; // Host computer on the Internet
-    
-    /**
-     * Set server hostname
-     */
+
+    // Set server hostname
     server = gethostbyname(hostname);
     if (server == NULL) 
         error("ERROR, no such host");
 
-    /**
-     * Creates a new socket on the Internet
-     */
+    // Creates a new socket on the Internet
     sockfd = socket(AF_INET, SOCK_STREAM, 0); 
     if (sockfd < 0) 
         error("ERROR opening socket");
     if (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &(int){1}, sizeof(int)) < 0)
         error("ERROR setsockopt(SO_REUSEADDR) failed");
     
-    /**
-     * Set the addresses
-     */
+    // Set the addresses
     bzero((char *) &serv_addr, sizeof(serv_addr)); 
     serv_addr.sin_family = AF_INET; // Address family
 
@@ -72,14 +66,9 @@ void socketConnection(const int portno, const char * hostname) {
         (char *) &serv_addr.sin_addr.s_addr, // Server address
         server->h_length); // Length of address
 
-    /**
-     * Convert port number into network byte order
-     */
-    serv_addr.sin_port = htons(portno); 
+    serv_addr.sin_port = htons(portno); // Convert port number into network byte order
 
-    /**
-     * Start socket connection to the Server
-     */ 
+    // Start socket connection to the Server
     if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) 
         error("ERROR connecting to the server");
 }
@@ -95,26 +84,24 @@ int main(int argc, char *argv[]) {
     const int portno = PORTNO + 4; // Port number
     const char * hostname = HOSTNAME; // Hostname
 
-    /**
-     * Create socket connection with the Master process
-     */
+    // Create socket connection with the Master process
     socketConnection(portno, hostname);
-    
-    /**
-     * Read message by the Server
-     */
-	char bufferR[80];
-    bzero(bufferR, strlen(bufferR));
-    if (read(sockfd, bufferR, strlen(bufferR)) < 0) 
-        error("ERROR socket reading");
-	
-	/**
-	 * Send data to the Server  
-	 */
-	char * bufferW = "Hello";
-    if (write(sockfd, bufferW, strlen(bufferW)) < 0)
+
+    // Send data to the Master  
+	char * bufferW = "[DRONE 4] Hello!";
+    if (send(sockfd, bufferW, strlen(bufferW), 0) < 0)
 		error("ERROR socket writing");
 
+    // Read message from the Master
+	char bufferR[256];
+    bzero(bufferR, strlen(bufferR));
+    if (recv(sockfd, bufferR , strlen(bufferR)-1, 0) < 0) 
+        error("ERROR socket reading");
+	
+    printf("[DRONE 4] Message received: %s\n", bufferR);
+    fflush(stdout);
+
     close(sockfd); 
+
     return 0;
 }
