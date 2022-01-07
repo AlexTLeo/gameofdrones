@@ -55,18 +55,12 @@ server = gethostbyname(hostname);
        
     bzero((char *) &serv_addr, sizeof(serv_addr)); 
     serv_addr.sin_family = AF_INET;
-    bcopy((char *) server->h_addr, // Client address
-        (char *) &serv_addr.sin_addr.s_addr, // Server address
-        server->h_length); // Length of address
+    bcopy((char *) server->h_addr,                  // Client address
+        (char *) &serv_addr.sin_addr.s_addr,       // Server address
+        server->h_length);                        // Length of address
     serv_addr.sin_port = htons(portno);  
        
-    // Convert IPv4 and IPv6 addresses from text to binary form
-    /*if(inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<=0) 
-    {
-        printf("\nInvalid address/ Address not supported \n");fflush(stdout);
-        sleep(30);
-        return -1;
-    }*/
+    
    
     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
     {
