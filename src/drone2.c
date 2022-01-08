@@ -21,17 +21,17 @@ void errorPrompt(int state,char error_msg[])
 
 void sendAndReceive(int sockfd)
 {
-  int returnMSG;
-  char *msg2server = "Hello, world from group 2!\n";
+  char returnMSG[256];
+  char *msg2server = "Hello, world from group 2";
   printf("Sending msg......");
   //write how many bytes that server should recieve -------
   // ################################################
-  if (write(sockfd, msg2server, sizeof(msg2server)) < 0 ){
+  if (write(sockfd, msg2server, strlen(msg2server)) < 0 ){
     perror("sending failed...");
     exit(0);
   }
   printf("Sucess\n");
-  if (read(sockfd, &returnMSG, sizeof(int)) < 0 ){
+  if (read(sockfd, returnMSG, 255) < 0 ){
     perror("reading failed...");
     exit(0);
   }
@@ -55,7 +55,7 @@ int main()
 
   // assign IP, PORT
   servaddr.sin_family = AF_INET;
-  servaddr.sin_addr.s_addr = inet_addr(HOSTNAME); //HOSTNAME ->"127.0.0.1"
+  servaddr.sin_addr.s_addr = inet_addr("127.0.0.1"); //HOSTNAME ->"127.0.0.1"
   servaddr.sin_port = htons(PORTNO+2);
 
   //init the timestep for loop using sleep
