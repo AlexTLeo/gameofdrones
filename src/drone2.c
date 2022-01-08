@@ -23,10 +23,11 @@ void sendAndReceive(int sockfd)
 {
   char returnMSG[256];
   char *msg2server = "Hello, world from group 2";
+  //msg2server = "Hello world from group 2";
   printf("Sending msg......");
   //write how many bytes that server should recieve -------
   // ################################################
-  if (write(sockfd, msg2server, strlen(msg2server)) < 0 ){
+  if (write(sockfd, msg2server, 256) < 0 ){
     perror("sending failed...");
     exit(0);
   }
@@ -35,27 +36,33 @@ void sendAndReceive(int sockfd)
     perror("reading failed...");
     exit(0);
   }
-  printf("From Server : %d\n", ntohl(returnMSG));
+  printf("From Server : %s\n", returnMSG);
 }
 
 int main()
 {
   //setup the server connection
-  int sockfd, connfd, opt = 1;
+  int sockfd, connfd;
   struct sockaddr_in servaddr, cli;
-
+  struct hostent *server;
   // socket create and varification
   sockfd = socket(AF_INET, SOCK_STREAM, 0);
   errorPrompt (sockfd, "socket creation failed...");
 
   printf("Socket successfully created..\n");
   //add reuse socket addr and port
-  errorPrompt (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)), "setsockopt");
+  errorPrompt (setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &(int){1}, sizeof(int)), "setsockopt");
   bzero(&servaddr, sizeof(servaddr));
 
   // assign IP, PORT
   servaddr.sin_family = AF_INET;
-  servaddr.sin_addr.s_addr = inet_addr("127.0.0.1"); //HOSTNAME ->"127.0.0.1"
+  server = gethostbyname("localhost");
+  if(server == NULL ){
+    perror("ERROR, no such host");
+    close(sockfd);
+    exit(0);
+  }
+  memcpy((char *)server->h_addr, (char *)&servaddr.sin_addr.s_addr, server->h_length);
   servaddr.sin_port = htons(PORTNO+2);
 
   //init the timestep for loop using sleep
@@ -71,6 +78,7 @@ int main()
     // close the socket
     errorPrompt(close(sockfd), "close failed...");
     errorPrompt(select(1, NULL, NULL, NULL, &tv), "select failed...");
+    break;
     //Using select insead of sleep for preciser timing ref: https://stackoverflow.com/questions/3125645/why-use-select-instead-of-sleep
   }
 }
