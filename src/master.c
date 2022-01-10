@@ -16,7 +16,16 @@
  * in case of potential collisions, amongst other things (see README).
  */
 
+/**
+ * Draws a map to terminal with drones and map borders visible
+ * @param droneCoords array of 2 coordinates for each of 5 drones
+ */
+void drawMap(int droneCoords[5][2]);
+
 const int NUM_SOCKETS = 5;
+const int TEXT_DELAY = 25000;
+const int MAP_WIDTH = 80;
+const int MAP_HEIGHT = 40;
 
 int main (int argc, char *argv[]) {
   // Sockets
@@ -87,7 +96,8 @@ int main (int argc, char *argv[]) {
       exit(-1);
     }
 
-    printf("[MASTER] Message received: %s\n", buffer);
+    displayText("[MASTER] Message received: ", TEXT_DELAY);
+    printf("%s\n", buffer);
     n = write(fdDrone[i], "[MASTER] Packet received", 255);
 
     if (n < 0) {
@@ -97,4 +107,29 @@ int main (int argc, char *argv[]) {
   }
 
   return 0;
+}
+
+void drawMap(int droneCoords[5][2]) {
+  clearTerminal();
+  for (int i = 0; i < MAP_HEIGHT+2; i++) {
+    for (int j = 0; j < MAP_WIDTH+2; j++) {
+      if (i == 0 || i == MAP_HEIGHT+1) {
+        // First or Final row (map borders)
+        printf("#");
+      } else if (j == 0) {
+        // First column
+        printf("\n#");
+      } else if (j == MAP_WIDTH + 1) {
+        // Last column
+        printf("#");
+        if (i == MAP_HEIGHT) {
+          printf("\n");
+        }
+      } else {
+        printf(" ");
+      }
+    }
+  }
+
+  fflush(stdout);
 }
