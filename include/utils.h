@@ -135,9 +135,9 @@ void clearTerminal() {
   printf("\033c");
   system("clear");
   terminalColor(31, true);
-  printf("==================\n");
-  printf("= DRONE OVERLORD =\n");
-  printf("==================\n\n");
+  // Needs to center a map 80 characters long
+  printf("                                  DRONE OVERLORD\n");
+  printf("                                       MAP\n");
   terminalColor(37, true);
   fflush(stdout);
 }

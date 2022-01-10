@@ -17,11 +17,11 @@ const int STEPS = 300;
 /**
 * STARTING POSITIONS (TEMPORARY)
 */
-const int START0 = {0, 0};
-const int START1 = {40, 0};
-const int START2 = {0, 80};
-const int START3 = {40, 80};
-const int START4 = {20, 40};
+const int START0[2] = {0, 0};
+const int START1[2] = {40, 0};
+const int START2[2] = {0, 80};
+const int START3[2] = {40, 80};
+const int START4[2] = {20, 40};
 
 /*
 Group 0: Michele Pestarino + Federico Sacco
