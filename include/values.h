@@ -17,9 +17,9 @@ const int STEPS = 300;
 /**
 * STARTING POSITIONS (TEMPORARY)
 */
-const int START0[2] = {0, 0};
-const int START1[2] = {40, 0};
-const int START2[2] = {0, 80};
+const int START0[2] = {1, 1};
+const int START1[2] = {40, 1};
+const int START2[2] = {1, 80};
 const int START3[2] = {40, 80};
 const int START4[2] = {20, 40};
 
