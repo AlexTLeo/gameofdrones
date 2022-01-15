@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 
@@ -27,13 +28,61 @@
 int sockfd; // Socket file descriptor
 
 /**
- * @brief Return an error message and exit
+ * @brief Return an error message and exit.
  * 
  * @param msg 
  */
 void error(char *msg) {
     perror(msg);
     exit(0);
+}
+
+/**
+ * @brief Generate a random integer number in 
+ * a specific interval.
+ * 
+ * @param lower 
+ * @param upper 
+ * @return int 
+ */
+int randomNumberInt(int lower, int upper) {
+    srand(time(NULL));
+    return rand() % (upper - lower + 1) + lower;
+}
+
+/**
+ * @brief Compute next position.
+ * 
+ * @param direction 
+ */
+void nextPosition(int direction) {
+    /**
+     * 0 = Up
+     * 1 = Up and Left
+     * 2 = Left
+     * 3 = Down and Left
+     * 4 = Down
+     * 5 = Down and Right
+     * 6 = Right
+     * 7 = Up and Right
+     */
+
+    /**
+     * Update x 
+     */
+    if (direction == 5 || direction == 6 || direction == 7)
+        coordinatePair[0] += 1;
+    else if (direction == 1 || direction == 2 || direction == 3)
+        coordinatePair[0] -= 1;
+
+    /**
+     * Update y 
+     */
+    if (direction == 0 || direction == 1 || direction == 7)
+        coordinatePair[1] += 1;
+    else if (direction == 3 || direction == 4 || direction == 5)
+        coordinatePair[1] -= 1;
+    
 }
 
 /**
@@ -74,34 +123,80 @@ void socketConnection(const int portno, const char * hostname) {
 }
 
 /**
- * @brief main function
+ * @brief main function.
  * 
  * @param argc 
  * @param argv 
  * @return int 
  */
-int main(int argc, char *argv[]) {
+int main(int argc, char * argv[]) {
+    // Take data from includes/values.h file
+	coordinatePair[0] = START4[0];
+	coordinatePair[1] = START4[1];
+
     const int portno = PORTNO + 4; // Port number
     const char * hostname = HOSTNAME; // Hostname
 
+    // Generate a random drone's battery power 
+	int power = randomNumberInt(100, 300);
+
     // Create socket connection with the Master process
     socketConnection(portno, hostname);
+    
+    /**
+     * Move the drones until the battery is not discharge
+     */
+    int response;
 
-    // Send data to the Master  
-	char * bufferW = "[DRONE 4] Hello!";
-    if (send(sockfd, bufferW, strlen(bufferW), 0) < 0)
-		error("ERROR socket writing");
+    while (power > 0) {
+        // Generate a random direction and a random number of steps 
+        int direction = randomNumberInt(0, 7);
+        int steps = randomNumberInt(5, 10);
 
-    // Read message from the Master
-	char bufferR[256];
-    bzero(bufferR, strlen(bufferR));
-    if (recv(sockfd, bufferR , strlen(bufferR)-1, 0) < 0) 
-        error("ERROR socket reading");
-	
-    printf("[DRONE 4] Message received: %s\n", bufferR);
-    fflush(stdout);
+        printf("\nDirection: %d\nSteps: %d\n", direction, steps);
+        fflush(stdout);
 
+        // Move the drone 
+        for (int i = 0; i < steps; i++) {
+            // Compute the next position coordinates
+            nextPosition(direction);
+
+            printf("X: %d\nY: %d\n", coordinatePair[0], coordinatePair[1]);
+            fflush(stdout);
+
+            // Send the coordinates to the Master 
+            if (send(sockfd, &coordinatePair[0], sizeof(int), 0) < 0)
+		        error("ERROR sending the coordinate x to the master");
+            if (send(sockfd, &coordinatePair[1], sizeof(int), 0) < 0)
+		        error("ERROR sending the coordinate y to the master");
+
+            // Read Master response and manage it
+            if (recv(sockfd, &response, sizeof(int), 0) < 0) 
+                error("ERROR reading the master response");
+            printf("Master response: %d\n", response);
+            fflush(stdout);
+
+            if (response == MASTER_OK) { // Success
+                power--;
+                printf("Movement allowed.\nPower remained: %d\n", power);
+                fflush(stdout);
+            }
+            else if (response == MASTER_COL) { // Fail
+                i--;
+                printf("Movement not allowed.\nPower remained: %d\n", power);
+                fflush(stdout);
+                sleep(DRONE_TIMEOUT);
+            }
+            else {
+                printf("No response received by the Master process.\nPower remained: %d\n", power);
+                fflush(stdout);
+            }
+
+            usleep(TIMESTEP * 5000);
+        }
+    }
+
+    // Close socket connection and return 
     close(sockfd); 
-
     return 0;
 }
