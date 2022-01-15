@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../includes/values.h"
+#include "../include/values.h"
 #define LENGTH_MSG 8
 
 int create_and_connect_to_server(int *sock){
@@ -33,8 +33,8 @@ int create_and_connect_to_server(int *sock){
 }
 
 int send_message(int sock,int x,int y){
-    char message[80];
-    snprintf(message, sizeof(message), "%i,%i", x,y);
+    //int message[2] = {x,y};
+    char message[] = "blabla";
 
     char *server_reply;
     if (NULL == (server_reply = malloc(2 * LENGTH_MSG)))
@@ -42,25 +42,26 @@ int send_message(int sock,int x,int y){
         perror("malloc error");
     }
      //Send message
-        if (send(sock, message, strlen(message), 0) < 0)
+        if (write(sock, message, sizeof(message)) < 0)
         {
             puts("Client: Send failed");
             return 2;
         }
 
         //Receive a reply from the server
-        if (recv(sock, server_reply, 2 * strlen(message), 0) < 0)
+        if (recv(sock, server_reply, 2 * sizeof(message), 0) < 0)
         {
             puts("Client: recv failed");
             return 2;
         }
+    printf("%s\n", server_reply);
     int response = atoi(server_reply);
     free(server_reply);
     return response;
 }
 
-struct CoordinatePair get_coords(int sock){
-    struct CoordinatePair coords;
+int* get_coords(int sock){
+    static int coords[2];
      char *server_reply;
     if (NULL == (server_reply = malloc(2 * LENGTH_MSG)))
     {
@@ -71,8 +72,8 @@ struct CoordinatePair get_coords(int sock){
         {
             puts("Client: recv failed");
         }
-    coords.x = atoi(strsep(&server_reply, ","));
-    coords.y = atoi(strsep(&server_reply, ","));
+    coords[0] = atoi(strsep(&server_reply, ","));
+    coords[1] = atoi(strsep(&server_reply, ","));
     free(server_reply);
     return coords;
 }
