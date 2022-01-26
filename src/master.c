@@ -21,7 +21,7 @@
  * @param map - array of map tiles 40x80, where each value has a meaning:
  * 0 is "empty", 1 is "occupied, wall", 2 is "occupied, flying", 3 is "occupied, refueling"
  */
-void drawMap(int droneMap[82][42]);
+void drawMap(int mapFull[82][42]);
 
 const int NUM_DRONES = 5;
 const int TEXT_DELAY = 2500;
@@ -29,10 +29,10 @@ const int MAP_WIDTH = 80 + 2; // +2 for walls
 const int MAP_HEIGHT = 40 + 2; // +2 for walls
 
 int main (int argc, char *argv[]) {
-  int droneMap[82][42];
-  int droneCoords[5][2];
+  int mapFull[82][42]; // Map of everything (walls, drones, etc.)
+  int droneCoordsNext[5][2]; // Each drone's next requested coordinates
+  int droneCoordsCurr[5][2] = {0}; // Each drone's current coordinates
   bool isRunning = true;
-  bool isOccupied = false;
   // Sockets
   int fdSocket[NUM_DRONES];
   int fdDrone[NUM_DRONES];
@@ -93,51 +93,99 @@ int main (int argc, char *argv[]) {
   // Initially, fill map with walls
   for (int i = 0; i < MAP_HEIGHT; i++) {
     for (int j = 0; j < MAP_WIDTH; j++) {
-      droneMap[j][i] = 1;
+      mapFull[j][i] = 1;
     }
   }
 
   // Read coordinates from drones
-  writeInfoLog(fdlogInfo, "[MASTER] Reading from sockets (drones)");
   while (isRunning) {
+    writeInfoLog(fdlogInfo, "[MASTER] Reading from sockets (drones)");
     for (int i = 0; i < NUM_DRONES; i++) {
-      droneCoords[i][0] = socketRead(fdDrone[i], sizeof(int), fdlogErr);
-      droneCoords[i][1] = socketRead(fdDrone[i], sizeof(int), fdlogErr);
+      droneCoordsNext[i][0] = socketRead(fdDrone[i], sizeof(int), fdlogErr);
+      droneCoordsNext[i][1] = socketRead(fdDrone[i], sizeof(int), fdlogErr);
+    }
 
-      displayText("[MASTER] Message received: ", TEXT_DELAY);
-      write(fdDrone[i], "[MASTER] Packet received", 255);
+    // Calculating collisions
+    writeInfoLog(fdlogInfo, "[MASTER] Checking drone collision");
+    for (int i = 0; i < NUM_DRONES; i++) {
+      bool isCollision = false;
+      int x1 = droneCoordsNext[i][0];
+      int y1 = droneCoordsNext[i][1];
+
+      // Check if drone is trying to move out of the map
+      if (x1 <= 0 || y1 <= 0 || x1 >= MAP_WIDTH || y1 >= MAP_HEIGHT) {
+        // CASE: Moving out of map
+        isCollision = true;
+        writeInfoLog(fdlogInfo, "[MASTER] Drone trying to move out of map");
+
+        writeInfoLog(fdlogInfo, "[MASTER] Sending MASTER_COL to drone"); // TODO: print "i"
+        socketWrite(fdDrone[i], MASTER_COL, sizeof(MASTER_COL), fdlogErr);
+        // Set "next coordinates" to be current cell
+        x1 = droneCoordsCurr[i][0];
+        y1 = droneCoordsCurr[i][1];
+        droneCoordsNext[i][0] = x1;
+        droneCoordsNext[i][1] = y1;
+      }
+
+      // Check if any drones are requesting the same cell
+      for (int j = 0; j < NUM_DRONES; j++) {
+        if (i != j) { // (ignore itself)
+          int x2 = droneCoordsNext[j][0];
+          int y2 = droneCoordsNext[j][1];
+
+          if (x1 == x2 && y1 == y2) {
+            // CASE: Collision
+            isCollision = true;
+            writeInfoLog(fdlogInfo, "[MASTER] Potential collision detected");
+            // Stop i-th drone (arbitrary)
+            // TODO: REFUELING DRONES???
+            writeInfoLog(fdlogInfo, "[MASTER] Sending MASTER_COL to drone"); // TODO: print "i"
+            socketWrite(fdDrone[i], MASTER_COL, sizeof(MASTER_COL), fdlogErr);
+
+            // Set "next coordinates" to be current cell
+            droneCoordsNext[i][0] = droneCoordsCurr[i][0];
+            droneCoordsNext[i][1] = droneCoordsCurr[i][1];
+          }
+        }
+      }
+
+      if (!isCollision) {
+        socketWrite(fdDrone[i], MASTER_OK, sizeof(MASTER_OK), fdlogErr);
+      }
     }
 
     // Updating map (skipping walls)
+    writeInfoLog(fdlogInfo, "[MASTER] Updating map");
     for (int y = 1; y < MAP_HEIGHT-1; y++) {
       // For each row
       for (int x = 1; x < MAP_WIDTH-1; x++) {
         // For each column
-        isOccupied = false;
+        bool isOccupied = false;
         for (int k = 0; k < NUM_DRONES; k++) {
-          // For each drone
-          // Check cell occupancy
-          if (droneCoords[k][0] == x && droneCoords[k][1] == y) {
-            // Cell occupied
-            droneMap[x][y] = 2;
+          // For each drone, recieve each drone's next cell
+          if (droneCoordsNext[k][0] == x && droneCoordsNext[k][1] == y) {
+            // Update drone position
+            mapFull[x][y] = 2;
+            droneCoordsCurr[k][0] = x;
+            droneCoordsCurr[k][1] = y;
             isOccupied = true;
           } else if (!isOccupied) {
             // Cell free
-            droneMap[x][y] = 0;
+            mapFull[x][y] = 0;
           }
         }
       }
     }
 
     // Draw map to terminal
-    drawMap(droneMap);
-    break;
+    writeInfoLog(fdlogInfo, "[MASTER] Redrawing map");
+    drawMap(mapFull);
   }
 
   return 0;
 }
 
-void drawMap(int droneMap[82][42]) {
+void drawMap(int mapFull[82][42]) {
   clearTerminal();
 
   for (int y = 0; y < MAP_HEIGHT; y++) {
@@ -145,7 +193,7 @@ void drawMap(int droneMap[82][42]) {
     for (int x = 0; x < MAP_WIDTH; x++) {
       // For each column
       // Draw the appropriate symbol
-      switch (droneMap[x][y]) {
+      switch (mapFull[x][y]) {
         case 1: // wall
           printf("#");
           break;

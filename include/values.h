@@ -6,8 +6,8 @@ int coordinatePair[2]; // (x, y)
 /**
 * TCP CODES
 */
-const int MASTER_OK = 1;
-const int MASTER_COL = 0;
+const int MASTER_OK = 1; // OK to move!
+const int MASTER_COL = 0; // potential collision, movement NOT allowed!
 
 const int DRONE_TIMEOUT = 3;
 const int TIMESTEP = 200; // milliseconds
