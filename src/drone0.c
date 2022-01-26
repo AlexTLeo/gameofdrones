@@ -1,4 +1,5 @@
-#include "../includes/values.h"
+#include "../include/values.h"
+#include "../include/utils.h"
 #include <fcntl.h>
 #include <sys/types.h>
 #include <time.h>
@@ -14,7 +15,8 @@
 
 int main(int argc, char *argv[]) {
 
-    int array[2];
+    // Get starting position
+    int position[2] = {START0[0], START0[1]};
     // Socket connection
     // Initialize socket file descriptor and variable to check writing to socket
     int sockfd, n;
@@ -52,8 +54,6 @@ int main(int argc, char *argv[]) {
 
     // Max number of steps in the same direction
     const int same_direction = 5;
-    // Get starting position
-    struct CoordinatePair pos = START0;
     // Timeout counter
     int timeout = 0;
     // Initialize response variable
@@ -71,49 +71,47 @@ int main(int argc, char *argv[]) {
             if (direction == 0) {
                 // Up 
                 printf("Up ");
-                pos.y++;
+                position[1]++;
             } else if (direction == 1) {
                 // Up - right
                 printf("Up - right ");
-                pos.x++;
-                pos.y++;
+                position[0]++;
+                position[1]++;
             } else if (direction == 2) {
                 // Right
                 printf("Right ");
-                pos.x++;
+                position[0]++;
             } else if (direction == 3) {
                 // Down -right
                 printf("Down - right ");
-                pos.x++;
-                pos.y--;
+                position[0]++;
+                position[1]--;
             } else if (direction == 4) {
                 // Down
                 printf("Down ");
-                pos.y--;
+                position[1]--;
             } else if (direction == 5) {
                 // Down - left
                 printf("Down - left ");
-                pos.x--;
-                pos.y--;
+                position[0]--;
+                position[1]--;
             } else if (direction == 6) {
                 printf("Left ");
                 // Left
-                pos.x--;
+                position[0]--;
             } else if (direction == 7) {
                 // Up - left
                 printf("Up - left ");
-                pos.x--;
-                pos.y++;
+                position[0]--;
+                position[1]++;
             }
-            array[0] = pos.x;
-            array[1] = pos.y;
             // Send new position to master 
-            n = write(sockfd, array, sizeof(array));
+            n = write(sockfd, position, sizeof(position));
             if (n < 0) { 
                 perror("ERROR writing to socket");
                 exit(EXIT_FAILURE);
             }
-            printf("drone0: Writing (%d, %d) to server...\n", pos.x, pos.y);
+            printf("drone0: Writing (%d, %d) to server...\n", position[0], position[1]);
             fflush (stdout);
             sleep(1);
             // Wait for response 
@@ -136,6 +134,13 @@ int main(int argc, char *argv[]) {
                 exit(EXIT_FAILURE);
             }
         }
-    }   
+    }
+    n = write(sockfd, position, sizeof(position));
+    if (n < 0) { 
+        perror("ERROR writing to socket");
+        exit(EXIT_FAILURE);
+    }
+    printf("drone0: Landing in (%d, %d)...\n", position[0], position[1]);
+    fflush(stdout); 
     return 0;
 }
