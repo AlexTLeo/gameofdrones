@@ -13,6 +13,19 @@
 #include <sys/wait.h>
 #include <string.h>
 
+unsigned long mix(unsigned long a, unsigned long b, unsigned long c) {
+    a=a-b; a=a-c; a=a^(c >> 13);
+    b=b-c; b=b-a; b=b^(a << 8);
+    c=c-a; c=c-b; c=c^(b >> 13);
+    a=a-b; a=a-c; a=a^(c >> 12);
+    b=b-c; b=b-a; b=b^(a << 16);
+    c=c-a; c=c-b; c=c^(b >> 5);
+    a=a-b; a=a-c; a=a^(c >> 3);
+    b=b-c; b=b-a; b=b^(a << 10);
+    c=c-a; c=c-b; c=c^(b >> 15);
+    return c;
+}
+
 int main(int argc, char *argv[]) {
 
     // Get starting position
@@ -58,10 +71,15 @@ int main(int argc, char *argv[]) {
     int timeout = 0;
     // Initialize response variable
     int response = 1;
+    // Store old position in case of collisions
+    int old_position[2];
     // Intializes random number generator
     time_t t;
-    srand((unsigned) time(&t));
+    srand(mix(clock(), time(NULL), getpid()));
     for (int i = 0; i < STEPS; i++) {
+        // Store old posiiton
+        old_position[0] = position[0];
+        old_position[1] = position[1];
         // Reset timeout counter
         timeout = 0;
         // Choose new direction
@@ -112,15 +130,21 @@ int main(int argc, char *argv[]) {
                 exit(EXIT_FAILURE);
             }
             printf("drone0: Writing (%d, %d) to server...\n", position[0], position[1]);
-            fflush (stdout);
+            fflush(stdout);
             sleep(1);
             // Wait for response 
             n = recv(sockfd, &response, sizeof(response), MSG_WAITALL);
+            if (n < 0) {
+                perror("ERROR reading response from socket\n");
+                exit(EXIT_FAILURE);
+            }
             printf("drone0: response %d from server\n", response);
             
-            // if response is collision, then update timeout and check condition on it
+            // If response is collision, then update timeout and check condition on it
             if (response == MASTER_COL) {
-                timeout ++;
+                timeout++;
+                position[0] = old_position[0];
+                position[1] = old_position[1];
                 if (timeout == DRONE_TIMEOUT) {
                     // If drone has collided "timeout" times, then change direction
                     break;
