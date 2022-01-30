@@ -1,4 +1,4 @@
-#include "../includes/values.h"
+#include "../include/values.h"
 #include <netdb.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,7 +30,7 @@ void randomDir(int maxstep, int arr[])
     arr[1] = n;
 }
 
-void position(int x, int y, int newdir, int coordinate[])
+void position(int x, int y, int newdir, int coordinate[2])
 {
     switch (newdir)
     {
@@ -83,7 +83,7 @@ int sendAndReceive(int sockfd, int goTo [])
 {
   int returnMSG;
   //msg2server = "Hello world from group 2";
-  printf("Sending msg......");
+  printf("Sending msg...... goTo %d, %d", goTo[0], goTo[1]);
   //write how many bytes that server should recieve -------
   // Sending co-ordiante to master
   if (write(sockfd, goTo, sizeof(int)*2) < 0 ){
@@ -92,17 +92,17 @@ int sendAndReceive(int sockfd, int goTo [])
   }
   printf("Send successfully\n");
   // Recieve the permission
-  if (read(sockfd, returnMSG, sizeof(int)*1) < 0 ){
+  if (read(sockfd, &returnMSG, sizeof(int)*1) < 0 ){
     perror("reading failed...");
     exit(0);
   }
   printf("From Server : %d\n", returnMSG);
 
-  if(returnMSG == 0){
+  if(returnMSG == MASTER_COL){
     printf("Rejected by Master (rejected code: %d), unable to move to %d, %d", returnMSG, goTo[0], goTo[0]);
     return 0;
   }
-  if else (returnMSG == 1){
+  else if (returnMSG == MASTER_OK){
       printf("Approved by Master (code: %d), moving to %d, %d", returnMSG, goTo[0], goTo[0]);
       return 1;
   }
@@ -143,32 +143,33 @@ int main()
   int dir = 0;
   int step = 0;
   int res =0;
-  int x,y =0;
   int coordinate[2], trajectory[2], goTo[2];
   int fuel = 500;
   //coordinate = values.h
-  coordinate[0] = 0;
-  coordinate[1] = 80;
+  coordinate[0] = 30;
+  coordinate[1] = 30;
   trajectory[1] = 0;
-
+  errorPrompt(connect(sockfd, (SA*)&servaddr, sizeof(servaddr)), "connection with the server failed...");
+  printf("connected to the server..\n");
   while(1){
     if (fuel == 0){
-      // Sending to master 
+      // Sending to master
       sleep(4);
       fuel = 500;
     }
     if (trajectory[1]==0){
       randomDir(MAXSTEP, trajectory);
     }
+    printf("coordinates %d, %d", coordinate[0], coordinate[1]);
     position(coordinate[0], coordinate[1], trajectory[0], goTo);
+    printf("-------------- %d, %d", goTo[0], goTo[1]);
 
-    for (i=0; i<= DRONE_TIMEOUT; i++){ //this one i <= Timeout
-      errorPrompt(connect(sockfd, (SA*)&servaddr, sizeof(servaddr)), "connection with the server failed...");
-      printf("connected to the server..\n");
-      sendAndReceive(sockfd, goTo);
-      res = Aob([x,y]);
-      errorPrompt(close(sockfd), "close failed...");
-      printf("Close successfully..\n");
+    for (int i=0; i<= DRONE_TIMEOUT; i++){ //this one i <= Timeout
+      // errorPrompt(connect(sockfd, (SA*)&servaddr, sizeof(servaddr)), "connection with the server failed...");
+      // printf("connected to the server..\n");
+      res = sendAndReceive(sockfd, goTo);
+      // errorPrompt(close(sockfd), "close failed...");
+      // printf("Close successfully..\n");
       if(res==1){
         position(coordinate[0], coordinate[1], trajectory[0], coordinate);
         fuel --;
@@ -188,5 +189,7 @@ int main()
     errorPrompt(select(1, NULL, NULL, NULL, &tv), "select failed...");
     //Using select insead of sleep for preciser timing ref: https://stackoverflow.com/questions/3125645/why-use-select-instead-of-sleep
   }
+  errorPrompt(close(sockfd), "close failed...");
+  printf("Close successfully..\n");
   return 0;
 }
