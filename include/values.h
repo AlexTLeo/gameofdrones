@@ -1,16 +1,13 @@
 const int PORTNO = 4000; // example: group 1 has portno = (PORTNO+1)
 const char* HOSTNAME = "localhost";
 
-struct CoordinatePair {
-  int x;
-  int y;
-};
+int coordinatePair[2]; // (x, y)
 
 /**
 * TCP CODES
 */
-const int MASTER_OK = 1;
-const int MASTER_COL = 0;
+const int MASTER_OK = 1; // OK to move!
+const int MASTER_COL = 0; // potential collision, movement NOT allowed!
 
 const int DRONE_TIMEOUT = 3;
 const int TIMESTEP = 200; // milliseconds
@@ -20,11 +17,11 @@ const int STEPS = 300;
 /**
 * STARTING POSITIONS (TEMPORARY)
 */
-const struct CoordinatePair START0 = {.x = 0, .y = 0};
-const struct CoordinatePair START1 = {.x = 40, .y = 0};
-const struct CoordinatePair START2 = {.x = 0, .y = 80};
-const struct CoordinatePair START3 = {.x = 40, .y = 80};
-const struct CoordinatePair START4 = {.x = 20, .y = 40};
+const int START0[2] = {1, 1};
+const int START1[2] = {40, 1};
+const int START2[2] = {1, 80};
+const int START3[2] = {40, 80};
+const int START4[2] = {20, 40};
 
 /*
 Group 0: Michele Pestarino + Federico Sacco
