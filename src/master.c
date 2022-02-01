@@ -99,6 +99,7 @@ int main (int argc, char *argv[]) {
     for (int i = 0; i < NUM_DRONES; i++) {
       droneCoordsNext[i][0] = socketRead(fdDrone, sizeof(int), fdlogErr);
       droneCoordsNext[i][1] = socketRead(fdDrone, sizeof(int), fdlogErr);
+      printf("\ncoordonnées reçues : %i, %i", droneCoordsNext[i][0], droneCoordsNext[i][1]);
     }
 
     // Calculating collisions
@@ -107,9 +108,12 @@ int main (int argc, char *argv[]) {
       bool isCollision = false;
       int x1 = droneCoordsNext[i][0];
       int y1 = droneCoordsNext[i][1];
+      printf("\ncoordonnées traitées : %i, %i", droneCoordsNext[i][0], droneCoordsNext[i][1]);
 
       // Check if drone is trying to move out of the map
       if (x1 <= 0 || y1 <= 0 || x1 >= MAP_WIDTH || y1 >= MAP_HEIGHT) {
+        
+        printf("\n MAP");
         // CASE: Moving out of map
         isCollision = true;
         writeInfoLog(fdlogInfo, "[MASTER] Drone trying to move out of map");
@@ -130,6 +134,7 @@ int main (int argc, char *argv[]) {
           int y2 = droneCoordsNext[j][1];
 
           if (x1 == x2 && y1 == y2) {
+             printf("\n DRONE");
             // CASE: Collision
             isCollision = true;
             writeInfoLog(fdlogInfo, "[MASTER] Potential collision detected");
@@ -146,6 +151,7 @@ int main (int argc, char *argv[]) {
       }
 
       if (!isCollision) {
+        printf("\n MAP");
         socketWrite(fdDrone, MASTER_OK, sizeof(MASTER_OK), fdlogErr);
       }
     }
@@ -182,8 +188,8 @@ int main (int argc, char *argv[]) {
 }
 
 void drawMap(int mapFull[82][42]) {
-  clearTerminal();
-
+  /*clearTerminal();
+  
   for (int y = 0; y < MAP_HEIGHT; y++) {
     // For each row
     for (int x = 0; x < MAP_WIDTH; x++) {
@@ -208,5 +214,5 @@ void drawMap(int mapFull[82][42]) {
     printf("\n");
   }
 
-  fflush(stdout);
+  fflush(stdout);*/
 }
