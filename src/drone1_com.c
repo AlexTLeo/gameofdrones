@@ -33,8 +33,8 @@ int create_and_connect_to_server(int *sock){
 }
 
 int send_message(int sock,int x,int y){
-    //int message[2] = {x,y};
-    char message[] = "blabla";
+    int message[2] = {x,y};
+    //char message[] = "blabla";
 
     char *server_reply;
     if (NULL == (server_reply = malloc(2 * LENGTH_MSG)))
@@ -54,7 +54,7 @@ int send_message(int sock,int x,int y){
             puts("Client: recv failed");
             return 2;
         }
-    printf("%s\n", server_reply);
+    //printf("%s\n", server_reply);
     int response = atoi(server_reply);
     free(server_reply);
     return response;

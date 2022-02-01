@@ -23,7 +23,7 @@
  */
 void drawMap(int mapFull[82][42]);
 
-const int NUM_DRONES = 5;
+const int NUM_DRONES = 1;
 const int TEXT_DELAY = 2500;
 const int MAP_WIDTH = 80 + 2; // +2 for walls
 const int MAP_HEIGHT = 40 + 2; // +2 for walls
@@ -34,9 +34,9 @@ int main (int argc, char *argv[]) {
   int droneCoordsCurr[5][2] = {0}; // Each drone's current coordinates
   bool isRunning = true;
   // Sockets
-  int fdSocket[NUM_DRONES];
-  int fdDrone[NUM_DRONES];
-  int portno[NUM_DRONES], clilen;
+  int fdSocket;
+  int fdDrone;
+  int portno, clilen;
   struct sockaddr_in servAddr, cliAddr;
   const int optVal = 1;
   const socklen_t optLen = sizeof(optVal);
@@ -44,11 +44,7 @@ int main (int argc, char *argv[]) {
   int fdlogErr;
   int fdlogInfo;
 
-  portno[0] = PORTNO;
-  portno[1] = PORTNO + 1;
-  portno[2] = PORTNO + 2;
-  portno[3] = PORTNO + 3;
-  portno[4] = PORTNO + 4;
+  portno = PORTNO + 1;
 
   fdlogErr = openErrorLog();
   fdlogInfo = openInfoLog();
@@ -57,8 +53,8 @@ int main (int argc, char *argv[]) {
 
   // Create sockets
   for (int i = 0; i < NUM_DRONES; i++) {
-    fdSocket[i] = socketCreate(AF_INET, SOCK_STREAM, 0, fdlogErr);
-    socketSetOpt(fdSocket[i], SOL_SOCKET, SO_REUSEPORT, (void*) &optVal, optLen, 2);
+    fdSocket = socketCreate(AF_INET, SOCK_STREAM, 0, fdlogErr);
+    socketSetOpt(fdSocket, SOL_SOCKET, SO_REUSEPORT, (void*) &optVal, optLen, 2);
   }
 
   // Configuring 5 sockets, loop through each socket
@@ -72,22 +68,22 @@ int main (int argc, char *argv[]) {
   // Bind
   writeInfoLog(fdlogInfo, "[MASTER] Binding sockets");
   for (int i = 0; i < NUM_DRONES; i++) {
-    servAddr.sin_port = htons(portno[i]);
+    servAddr.sin_port = htons(portno);
 
-    socketBind(fdSocket[i], (struct sockaddr*) &servAddr, sizeof(servAddr), fdlogErr);
+    socketBind(fdSocket, (struct sockaddr*) &servAddr, sizeof(servAddr), fdlogErr);
   }
 
   // Listen
   writeInfoLog(fdlogInfo, "[MASTER] Listening on sockets");
   for (int i = 0; i < NUM_DRONES; i++) {
-    socketListen(fdSocket[i], 5, fdlogErr);
+    socketListen(fdSocket, 5, fdlogErr);
   }
 
   // Accept
   writeInfoLog(fdlogInfo, "[MASTER] Accepting incoming connections on sockets");
   clilen = sizeof(cliAddr);
   for (int i = 0; i < NUM_DRONES; i++) {
-    fdDrone[i] = socketAccept(fdSocket[i], (struct sockaddr *) &cliAddr, &clilen, fdlogErr);
+    fdDrone = socketAccept(fdSocket, (struct sockaddr *) &cliAddr, &clilen, fdlogErr);
   }
 
   // Initially, fill map with walls
@@ -101,8 +97,8 @@ int main (int argc, char *argv[]) {
   while (isRunning) {
     writeInfoLog(fdlogInfo, "[MASTER] Reading from sockets (drones)");
     for (int i = 0; i < NUM_DRONES; i++) {
-      droneCoordsNext[i][0] = socketRead(fdDrone[i], sizeof(int), fdlogErr);
-      droneCoordsNext[i][1] = socketRead(fdDrone[i], sizeof(int), fdlogErr);
+      droneCoordsNext[i][0] = socketRead(fdDrone, sizeof(int), fdlogErr);
+      droneCoordsNext[i][1] = socketRead(fdDrone, sizeof(int), fdlogErr);
     }
 
     // Calculating collisions
@@ -119,7 +115,7 @@ int main (int argc, char *argv[]) {
         writeInfoLog(fdlogInfo, "[MASTER] Drone trying to move out of map");
 
         writeInfoLog(fdlogInfo, "[MASTER] Sending MASTER_COL to drone"); // TODO: print "i"
-        socketWrite(fdDrone[i], MASTER_COL, sizeof(MASTER_COL), fdlogErr);
+        socketWrite(fdDrone, MASTER_COL, sizeof(MASTER_COL), fdlogErr);
         // Set "next coordinates" to be current cell
         x1 = droneCoordsCurr[i][0];
         y1 = droneCoordsCurr[i][1];
@@ -140,7 +136,7 @@ int main (int argc, char *argv[]) {
             // Stop i-th drone (arbitrary)
             // TODO: REFUELING DRONES???
             writeInfoLog(fdlogInfo, "[MASTER] Sending MASTER_COL to drone"); // TODO: print "i"
-            socketWrite(fdDrone[i], MASTER_COL, sizeof(MASTER_COL), fdlogErr);
+            socketWrite(fdDrone, MASTER_COL, sizeof(MASTER_COL), fdlogErr);
 
             // Set "next coordinates" to be current cell
             droneCoordsNext[i][0] = droneCoordsCurr[i][0];
@@ -150,7 +146,7 @@ int main (int argc, char *argv[]) {
       }
 
       if (!isCollision) {
-        socketWrite(fdDrone[i], MASTER_OK, sizeof(MASTER_OK), fdlogErr);
+        socketWrite(fdDrone, MASTER_OK, sizeof(MASTER_OK), fdlogErr);
       }
     }
 
