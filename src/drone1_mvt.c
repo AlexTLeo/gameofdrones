@@ -67,11 +67,11 @@ int main(int argc, char *argv[]){
     current_pos[0] = 20;//START1[0];
     current_pos[1] = 20; //START1[1];
     int next_pos[2];
-    //random fuel value between 150 and 250
-    int fuel = (int)rand()%100 +150;
+    //random fuel value between 150 and 200
+    int fuel = (int)rand()%50 +150;
 
     srand(time(NULL)); 
-    struct timespec remaining, request = {5, TIMESTEP}; // TO MODIFY, 5-->0
+    struct timespec remaining, request = {0, TIMESTEP}; // TO MODIFY, 5-->0
 
     int sock;
     int response;
