@@ -10,13 +10,13 @@ int main(int argc, char *argv[]){
     // The 8 possible directions 
     const int INCREMENTS[8][2] = {{-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1, -1}, {1, 0}, {1,-1}};
     // Initialisation of the positions
-    struct CoordinatePair current_pos = START1;
-    struct CoordinatePair next_pos;
+    int current_pos[2] = START1;
+    int next_pos[2];
     //random fuel value between 150 and 250
     int fuel = (int)rand()%100 +150;
 
     srand(time(NULL)); 
-    struct timespec remaining, request = {2, TIMESTEP}; //!!!! TO MODIFY!!! seconds = 0 normally
+    struct timespec remaining, request = {0, TIMESTEP}; 
 
     int sock;
     int response;
@@ -40,23 +40,24 @@ int main(int argc, char *argv[]){
 
         while (current_step<max_steps){
         
-            next_pos.x = current_pos.x + INCREMENTS[inc][0];
-            next_pos.y = current_pos.y + INCREMENTS[inc][1];   
+            next_pos[0] = current_pos[0] + INCREMENTS[inc][0];
+            next_pos[1] = current_pos[1] + INCREMENTS[inc][1];   
             
 
             //Send the requested next position for approval
             
             if (fuel>0)
-                response = send_message(sock,next_pos.x,next_pos.y);
+                response = send_message(sock,next_pos[0],next_pos[1]);
             else
-                response = send_message(sock,current_pos.x,current_pos.y);
+                response = send_message(sock,current_pos[0],current_pos[1]);
                  
 
             //Reception of the answer
             printf("response ====> %i\n", response);
             if (response == MASTER_OK){
                 if (fuel>0){ 
-                    current_pos = next_pos;
+                    current_pos[0] = next_pos[0];
+                    current_pos[1] = next_pos[1];
                     fuel--;
                 }
                 nb_colisions = 0;
