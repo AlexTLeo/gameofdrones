@@ -27,3 +27,8 @@ See values.h for communication messages specifications
 - master: mark drones as landed or not
 <br>
 From 14/01 to 21/01 is a lot of time for objectively really simple additions, so we might start working on improvements in that time period
+## 15/02
+- drone: implement refueling (arbitrarily decide refuel time) by sending master its CURRENT coordinates
+- master: if reading a drone's current coordinates being set, assume it is refueling and display it
+- master: add visualization of already explored area
+- drone: add logging
