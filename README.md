@@ -30,4 +30,5 @@ See values.h for communication messages specifications
 - master: reduce log spam
 - master: if reading a drone's current coordinates being set, assume it is refueling and display it
 - master: add visualization of already explored area
+- master: fix collision issue when drone is beyond x = 40 y = 40
 - drone: add logging
