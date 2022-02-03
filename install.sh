@@ -1,8 +1,8 @@
 pwd=$(pwd)
 if [ -z "$1" ]; then 
-    ARCHIVEVAR=~/archive_drones
+   ARCHIVEVAR=~/archive_drones
 else 
-    ARCHIVEVAR=$1
+   ARCHIVEVAR=$1
 fi
 
 unzip -u -d /tmp/archive_drones archive_drones.zip

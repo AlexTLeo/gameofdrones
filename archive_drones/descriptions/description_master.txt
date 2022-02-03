@@ -1,0 +1,6 @@
+
+[master.c]
+
+This process handles the map of the environment and the position of drones. 
+It gets new coordinates for each drones and check with collision between drones, or between a drone and the map border. 
+It then updates the map. 

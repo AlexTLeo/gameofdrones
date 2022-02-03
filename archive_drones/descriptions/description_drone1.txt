@@ -1,0 +1,9 @@
+
+[drone1.c]
+
+This process handles the movement of a drone on axes x and y.
+The drone retrieves its initial coordinates, computes new ones over a random direction and sends them to the master.
+
+It then moves if the master authorizes it. 
+
+If the drone does not have fuel anymore it waits 20 steps before refueling and sending new coordinates again.

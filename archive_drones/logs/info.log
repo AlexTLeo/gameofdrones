@@ -1,0 +1,1341 @@
+[3-2-2022 14:27:0] [MASTER] Creating sockets
+[3-2-2022 14:27:0] [MASTER] Configuring sockets
+[3-2-2022 14:27:0] [MASTER] Binding sockets
+[3-2-2022 14:27:0] [MASTER] Listening on sockets
+[3-2-2022 14:27:0] [MASTER] Accepting incoming connections on sockets
+[3-2-2022 16:56:47] [MASTER] Creating sockets
+[3-2-2022 16:56:47] [MASTER] Configuring sockets
+[3-2-2022 16:56:47] [MASTER] Binding sockets
+[3-2-2022 16:56:47] [MASTER] Listening on sockets
+[3-2-2022 16:56:47] [MASTER] Accepting incoming connections on sockets
+[3-2-2022 16:56:47] [drone1] Trajectory set : 9 steps, in the direction 4
+
+[3-2-2022 16:56:47] [drone1] Trajectory set : 5 steps, in the direction 1
+
+[3-2-2022 16:56:47] [drone1] Trajectory set : 9 steps, in the direction 0
+
+[3-2-2022 16:56:48] [drone1] Trajectory set : 8 steps, in the direction 1
+
+[3-2-2022 16:56:48] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:48] [drone1] Trajectory set : 3 steps, in the direction 3
+
+[3-2-2022 16:56:48] [MASTER] Checking drone collision
+[3-2-2022 16:56:48] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:48] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:48] [MASTER] Potential collision detected
+[3-2-2022 16:56:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:48] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:48] [MASTER] Potential collision detected
+[3-2-2022 16:56:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:48] [MASTER] Potential collision detected
+[3-2-2022 16:56:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:48] [MASTER] Updating map
+[3-2-2022 16:56:48] [MASTER] Redrawing map
+[3-2-2022 16:56:48] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:49] [MASTER] Checking drone collision
+[3-2-2022 16:56:49] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:49] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:49] [MASTER] Potential collision detected
+[3-2-2022 16:56:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:49] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:49] [MASTER] Potential collision detected
+[3-2-2022 16:56:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:49] [MASTER] Potential collision detected
+[3-2-2022 16:56:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:49] [MASTER] Updating map
+[3-2-2022 16:56:49] [MASTER] Redrawing map
+[3-2-2022 16:56:49] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:50] [MASTER] Checking drone collision
+[3-2-2022 16:56:50] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:50] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:50] [MASTER] Potential collision detected
+[3-2-2022 16:56:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:50] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:50] [MASTER] Potential collision detected
+[3-2-2022 16:56:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:50] [MASTER] Potential collision detected
+[3-2-2022 16:56:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:50] [MASTER] Updating map
+[3-2-2022 16:56:50] [MASTER] Redrawing map
+[3-2-2022 16:56:50] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:51] [drone1] Trajectory set : 6 steps, in the direction 7
+
+[3-2-2022 16:56:51] [drone1] Trajectory set : 4 steps, in the direction 7
+
+[3-2-2022 16:56:51] [drone1] Trajectory set : 9 steps, in the direction 5
+
+[3-2-2022 16:56:51] [MASTER] Checking drone collision
+[3-2-2022 16:56:51] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:51] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:51] [MASTER] Potential collision detected
+[3-2-2022 16:56:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:51] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:51] [MASTER] Potential collision detected
+[3-2-2022 16:56:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:51] [MASTER] Potential collision detected
+[3-2-2022 16:56:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:51] [MASTER] Updating map
+[3-2-2022 16:56:51] [MASTER] Redrawing map
+[3-2-2022 16:56:51] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:52] [MASTER] Checking drone collision
+[3-2-2022 16:56:52] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:52] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:52] [MASTER] Potential collision detected
+[3-2-2022 16:56:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:52] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:52] [MASTER] Potential collision detected
+[3-2-2022 16:56:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:52] [MASTER] Potential collision detected
+[3-2-2022 16:56:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:52] [MASTER] Updating map
+[3-2-2022 16:56:52] [MASTER] Redrawing map
+[3-2-2022 16:56:52] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:53] [drone1] Trajectory set : 7 steps, in the direction 7
+
+[3-2-2022 16:56:53] [MASTER] Checking drone collision
+[3-2-2022 16:56:53] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:53] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:53] [MASTER] Potential collision detected
+[3-2-2022 16:56:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:53] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:53] [MASTER] Potential collision detected
+[3-2-2022 16:56:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:53] [MASTER] Potential collision detected
+[3-2-2022 16:56:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:53] [MASTER] Updating map
+[3-2-2022 16:56:53] [MASTER] Redrawing map
+[3-2-2022 16:56:53] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:54] [drone1] Trajectory set : 5 steps, in the direction 5
+
+[3-2-2022 16:56:54] [drone1] Trajectory set : 4 steps, in the direction 0
+
+[3-2-2022 16:56:54] [drone1] Trajectory set : 5 steps, in the direction 1
+
+[3-2-2022 16:56:54] [MASTER] Checking drone collision
+[3-2-2022 16:56:54] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:54] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:54] [MASTER] Potential collision detected
+[3-2-2022 16:56:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:54] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:54] [MASTER] Potential collision detected
+[3-2-2022 16:56:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:54] [MASTER] Potential collision detected
+[3-2-2022 16:56:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:54] [MASTER] Updating map
+[3-2-2022 16:56:54] [MASTER] Redrawing map
+[3-2-2022 16:56:54] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:55] [MASTER] Checking drone collision
+[3-2-2022 16:56:55] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:55] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:55] [MASTER] Potential collision detected
+[3-2-2022 16:56:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:55] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:55] [MASTER] Potential collision detected
+[3-2-2022 16:56:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:55] [MASTER] Potential collision detected
+[3-2-2022 16:56:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:55] [MASTER] Updating map
+[3-2-2022 16:56:55] [MASTER] Redrawing map
+[3-2-2022 16:56:55] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:56] [MASTER] Checking drone collision
+[3-2-2022 16:56:56] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:56] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:56] [MASTER] Potential collision detected
+[3-2-2022 16:56:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:56] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:56] [MASTER] Potential collision detected
+[3-2-2022 16:56:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:56] [MASTER] Potential collision detected
+[3-2-2022 16:56:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:56] [MASTER] Updating map
+[3-2-2022 16:56:56] [MASTER] Redrawing map
+[3-2-2022 16:56:56] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:57] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[3-2-2022 16:56:57] [drone1] Trajectory set : 8 steps, in the direction 6
+
+[3-2-2022 16:56:57] [drone1] Trajectory set : 6 steps, in the direction 5
+
+[3-2-2022 16:56:57] [drone1] Trajectory set : 4 steps, in the direction 3
+
+[3-2-2022 16:56:57] [MASTER] Checking drone collision
+[3-2-2022 16:56:57] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:57] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:57] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:57] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:57] [MASTER] Potential collision detected
+[3-2-2022 16:56:57] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:57] [MASTER] Updating map
+[3-2-2022 16:56:57] [MASTER] Redrawing map
+[3-2-2022 16:56:57] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:58] [MASTER] Checking drone collision
+[3-2-2022 16:56:58] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:58] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:58] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:58] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:58] [MASTER] Potential collision detected
+[3-2-2022 16:56:58] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:58] [MASTER] Updating map
+[3-2-2022 16:56:58] [MASTER] Redrawing map
+[3-2-2022 16:56:58] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:56:59] [MASTER] Checking drone collision
+[3-2-2022 16:56:59] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:59] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:59] [MASTER] Drone trying to move out of map
+[3-2-2022 16:56:59] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:59] [MASTER] Potential collision detected
+[3-2-2022 16:56:59] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:56:59] [MASTER] Updating map
+[3-2-2022 16:56:59] [MASTER] Redrawing map
+[3-2-2022 16:56:59] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:0] [drone1] Trajectory set : 8 steps, in the direction 5
+
+[3-2-2022 16:57:0] [drone1] Trajectory set : 8 steps, in the direction 7
+
+[3-2-2022 16:57:0] [drone1] Trajectory set : 4 steps, in the direction 3
+
+[3-2-2022 16:57:0] [MASTER] Checking drone collision
+[3-2-2022 16:57:0] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:0] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:0] [MASTER] Potential collision detected
+[3-2-2022 16:57:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:0] [MASTER] Updating map
+[3-2-2022 16:57:0] [MASTER] Redrawing map
+[3-2-2022 16:57:0] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:1] [MASTER] Checking drone collision
+[3-2-2022 16:57:1] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:1] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:1] [MASTER] Potential collision detected
+[3-2-2022 16:57:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:1] [MASTER] Updating map
+[3-2-2022 16:57:1] [MASTER] Redrawing map
+[3-2-2022 16:57:1] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:2] [drone1] Trajectory set : 7 steps, in the direction 1
+
+[3-2-2022 16:57:2] [MASTER] Checking drone collision
+[3-2-2022 16:57:2] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:2] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:2] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:2] [MASTER] Potential collision detected
+[3-2-2022 16:57:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:2] [MASTER] Updating map
+[3-2-2022 16:57:2] [MASTER] Redrawing map
+[3-2-2022 16:57:2] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:3] [drone1] Trajectory set : 3 steps, in the direction 4
+
+[3-2-2022 16:57:3] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[3-2-2022 16:57:3] [drone1] Trajectory set : 8 steps, in the direction 6
+
+[3-2-2022 16:57:3] [MASTER] Checking drone collision
+[3-2-2022 16:57:3] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:3] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:3] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:3] [MASTER] Potential collision detected
+[3-2-2022 16:57:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:3] [MASTER] Updating map
+[3-2-2022 16:57:3] [MASTER] Redrawing map
+[3-2-2022 16:57:3] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:4] [drone1] Trajectory set : 3 steps, in the direction 0
+
+[3-2-2022 16:57:4] [MASTER] Checking drone collision
+[3-2-2022 16:57:4] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:4] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:4] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:4] [MASTER] Potential collision detected
+[3-2-2022 16:57:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:4] [MASTER] Updating map
+[3-2-2022 16:57:4] [MASTER] Redrawing map
+[3-2-2022 16:57:4] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:5] [MASTER] Checking drone collision
+[3-2-2022 16:57:5] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:5] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:5] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:5] [MASTER] Potential collision detected
+[3-2-2022 16:57:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:5] [MASTER] Updating map
+[3-2-2022 16:57:5] [MASTER] Redrawing map
+[3-2-2022 16:57:5] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:6] [drone1] Trajectory set : 3 steps, in the direction 0
+
+[3-2-2022 16:57:6] [drone1] Trajectory set : 6 steps, in the direction 6
+
+[3-2-2022 16:57:6] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[3-2-2022 16:57:6] [MASTER] Checking drone collision
+[3-2-2022 16:57:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:6] [MASTER] Potential collision detected
+[3-2-2022 16:57:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:6] [MASTER] Updating map
+[3-2-2022 16:57:6] [MASTER] Redrawing map
+[3-2-2022 16:57:6] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:7] [drone1] Trajectory set : 9 steps, in the direction 1
+
+[3-2-2022 16:57:7] [MASTER] Checking drone collision
+[3-2-2022 16:57:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:7] [MASTER] Potential collision detected
+[3-2-2022 16:57:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:7] [MASTER] Updating map
+[3-2-2022 16:57:7] [MASTER] Redrawing map
+[3-2-2022 16:57:7] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:8] [MASTER] Checking drone collision
+[3-2-2022 16:57:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:8] [MASTER] Potential collision detected
+[3-2-2022 16:57:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:8] [MASTER] Updating map
+[3-2-2022 16:57:8] [MASTER] Redrawing map
+[3-2-2022 16:57:8] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:9] [drone1] Trajectory set : 9 steps, in the direction 6
+
+[3-2-2022 16:57:9] [drone1] Trajectory set : 6 steps, in the direction 4
+
+[3-2-2022 16:57:9] [drone1] Trajectory set : 5 steps, in the direction 7
+
+[3-2-2022 16:57:9] [drone1] Trajectory set : 9 steps, in the direction 3
+
+[3-2-2022 16:57:9] [MASTER] Checking drone collision
+[3-2-2022 16:57:9] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:9] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:9] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:9] [MASTER] Potential collision detected
+[3-2-2022 16:57:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:9] [MASTER] Updating map
+[3-2-2022 16:57:9] [MASTER] Redrawing map
+[3-2-2022 16:57:9] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:10] [MASTER] Checking drone collision
+[3-2-2022 16:57:10] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:10] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:10] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:10] [MASTER] Potential collision detected
+[3-2-2022 16:57:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:10] [MASTER] Updating map
+[3-2-2022 16:57:10] [MASTER] Redrawing map
+[3-2-2022 16:57:10] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:11] [MASTER] Checking drone collision
+[3-2-2022 16:57:11] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:11] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:11] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:11] [MASTER] Potential collision detected
+[3-2-2022 16:57:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:11] [MASTER] Updating map
+[3-2-2022 16:57:11] [MASTER] Redrawing map
+[3-2-2022 16:57:11] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:12] [drone1] Trajectory set : 6 steps, in the direction 1
+
+[3-2-2022 16:57:12] [drone1] Trajectory set : 7 steps, in the direction 2
+
+[3-2-2022 16:57:12] [drone1] Trajectory set : 7 steps, in the direction 6
+
+[3-2-2022 16:57:12] [MASTER] Checking drone collision
+[3-2-2022 16:57:12] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:12] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:12] [MASTER] Potential collision detected
+[3-2-2022 16:57:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:12] [MASTER] Updating map
+[3-2-2022 16:57:12] [MASTER] Redrawing map
+[3-2-2022 16:57:12] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:13] [MASTER] Checking drone collision
+[3-2-2022 16:57:13] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:13] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:13] [MASTER] Potential collision detected
+[3-2-2022 16:57:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:13] [MASTER] Updating map
+[3-2-2022 16:57:13] [MASTER] Redrawing map
+[3-2-2022 16:57:13] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:14] [MASTER] Checking drone collision
+[3-2-2022 16:57:14] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:14] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:14] [MASTER] Potential collision detected
+[3-2-2022 16:57:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:14] [MASTER] Updating map
+[3-2-2022 16:57:14] [MASTER] Redrawing map
+[3-2-2022 16:57:14] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:15] [drone1] Trajectory set : 4 steps, in the direction 6
+
+[3-2-2022 16:57:15] [drone1] Trajectory set : 8 steps, in the direction 6
+
+[3-2-2022 16:57:15] [MASTER] Checking drone collision
+[3-2-2022 16:57:15] [MASTER] Potential collision detected
+[3-2-2022 16:57:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:15] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:15] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:15] [MASTER] Potential collision detected
+[3-2-2022 16:57:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:15] [MASTER] Updating map
+[3-2-2022 16:57:15] [MASTER] Redrawing map
+[3-2-2022 16:57:15] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:16] [drone1] Trajectory set : 9 steps, in the direction 4
+
+[3-2-2022 16:57:16] [MASTER] Checking drone collision
+[3-2-2022 16:57:16] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:16] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:16] [MASTER] Potential collision detected
+[3-2-2022 16:57:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:16] [MASTER] Updating map
+[3-2-2022 16:57:16] [MASTER] Redrawing map
+[3-2-2022 16:57:16] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:17] [MASTER] Checking drone collision
+[3-2-2022 16:57:17] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:17] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:17] [MASTER] Potential collision detected
+[3-2-2022 16:57:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:17] [MASTER] Updating map
+[3-2-2022 16:57:17] [MASTER] Redrawing map
+[3-2-2022 16:57:17] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:18] [drone1] Trajectory set : 3 steps, in the direction 7
+
+[3-2-2022 16:57:18] [drone1] Trajectory set : 3 steps, in the direction 6
+
+[3-2-2022 16:57:18] [drone1] Trajectory set : 7 steps, in the direction 3
+
+[3-2-2022 16:57:18] [MASTER] Checking drone collision
+[3-2-2022 16:57:18] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:18] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:18] [MASTER] Potential collision detected
+[3-2-2022 16:57:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:18] [MASTER] Updating map
+[3-2-2022 16:57:18] [MASTER] Redrawing map
+[3-2-2022 16:57:18] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:19] [drone1] Trajectory set : 10 steps, in the direction 4
+
+[3-2-2022 16:57:19] [MASTER] Checking drone collision
+[3-2-2022 16:57:19] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:19] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:19] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:19] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:19] [MASTER] Potential collision detected
+[3-2-2022 16:57:19] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:19] [MASTER] Updating map
+[3-2-2022 16:57:19] [MASTER] Redrawing map
+[3-2-2022 16:57:19] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:20] [MASTER] Checking drone collision
+[3-2-2022 16:57:20] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:20] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:20] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:20] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:20] [MASTER] Potential collision detected
+[3-2-2022 16:57:20] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:20] [MASTER] Updating map
+[3-2-2022 16:57:20] [MASTER] Redrawing map
+[3-2-2022 16:57:20] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:21] [drone1] Trajectory set : 10 steps, in the direction 0
+
+[3-2-2022 16:57:21] [drone1] Trajectory set : 5 steps, in the direction 5
+
+[3-2-2022 16:57:21] [drone1] Trajectory set : 7 steps, in the direction 7
+
+[3-2-2022 16:57:21] [MASTER] Checking drone collision
+[3-2-2022 16:57:21] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:21] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:21] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:21] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:21] [MASTER] Potential collision detected
+[3-2-2022 16:57:21] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:21] [MASTER] Updating map
+[3-2-2022 16:57:21] [MASTER] Redrawing map
+[3-2-2022 16:57:21] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:22] [MASTER] Checking drone collision
+[3-2-2022 16:57:22] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:22] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:22] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:22] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:22] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:22] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:22] [MASTER] Potential collision detected
+[3-2-2022 16:57:22] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:22] [MASTER] Updating map
+[3-2-2022 16:57:22] [MASTER] Redrawing map
+[3-2-2022 16:57:22] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:23] [MASTER] Checking drone collision
+[3-2-2022 16:57:23] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:23] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:23] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:23] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:23] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:23] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:23] [MASTER] Potential collision detected
+[3-2-2022 16:57:23] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:23] [MASTER] Updating map
+[3-2-2022 16:57:23] [MASTER] Redrawing map
+[3-2-2022 16:57:23] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:24] [drone1] Trajectory set : 9 steps, in the direction 0
+
+[3-2-2022 16:57:24] [drone1] Trajectory set : 7 steps, in the direction 1
+
+[3-2-2022 16:57:24] [MASTER] Checking drone collision
+[3-2-2022 16:57:24] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:24] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:24] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:24] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:24] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:24] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:24] [MASTER] Potential collision detected
+[3-2-2022 16:57:24] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:24] [MASTER] Updating map
+[3-2-2022 16:57:24] [MASTER] Redrawing map
+[3-2-2022 16:57:24] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:25] [drone1] Trajectory set : 3 steps, in the direction 6
+
+[3-2-2022 16:57:25] [MASTER] Checking drone collision
+[3-2-2022 16:57:25] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:25] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:25] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:25] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:25] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:25] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:25] [MASTER] Potential collision detected
+[3-2-2022 16:57:25] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:25] [MASTER] Updating map
+[3-2-2022 16:57:25] [MASTER] Redrawing map
+[3-2-2022 16:57:25] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:26] [drone1] Trajectory set : 9 steps, in the direction 0
+
+[3-2-2022 16:57:26] [MASTER] Checking drone collision
+[3-2-2022 16:57:26] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:26] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:26] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:26] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:26] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:26] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:26] [MASTER] Potential collision detected
+[3-2-2022 16:57:26] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:26] [MASTER] Updating map
+[3-2-2022 16:57:26] [MASTER] Redrawing map
+[3-2-2022 16:57:26] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:27] [drone1] Trajectory set : 5 steps, in the direction 1
+
+[3-2-2022 16:57:27] [drone1] Trajectory set : 8 steps, in the direction 3
+
+[3-2-2022 16:57:27] [MASTER] Checking drone collision
+[3-2-2022 16:57:27] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:27] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:27] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:27] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:27] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:27] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:27] [MASTER] Potential collision detected
+[3-2-2022 16:57:27] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:27] [MASTER] Updating map
+[3-2-2022 16:57:27] [MASTER] Redrawing map
+[3-2-2022 16:57:27] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:28] [drone1] Trajectory set : 4 steps, in the direction 5
+
+[3-2-2022 16:57:28] [MASTER] Checking drone collision
+[3-2-2022 16:57:28] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:28] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:28] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:28] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:28] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:28] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:28] [MASTER] Potential collision detected
+[3-2-2022 16:57:28] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:28] [MASTER] Updating map
+[3-2-2022 16:57:28] [MASTER] Redrawing map
+[3-2-2022 16:57:28] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:29] [drone1] Trajectory set : 10 steps, in the direction 2
+
+[3-2-2022 16:57:29] [drone1] Trajectory set : 3 steps, in the direction 7
+
+[3-2-2022 16:57:29] [MASTER] Checking drone collision
+[3-2-2022 16:57:29] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:29] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:29] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:29] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:29] [MASTER] Potential collision detected
+[3-2-2022 16:57:29] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:29] [MASTER] Updating map
+[3-2-2022 16:57:29] [MASTER] Redrawing map
+[3-2-2022 16:57:29] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:30] [drone1] Trajectory set : 8 steps, in the direction 2
+
+[3-2-2022 16:57:30] [drone1] Trajectory set : 7 steps, in the direction 5
+
+[3-2-2022 16:57:30] [MASTER] Checking drone collision
+[3-2-2022 16:57:30] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:30] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:30] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:30] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:30] [MASTER] Potential collision detected
+[3-2-2022 16:57:30] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:30] [MASTER] Updating map
+[3-2-2022 16:57:30] [MASTER] Redrawing map
+[3-2-2022 16:57:30] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:31] [MASTER] Checking drone collision
+[3-2-2022 16:57:31] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:31] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:31] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:31] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:31] [MASTER] Potential collision detected
+[3-2-2022 16:57:31] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:31] [MASTER] Updating map
+[3-2-2022 16:57:31] [MASTER] Redrawing map
+[3-2-2022 16:57:31] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:32] [drone1] Trajectory set : 4 steps, in the direction 6
+
+[3-2-2022 16:57:32] [drone1] Trajectory set : 4 steps, in the direction 3
+
+[3-2-2022 16:57:32] [MASTER] Checking drone collision
+[3-2-2022 16:57:32] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:32] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:32] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:32] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:32] [MASTER] Potential collision detected
+[3-2-2022 16:57:32] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:32] [MASTER] Updating map
+[3-2-2022 16:57:32] [MASTER] Redrawing map
+[3-2-2022 16:57:32] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:33] [drone1] Trajectory set : 9 steps, in the direction 6
+
+[3-2-2022 16:57:33] [drone1] Trajectory set : 8 steps, in the direction 2
+
+[3-2-2022 16:57:33] [MASTER] Checking drone collision
+[3-2-2022 16:57:33] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:33] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:33] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:33] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:33] [MASTER] Potential collision detected
+[3-2-2022 16:57:33] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:33] [MASTER] Updating map
+[3-2-2022 16:57:33] [MASTER] Redrawing map
+[3-2-2022 16:57:33] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:34] [MASTER] Checking drone collision
+[3-2-2022 16:57:34] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:34] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:34] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:34] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:34] [MASTER] Potential collision detected
+[3-2-2022 16:57:34] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:34] [MASTER] Updating map
+[3-2-2022 16:57:34] [MASTER] Redrawing map
+[3-2-2022 16:57:34] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:35] [MASTER] Checking drone collision
+[3-2-2022 16:57:35] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:35] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:35] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:35] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:35] [MASTER] Potential collision detected
+[3-2-2022 16:57:35] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:35] [MASTER] Updating map
+[3-2-2022 16:57:35] [MASTER] Redrawing map
+[3-2-2022 16:57:35] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:36] [drone1] Trajectory set : 6 steps, in the direction 5
+
+[3-2-2022 16:57:36] [drone1] Trajectory set : 5 steps, in the direction 2
+
+[3-2-2022 16:57:36] [drone1] Trajectory set : 10 steps, in the direction 2
+
+[3-2-2022 16:57:36] [drone1] Trajectory set : 4 steps, in the direction 2
+
+[3-2-2022 16:57:36] [MASTER] Checking drone collision
+[3-2-2022 16:57:36] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:36] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:36] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:36] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:36] [MASTER] Potential collision detected
+[3-2-2022 16:57:36] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:36] [MASTER] Updating map
+[3-2-2022 16:57:36] [MASTER] Redrawing map
+[3-2-2022 16:57:36] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:37] [MASTER] Checking drone collision
+[3-2-2022 16:57:37] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:37] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:37] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:37] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:37] [MASTER] Potential collision detected
+[3-2-2022 16:57:37] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:37] [MASTER] Updating map
+[3-2-2022 16:57:37] [MASTER] Redrawing map
+[3-2-2022 16:57:37] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:38] [MASTER] Checking drone collision
+[3-2-2022 16:57:38] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:38] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:38] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:38] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:38] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:38] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:38] [MASTER] Potential collision detected
+[3-2-2022 16:57:38] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:38] [MASTER] Updating map
+[3-2-2022 16:57:38] [MASTER] Redrawing map
+[3-2-2022 16:57:38] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:39] [drone1] Trajectory set : 6 steps, in the direction 1
+
+[3-2-2022 16:57:39] [drone1] Trajectory set : 8 steps, in the direction 4
+
+[3-2-2022 16:57:39] [drone1] Trajectory set : 6 steps, in the direction 7
+
+[3-2-2022 16:57:39] [MASTER] Checking drone collision
+[3-2-2022 16:57:39] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:39] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:39] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:39] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:39] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:39] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:39] [MASTER] Potential collision detected
+[3-2-2022 16:57:39] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:39] [MASTER] Updating map
+[3-2-2022 16:57:39] [MASTER] Redrawing map
+[3-2-2022 16:57:39] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:40] [MASTER] Checking drone collision
+[3-2-2022 16:57:40] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:40] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:40] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:40] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:40] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:40] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:40] [MASTER] Potential collision detected
+[3-2-2022 16:57:40] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:40] [MASTER] Updating map
+[3-2-2022 16:57:40] [MASTER] Redrawing map
+[3-2-2022 16:57:40] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:41] [drone1] Trajectory set : 7 steps, in the direction 0
+
+[3-2-2022 16:57:41] [MASTER] Checking drone collision
+[3-2-2022 16:57:41] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:41] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:41] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:41] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:41] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:41] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:41] [MASTER] Potential collision detected
+[3-2-2022 16:57:41] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:41] [MASTER] Updating map
+[3-2-2022 16:57:41] [MASTER] Redrawing map
+[3-2-2022 16:57:41] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:42] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[3-2-2022 16:57:42] [drone1] Trajectory set : 9 steps, in the direction 3
+
+[3-2-2022 16:57:42] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[3-2-2022 16:57:42] [MASTER] Checking drone collision
+[3-2-2022 16:57:42] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:42] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:42] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:42] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:42] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:42] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:42] [MASTER] Potential collision detected
+[3-2-2022 16:57:42] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:42] [MASTER] Updating map
+[3-2-2022 16:57:42] [MASTER] Redrawing map
+[3-2-2022 16:57:42] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:43] [MASTER] Checking drone collision
+[3-2-2022 16:57:43] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:43] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:43] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:43] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:43] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:43] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:43] [MASTER] Potential collision detected
+[3-2-2022 16:57:43] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:43] [MASTER] Updating map
+[3-2-2022 16:57:43] [MASTER] Redrawing map
+[3-2-2022 16:57:43] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:44] [MASTER] Checking drone collision
+[3-2-2022 16:57:44] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:44] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:44] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:44] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:44] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:44] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:44] [MASTER] Potential collision detected
+[3-2-2022 16:57:44] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:44] [MASTER] Updating map
+[3-2-2022 16:57:44] [MASTER] Redrawing map
+[3-2-2022 16:57:44] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:45] [drone1] Trajectory set : 7 steps, in the direction 6
+
+[3-2-2022 16:57:45] [drone1] Trajectory set : 4 steps, in the direction 3
+
+[3-2-2022 16:57:45] [drone1] Trajectory set : 6 steps, in the direction 4
+
+[3-2-2022 16:57:45] [MASTER] Checking drone collision
+[3-2-2022 16:57:45] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:45] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:45] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:45] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:45] [MASTER] Potential collision detected
+[3-2-2022 16:57:45] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:45] [MASTER] Updating map
+[3-2-2022 16:57:45] [MASTER] Redrawing map
+[3-2-2022 16:57:45] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:46] [drone1] Trajectory set : 3 steps, in the direction 7
+
+[3-2-2022 16:57:46] [MASTER] Checking drone collision
+[3-2-2022 16:57:46] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:46] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:46] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:46] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:46] [MASTER] Potential collision detected
+[3-2-2022 16:57:46] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:46] [MASTER] Updating map
+[3-2-2022 16:57:46] [MASTER] Redrawing map
+[3-2-2022 16:57:46] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:47] [MASTER] Checking drone collision
+[3-2-2022 16:57:47] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:47] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:47] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:47] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:47] [MASTER] Potential collision detected
+[3-2-2022 16:57:47] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:47] [MASTER] Updating map
+[3-2-2022 16:57:47] [MASTER] Redrawing map
+[3-2-2022 16:57:47] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:48] [drone1] Trajectory set : 10 steps, in the direction 7
+
+[3-2-2022 16:57:48] [drone1] Trajectory set : 7 steps, in the direction 0
+
+[3-2-2022 16:57:48] [drone1] Trajectory set : 6 steps, in the direction 0
+
+[3-2-2022 16:57:48] [MASTER] Checking drone collision
+[3-2-2022 16:57:48] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:48] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:48] [MASTER] Potential collision detected
+[3-2-2022 16:57:48] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:48] [MASTER] Updating map
+[3-2-2022 16:57:48] [MASTER] Redrawing map
+[3-2-2022 16:57:48] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:49] [drone1] Trajectory set : 8 steps, in the direction 4
+
+[3-2-2022 16:57:49] [MASTER] Checking drone collision
+[3-2-2022 16:57:49] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:49] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:49] [MASTER] Potential collision detected
+[3-2-2022 16:57:49] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:49] [MASTER] Updating map
+[3-2-2022 16:57:49] [MASTER] Redrawing map
+[3-2-2022 16:57:49] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:50] [MASTER] Checking drone collision
+[3-2-2022 16:57:50] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:50] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:50] [MASTER] Potential collision detected
+[3-2-2022 16:57:50] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:50] [MASTER] Updating map
+[3-2-2022 16:57:50] [MASTER] Redrawing map
+[3-2-2022 16:57:50] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:51] [drone1] Trajectory set : 9 steps, in the direction 1
+
+[3-2-2022 16:57:51] [drone1] Trajectory set : 7 steps, in the direction 1
+
+[3-2-2022 16:57:51] [MASTER] Checking drone collision
+[3-2-2022 16:57:51] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:51] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:51] [MASTER] Potential collision detected
+[3-2-2022 16:57:51] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:51] [MASTER] Updating map
+[3-2-2022 16:57:51] [MASTER] Redrawing map
+[3-2-2022 16:57:51] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:52] [drone1] Trajectory set : 7 steps, in the direction 5
+
+[3-2-2022 16:57:52] [MASTER] Checking drone collision
+[3-2-2022 16:57:52] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:52] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:52] [MASTER] Potential collision detected
+[3-2-2022 16:57:52] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:52] [MASTER] Updating map
+[3-2-2022 16:57:52] [MASTER] Redrawing map
+[3-2-2022 16:57:52] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:53] [MASTER] Checking drone collision
+[3-2-2022 16:57:53] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:53] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:53] [MASTER] Potential collision detected
+[3-2-2022 16:57:53] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:53] [MASTER] Updating map
+[3-2-2022 16:57:53] [MASTER] Redrawing map
+[3-2-2022 16:57:53] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:54] [drone1] Trajectory set : 8 steps, in the direction 2
+
+[3-2-2022 16:57:54] [drone1] Trajectory set : 3 steps, in the direction 5
+
+[3-2-2022 16:57:54] [MASTER] Checking drone collision
+[3-2-2022 16:57:54] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:54] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:54] [MASTER] Potential collision detected
+[3-2-2022 16:57:54] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:54] [MASTER] Updating map
+[3-2-2022 16:57:54] [MASTER] Redrawing map
+[3-2-2022 16:57:54] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:55] [drone1] Trajectory set : 4 steps, in the direction 2
+
+[3-2-2022 16:57:55] [MASTER] Checking drone collision
+[3-2-2022 16:57:55] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:55] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:55] [MASTER] Potential collision detected
+[3-2-2022 16:57:55] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:55] [MASTER] Updating map
+[3-2-2022 16:57:55] [MASTER] Redrawing map
+[3-2-2022 16:57:55] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:56] [MASTER] Checking drone collision
+[3-2-2022 16:57:56] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:56] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:56] [MASTER] Potential collision detected
+[3-2-2022 16:57:56] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:56] [MASTER] Updating map
+[3-2-2022 16:57:56] [MASTER] Redrawing map
+[3-2-2022 16:57:56] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:57] [drone1] Trajectory set : 6 steps, in the direction 1
+
+[3-2-2022 16:57:57] [drone1] Trajectory set : 3 steps, in the direction 3
+
+[3-2-2022 16:57:57] [drone1] Trajectory set : 6 steps, in the direction 7
+
+[3-2-2022 16:57:57] [MASTER] Checking drone collision
+[3-2-2022 16:57:57] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:57] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:57] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:57] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:57] [MASTER] Potential collision detected
+[3-2-2022 16:57:57] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:57] [MASTER] Updating map
+[3-2-2022 16:57:57] [MASTER] Redrawing map
+[3-2-2022 16:57:57] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:58] [MASTER] Checking drone collision
+[3-2-2022 16:57:58] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:58] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:58] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:58] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:58] [MASTER] Potential collision detected
+[3-2-2022 16:57:58] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:58] [MASTER] Updating map
+[3-2-2022 16:57:58] [MASTER] Redrawing map
+[3-2-2022 16:57:58] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:57:59] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[3-2-2022 16:57:59] [drone1] Trajectory set : 7 steps, in the direction 5
+
+[3-2-2022 16:57:59] [MASTER] Checking drone collision
+[3-2-2022 16:57:59] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:59] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:59] [MASTER] Drone trying to move out of map
+[3-2-2022 16:57:59] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:59] [MASTER] Potential collision detected
+[3-2-2022 16:57:59] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:57:59] [MASTER] Updating map
+[3-2-2022 16:57:59] [MASTER] Redrawing map
+[3-2-2022 16:57:59] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:0] [drone1] Trajectory set : 3 steps, in the direction 0
+
+[3-2-2022 16:58:0] [drone1] Trajectory set : 3 steps, in the direction 6
+
+[3-2-2022 16:58:0] [drone1] Trajectory set : 8 steps, in the direction 4
+
+[3-2-2022 16:58:0] [MASTER] Checking drone collision
+[3-2-2022 16:58:0] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:0] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:0] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:0] [MASTER] Potential collision detected
+[3-2-2022 16:58:0] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:0] [MASTER] Updating map
+[3-2-2022 16:58:0] [MASTER] Redrawing map
+[3-2-2022 16:58:0] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:1] [MASTER] Checking drone collision
+[3-2-2022 16:58:1] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:1] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:1] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:1] [MASTER] Potential collision detected
+[3-2-2022 16:58:1] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:1] [MASTER] Updating map
+[3-2-2022 16:58:1] [MASTER] Redrawing map
+[3-2-2022 16:58:1] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:2] [MASTER] Checking drone collision
+[3-2-2022 16:58:2] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:2] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:2] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:2] [MASTER] Potential collision detected
+[3-2-2022 16:58:2] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:2] [MASTER] Updating map
+[3-2-2022 16:58:2] [MASTER] Redrawing map
+[3-2-2022 16:58:2] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:3] [drone1] Trajectory set : 9 steps, in the direction 4
+
+[3-2-2022 16:58:3] [drone1] Trajectory set : 3 steps, in the direction 4
+
+[3-2-2022 16:58:3] [drone1] Trajectory set : 3 steps, in the direction 0
+
+[3-2-2022 16:58:3] [MASTER] Checking drone collision
+[3-2-2022 16:58:3] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:3] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:3] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:3] [MASTER] Potential collision detected
+[3-2-2022 16:58:3] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:3] [MASTER] Updating map
+[3-2-2022 16:58:3] [MASTER] Redrawing map
+[3-2-2022 16:58:3] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:4] [drone1] Trajectory set : 9 steps, in the direction 1
+
+[3-2-2022 16:58:4] [MASTER] Checking drone collision
+[3-2-2022 16:58:4] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:4] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:4] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:4] [MASTER] Potential collision detected
+[3-2-2022 16:58:4] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:4] [MASTER] Updating map
+[3-2-2022 16:58:4] [MASTER] Redrawing map
+[3-2-2022 16:58:4] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:5] [MASTER] Checking drone collision
+[3-2-2022 16:58:5] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:5] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:5] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:5] [MASTER] Potential collision detected
+[3-2-2022 16:58:5] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:5] [MASTER] Updating map
+[3-2-2022 16:58:5] [MASTER] Redrawing map
+[3-2-2022 16:58:5] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:6] [drone1] Trajectory set : 4 steps, in the direction 0
+
+[3-2-2022 16:58:6] [drone1] Trajectory set : 7 steps, in the direction 0
+
+[3-2-2022 16:58:6] [drone1] Trajectory set : 7 steps, in the direction 3
+
+[3-2-2022 16:58:6] [drone1] Trajectory set : 10 steps, in the direction 1
+
+[3-2-2022 16:58:6] [MASTER] Checking drone collision
+[3-2-2022 16:58:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:6] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:6] [MASTER] Potential collision detected
+[3-2-2022 16:58:6] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:6] [MASTER] Updating map
+[3-2-2022 16:58:6] [MASTER] Redrawing map
+[3-2-2022 16:58:6] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:7] [drone1] Trajectory set : 9 steps, in the direction 1
+
+[3-2-2022 16:58:7] [MASTER] Checking drone collision
+[3-2-2022 16:58:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:7] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:7] [MASTER] Potential collision detected
+[3-2-2022 16:58:7] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:7] [MASTER] Updating map
+[3-2-2022 16:58:7] [MASTER] Redrawing map
+[3-2-2022 16:58:7] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:8] [MASTER] Checking drone collision
+[3-2-2022 16:58:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:8] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:8] [MASTER] Potential collision detected
+[3-2-2022 16:58:8] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:8] [MASTER] Updating map
+[3-2-2022 16:58:8] [MASTER] Redrawing map
+[3-2-2022 16:58:8] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:9] [drone1] Trajectory set : 3 steps, in the direction 1
+
+[3-2-2022 16:58:9] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[3-2-2022 16:58:9] [MASTER] Checking drone collision
+[3-2-2022 16:58:9] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:9] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:9] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:9] [MASTER] Potential collision detected
+[3-2-2022 16:58:9] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:9] [MASTER] Updating map
+[3-2-2022 16:58:9] [MASTER] Redrawing map
+[3-2-2022 16:58:9] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:10] [drone1] Trajectory set : 8 steps, in the direction 1
+
+[3-2-2022 16:58:10] [MASTER] Checking drone collision
+[3-2-2022 16:58:10] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:10] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:10] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:10] [MASTER] Potential collision detected
+[3-2-2022 16:58:10] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:10] [MASTER] Updating map
+[3-2-2022 16:58:10] [MASTER] Redrawing map
+[3-2-2022 16:58:10] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:11] [MASTER] Checking drone collision
+[3-2-2022 16:58:11] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:11] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:11] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:11] [MASTER] Potential collision detected
+[3-2-2022 16:58:11] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:11] [MASTER] Updating map
+[3-2-2022 16:58:11] [MASTER] Redrawing map
+[3-2-2022 16:58:11] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:12] [drone1] Trajectory set : 5 steps, in the direction 7
+
+[3-2-2022 16:58:12] [drone1] Trajectory set : 10 steps, in the direction 4
+
+[3-2-2022 16:58:12] [MASTER] Checking drone collision
+[3-2-2022 16:58:12] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:12] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:12] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:12] [MASTER] Potential collision detected
+[3-2-2022 16:58:12] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:12] [MASTER] Updating map
+[3-2-2022 16:58:12] [MASTER] Redrawing map
+[3-2-2022 16:58:12] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:13] [drone1] Trajectory set : 5 steps, in the direction 0
+
+[3-2-2022 16:58:13] [drone1] Trajectory set : 5 steps, in the direction 0
+
+[3-2-2022 16:58:13] [drone1] Trajectory set : 3 steps, in the direction 4
+
+[3-2-2022 16:58:13] [MASTER] Checking drone collision
+[3-2-2022 16:58:13] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:13] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:13] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:13] [MASTER] Potential collision detected
+[3-2-2022 16:58:13] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:13] [MASTER] Updating map
+[3-2-2022 16:58:13] [MASTER] Redrawing map
+[3-2-2022 16:58:13] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:14] [MASTER] Checking drone collision
+[3-2-2022 16:58:14] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:14] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:14] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:14] [MASTER] Potential collision detected
+[3-2-2022 16:58:14] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:14] [MASTER] Updating map
+[3-2-2022 16:58:14] [MASTER] Redrawing map
+[3-2-2022 16:58:14] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:15] [drone1] Trajectory set : 5 steps, in the direction 2
+
+[3-2-2022 16:58:15] [drone1] Trajectory set : 4 steps, in the direction 0
+
+[3-2-2022 16:58:15] [MASTER] Checking drone collision
+[3-2-2022 16:58:15] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:15] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:15] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:15] [MASTER] Potential collision detected
+[3-2-2022 16:58:15] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:15] [MASTER] Updating map
+[3-2-2022 16:58:15] [MASTER] Redrawing map
+[3-2-2022 16:58:15] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:16] [drone1] Trajectory set : 3 steps, in the direction 1
+
+[3-2-2022 16:58:16] [drone1] Trajectory set : 4 steps, in the direction 2
+
+[3-2-2022 16:58:16] [MASTER] Checking drone collision
+[3-2-2022 16:58:16] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:16] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:16] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:16] [MASTER] Potential collision detected
+[3-2-2022 16:58:16] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:16] [MASTER] Updating map
+[3-2-2022 16:58:16] [MASTER] Redrawing map
+[3-2-2022 16:58:16] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:17] [MASTER] Checking drone collision
+[3-2-2022 16:58:17] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:17] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:17] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:17] [MASTER] Potential collision detected
+[3-2-2022 16:58:17] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:17] [MASTER] Updating map
+[3-2-2022 16:58:17] [MASTER] Redrawing map
+[3-2-2022 16:58:17] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:18] [drone1] Trajectory set : 3 steps, in the direction 7
+
+[3-2-2022 16:58:18] [drone1] Trajectory set : 10 steps, in the direction 6
+
+[3-2-2022 16:58:18] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[3-2-2022 16:58:18] [MASTER] Checking drone collision
+[3-2-2022 16:58:18] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:18] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:18] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:18] [MASTER] Potential collision detected
+[3-2-2022 16:58:18] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:18] [MASTER] Updating map
+[3-2-2022 16:58:18] [MASTER] Redrawing map
+[3-2-2022 16:58:18] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:19] [drone1] Trajectory set : 10 steps, in the direction 2
+
+[3-2-2022 16:58:19] [MASTER] Checking drone collision
+[3-2-2022 16:58:19] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:19] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:19] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:19] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:19] [MASTER] Potential collision detected
+[3-2-2022 16:58:19] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:19] [MASTER] Updating map
+[3-2-2022 16:58:19] [MASTER] Redrawing map
+[3-2-2022 16:58:19] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:20] [drone1] Trajectory set : 5 steps, in the direction 3
+
+[3-2-2022 16:58:20] [MASTER] Checking drone collision
+[3-2-2022 16:58:20] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:20] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:20] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:20] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:20] [MASTER] Potential collision detected
+[3-2-2022 16:58:20] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:20] [MASTER] Updating map
+[3-2-2022 16:58:20] [MASTER] Redrawing map
+[3-2-2022 16:58:20] [MASTER] Reading from sockets (drones)
+[3-2-2022 16:58:21] [drone1] Trajectory set : 7 steps, in the direction 0
+
+[3-2-2022 16:58:21] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[3-2-2022 16:58:21] [MASTER] Checking drone collision
+[3-2-2022 16:58:21] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:21] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:21] [MASTER] Drone trying to move out of map
+[3-2-2022 16:58:21] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:21] [MASTER] Potential collision detected
+[3-2-2022 16:58:21] [MASTER] Sending MASTER_COL to drone
+[3-2-2022 16:58:21] [MASTER] Updating map
+[3-2-2022 16:58:21] [MASTER] Redrawing map
+[3-2-2022 16:58:21] [MASTER] Reading from sockets (drones)
