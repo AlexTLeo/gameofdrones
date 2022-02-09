@@ -26,10 +26,13 @@
 #define SA struct sockaddr
 #define MINSTEP 3
 #define MAXSTEP 3 //The real maxstep is maxstep + minstep
+
+
 void errorPrompt(int state,char error_msg[])
 {
   if (state < 0){
     perror(error_msg);
+    //write_log(1, msg); 
     exit(EXIT_FAILURE);
   }
 }
@@ -186,12 +189,14 @@ int main()
       // printf("Close successfully..\n");
       if(res==1){
         position(coordinate[0], coordinate[1], trajectory[0], coordinate);
+        //write_log(0, "moving from xx yy to xx yy | battery : -xxx"); 
         fuel --;
         trajectory[1] --;
         break;
       }
       else{
         printf("Permission denied (Attempt: %d)\n", i);
+        //write_log(0, "cannot move to xx yy"); 
         errorPrompt(select(1, NULL, NULL, NULL, &tv), "select failed...");
       }
     }
