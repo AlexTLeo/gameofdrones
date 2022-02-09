@@ -25,5 +25,10 @@ See values.h for communication messages specifications
 ## 21/01
 - drone: able to manage its own power/fuel, sends master "out of fuel" message
 - master: mark drones as landed or not
-<br>
-From 14/01 to 21/01 is a lot of time for objectively really simple additions, so we might start working on improvements in that time period
+## 15/02
+- drone: implement refueling (arbitrarily decide refuel time) by sending master its CURRENT coordinates
+- master: reduce log spam
+- master: if reading a drone's current coordinates being set, assume it is refueling and display it
+- master: add visualization of already explored area
+- master: fix collision issue when drone is beyond x = 40 y = 40
+- drone: add logging
