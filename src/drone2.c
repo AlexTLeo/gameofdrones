@@ -1,4 +1,4 @@
-*/
+/*
   -log file write in same files as master -> Yusuke | [Drone2]: xxxxxxxxxxxxxxxxxxxxxxx log("XXXXXXXXXXXXXXXX")
   -create path planning -> Ebru rand (0, 80) for x and y  (greedy search, A* star)
   -Print/visulize our drone status -> Tachadol 
