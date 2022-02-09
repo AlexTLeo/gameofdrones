@@ -1,3 +1,16 @@
+*/
+  -log file write in same files as master -> Yusuke | [Drone2]: xxxxxxxxxxxxxxxxxxxxxxx log("XXXXXXXXXXXXXXXX")
+  -create path planning -> Ebru rand (0, 80) for x and y  (greedy search, A* star)
+  -Print/visulize our drone status -> Tachadol 
+   ^
+ < D >
+   v  [----Battery-----]
+   
+  Update Fri. 10PM 
+  
+  Sun. night 13/02/22
+  *-.sh file + put some comments
+*/
 #include "../include/values.h"
 #include <netdb.h>
 #include <stdio.h>
@@ -156,6 +169,7 @@ int main()
       // Sending to master
       sleep(4);
       fuel = 500;
+      //Send the same positon to master
     }
     if (trajectory[1]==0){
       randomDir(MAXSTEP, trajectory);
