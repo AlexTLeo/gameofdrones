@@ -181,7 +181,6 @@ int main(int argc, char *argv[]) {
                 
                 printf("Drone0: Writing (%d, %d) to server...\n", position[0], position[1]);
                 fflush(stdout);
-                sleep(1);
                 // Wait for response 
                 n = recv(sockfd, &response, sizeof(response), MSG_WAITALL);
                 if (n < 0) {
