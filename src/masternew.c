@@ -116,11 +116,11 @@ int main (int argc, char *argv[]) {
       int currY1 = droneCoordsCurr[i][1];
 
       // Check if drone is trying to move out of the map
-      if (nextX1 <= 0 || nextY1 <= 0 || nextX1 >= MAP_WIDTH || nextY1 >= MAP_HEIGHT) {
+      if (nextX1 <= 0 || nextY1 <= 0 || nextX1 >= MAP_WIDTH - 1 || nextY1 >= MAP_HEIGHT - 1) {
         // CASE: Moving out of map
         isCollision = true;
-        writeInfoLog(fdlogInfo, "[MASTER] Detected drone trying to move out of map");
-        writeInfoLog(fdlogInfo, "[MASTER] Sending MASTER_COL to drone"); // TODO: print "i"
+        sprintf(temp, "[MASTER] Drone %c trying to move out of map: sending MASTER_COL", i + '0');
+        writeInfoLog(fdlogInfo, temp);
         socketWrite(fdDrone[i], MASTER_COL, sizeof(MASTER_COL), fdlogErr);
         // Set "next coordinates" to be current cell
         nextX1 = currX1;
@@ -170,6 +170,7 @@ int main (int argc, char *argv[]) {
       // For each row
       for (int x = 1; x < MAP_WIDTH-1; x++) {
         // For each column
+        bool isOccupied = false;
         for (int k = 0; k < NUM_DRONES; k++) {
           // For each drone, recieve each drone's next cell
           if (droneCoordsNext[k][0] == x && droneCoordsNext[k][1] == y) {
@@ -183,7 +184,7 @@ int main (int argc, char *argv[]) {
             // Update drone coordinates
             droneCoordsCurr[k][0] = x;
             droneCoordsCurr[k][1] = y;
-          } else {
+          } else if (!isOccupied) {
             // CASE: No drone on cell
             mapFull[x][y] = 0;
           }
