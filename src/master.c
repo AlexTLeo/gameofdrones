@@ -122,6 +122,16 @@ int main (int argc, char *argv[]) {
       int currX1 = droneCoordsCurr[i][0];
       int currY1 = droneCoordsCurr[i][1];
 
+      // Check if any drones are refueling (i.e. requested movement is current cell)
+      if (nextX1 == currX1 && nextY1 == currY1) {
+        // CASE: Refueling
+        writeInfoLog(fdlogInfo, "[MASTER] A drone is refueling");
+        droneIsRefueling[i] = true;
+      } else {
+        // CASE: Not refueling
+        droneIsRefueling[i] = false;
+      }
+
       // Check if drone is trying to move out of the map
       if (nextX1 <= 0 || nextY1 <= 0 || nextX1 >= MAP_WIDTH - 1 || nextY1 >= MAP_HEIGHT - 1) {
         // CASE: Moving out of map
@@ -134,16 +144,6 @@ int main (int argc, char *argv[]) {
         nextY1 = currY1;
         droneCoordsNext[i][0] = currX1;
         droneCoordsNext[i][1] = currY1;
-      }
-
-      // Check if any drones are refueling (i.e. requested movement is current cell)
-      if (nextX1 == currX1 && nextY1 == currY1) {
-        // CASE: Refueling
-        writeInfoLog(fdlogInfo, "[MASTER] A drone is refueling");
-        droneIsRefueling[i] = true;
-      } else {
-        // CASE: Not refueling
-        droneIsRefueling[i] = false;
       }
 
       // Check if any drones are requesting the same cell

@@ -207,3 +207,9 @@ src/master.c:183:32: warning: format ‘%d’ expects a matching ‘int’ argum
 [10-2-2022 15:43:10] (code: 2) [drone 1] unkown response message from master
 [10-2-2022 15:43:30] (code: 2) [drone 1] unkown response message from master
 [10-2-2022 15:43:30] (code: 2) [drone 1] unkown response message from master
+[10-2-2022 15:45:27] (code: 2) [drone 1] unkown response message from master
+[10-2-2022 15:46:38] (code: 2) [drone 1] unkown response message from master
+[10-2-2022 15:46:38] (code: 2) [drone 1] unkown response message from master
+[10-2-2022 15:46:46] (code: 2) [drone 1] unkown response message from master
+[10-2-2022 15:46:46] (code: 2) [drone 1] unkown response message from master
+[10-2-2022 15:47:40] (code: 2) [drone 1] unkown response message from master
