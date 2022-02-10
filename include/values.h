@@ -6,8 +6,8 @@ int coordinatePair[2]; // (x, y)
 /**
 * TCP CODES
 */
-const int MASTER_OK = 1;
-const int MASTER_COL = 0;
+const int MASTER_OK = 1; // OK to move!
+const int MASTER_COL = 0; // potential collision, movement NOT allowed!
 
 const int DRONE_TIMEOUT = 3;
 const int TIMESTEP = 200; // milliseconds
@@ -17,11 +17,11 @@ const int STEPS = 300;
 /**
 * STARTING POSITIONS (TEMPORARY)
 */
-const int START0[] = {0, 0};
-const int START1[] = {40, 0};
-const int START2[] = {0, 80};
-const int START3[] = {40, 80};
-const int START4[] = {20, 40};
+const int START0[2] = {1, 1};
+const int START1[2] = {40, 1};
+const int START2[2] = {1, 80};
+const int START3[2] = {40, 80};
+const int START4[2] = {20, 40};
 
 /*
 Group 0: Michele Pestarino + Federico Sacco

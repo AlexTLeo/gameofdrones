@@ -13,6 +13,29 @@
 #include <sys/wait.h>
 #include <string.h>
 
+char* string1;
+char string2[30];
+char* string3;
+char string4[30];
+char* string5;
+int fdlogInfo;
+
+void log_desired_position(int x, int y){
+    string1 = "[Drone0] Desired position (";
+    sprintf(string2, "%d", x);
+    string3 = ",";
+    sprintf(string4, "%d", y);
+    string5 = ") ";
+    char* log_string = malloc(strlen(string1) + strlen(string2) + strlen(string3) + strlen(string4) + strlen(string5) + 1);
+    // Create string to be written to lof file
+    strcpy(log_string, string1);
+    strcat(log_string, string2);
+    strcat(log_string, string3);
+    strcat(log_string, string4);
+    strcat(log_string, string5);
+    writeInfoLog(fdlogInfo, log_string);
+}
+
 unsigned long mix(unsigned long a, unsigned long b, unsigned long c) {
     a=a-b; a=a-c; a=a^(c >> 13);
     b=b-c; b=b-a; b=b^(a << 8);
@@ -26,10 +49,32 @@ unsigned long mix(unsigned long a, unsigned long b, unsigned long c) {
     return c;
 }
 
-int main(int argc, char *argv[]) {
+int msleep(long msec) {
+    struct timespec ts;
+    int res;
 
+    if (msec < 0)
+    {
+        errno = EINVAL;
+        return -1;
+    }
+
+    ts.tv_sec = msec / 1000;
+    ts.tv_nsec = (msec % 1000) * 1000000;
+
+    do {
+        res = nanosleep(&ts, &ts);
+    } while (res && errno == EINTR);
+
+    return res;
+}
+
+int main(int argc, char *argv[]) {
     // Get starting position
     int position[2] = {START0[0], START0[1]};
+    printf("Drone0: Initial position (%d, %d) \n", position[0], position[1]);
+    fdlogInfo = openInfoLog();
+    writeInfoLog(fdlogInfo, "[Drone0] Starting...");
     // Socket connection
     // Initialize socket file descriptor and variable to check writing to socket
     int sockfd, n;
@@ -64,6 +109,7 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
     // Socket connection done
+    writeInfoLog(fdlogInfo, "[Drone0] Successfully connected");
 
     // Max number of steps in the same direction
     const int same_direction = 5;
@@ -74,97 +120,113 @@ int main(int argc, char *argv[]) {
     // Store old position in case of collisions
     int old_position[2];
     // Intializes random number generator
-    time_t t;
     srand(mix(clock(), time(NULL), getpid()));
-    for (int i = 0; i < STEPS; i++) {
-        // Store old posiiton
-        old_position[0] = position[0];
-        old_position[1] = position[1];
-        // Reset timeout counter
-        timeout = 0;
-        // Choose new direction
-        int direction = rand() % 8;
-        for (int j = 0; j < same_direction; j++) {
-            // Update position
-            if (direction == 0) {
-                // Up 
-                printf("Up ");
-                position[1]++;
-            } else if (direction == 1) {
-                // Up - right
-                printf("Up - right ");
-                position[0]++;
-                position[1]++;
-            } else if (direction == 2) {
-                // Right
-                printf("Right ");
-                position[0]++;
-            } else if (direction == 3) {
-                // Down -right
-                printf("Down - right ");
-                position[0]++;
-                position[1]--;
-            } else if (direction == 4) {
-                // Down
-                printf("Down ");
-                position[1]--;
-            } else if (direction == 5) {
-                // Down - left
-                printf("Down - left ");
-                position[0]--;
-                position[1]--;
-            } else if (direction == 6) {
-                printf("Left ");
-                // Left
-                position[0]--;
-            } else if (direction == 7) {
-                // Up - left
-                printf("Up - left ");
-                position[0]--;
-                position[1]++;
-            }
-            // Send new position to master 
-            n = write(sockfd, position, sizeof(position));
-            if (n < 0) { 
-                perror("ERROR writing to socket");
-                exit(EXIT_FAILURE);
-            }
-            printf("drone0: Writing (%d, %d) to server...\n", position[0], position[1]);
-            fflush(stdout);
-            sleep(1);
-            // Wait for response 
-            n = recv(sockfd, &response, sizeof(response), MSG_WAITALL);
-            if (n < 0) {
-                perror("ERROR reading response from socket\n");
-                exit(EXIT_FAILURE);
-            }
-            printf("drone0: response %d from server\n", response);
-            
-            // If response is collision, then update timeout and check condition on it
-            if (response == MASTER_COL) {
-                timeout++;
-                position[0] = old_position[0];
-                position[1] = old_position[1];
-                if (timeout == DRONE_TIMEOUT) {
-                    // If drone has collided "timeout" times, then change direction
-                    break;
+    while (1) {
+        for (int i = 0; i < STEPS; i++) {
+            // Store old posiiton
+            old_position[0] = position[0];
+            old_position[1] = position[1];
+            // Reset timeout counter
+            timeout = 0;
+            // Choose new direction
+            int direction = rand() % 8;
+            for (int j = 0; j < same_direction; j++) {
+                // Update position
+                if (direction == 0) {
+                    // Up 
+                    printf("Up ");
+                    position[1]++;
+                } else if (direction == 1) {
+                    // Up - right
+                    printf("Up - right ");
+                    position[0]++;
+                    position[1]++;
+                } else if (direction == 2) {
+                    // Right
+                    printf("Right ");
+                    position[0]++;
+                } else if (direction == 3) {
+                    // Down -right
+                    printf("Down - right ");
+                    position[0]++;
+                    position[1]--;
+                } else if (direction == 4) {
+                    // Down
+                    printf("Down ");
+                    position[1]--;
+                } else if (direction == 5) {
+                    // Down - left
+                    printf("Down - left ");
+                    position[0]--;
+                    position[1]--;
+                } else if (direction == 6) {
+                    printf("Left ");
+                    // Left
+                    position[0]--;
+                } else if (direction == 7) {
+                    // Up - left
+                    printf("Up - left ");
+                    position[0]--;
+                    position[1]++;
                 }
-            } else if (response == MASTER_OK) {
-                // No collision found
-                continue;
-            } else {
-                // Invalid response
-                perror("Response not valid");
-                exit(EXIT_FAILURE);
+                // Send new position to master 
+                n = write(sockfd, position, sizeof(position));
+                if (n < 0) { 
+                    perror("ERROR writing to socket");
+                    exit(EXIT_FAILURE);
+                }
+
+                log_desired_position(position[0], position[1]);
+                
+                
+                printf("Drone0: Writing (%d, %d) to server...\n", position[0], position[1]);
+                fflush(stdout);
+                sleep(1);
+                // Wait for response 
+                n = recv(sockfd, &response, sizeof(response), MSG_WAITALL);
+                if (n < 0) {
+                    perror("ERROR reading response from socket\n");
+                    exit(EXIT_FAILURE);
+                }
+                printf("Drone0: response %d from server\n", response);
+                    
+                // If response is collision, then update timeout and check condition on it
+                if (response == MASTER_COL) {
+                    writeInfoLog(fdlogInfo, "[Drone0] Master answered permission denied");
+                    timeout++;
+                    position[0] = old_position[0];
+                    position[1] = old_position[1];
+                    if (timeout == DRONE_TIMEOUT) {
+                        // If drone has collided "timeout" times, then change direction
+                        break;
+                    }
+                } else if (response == MASTER_OK) {
+                    // No collision found
+                    writeInfoLog(fdlogInfo, "[Drone0] Master allows motion");
+                    continue;
+                } else {
+                    // Invalid response
+                    perror("Response not valid");
+                    exit(EXIT_FAILURE);
+                }
             }
+            // Wait before moving again
+            msleep(TIMESTEP);
         }
+        // Landing for refuelling
+        writeInfoLog(fdlogInfo, "[Drone0] Landing for refuelling...");
+        n = write(sockfd, position, sizeof(position));
+        if (n < 0) { 
+            perror("ERROR writing to socket");
+            exit(EXIT_FAILURE);
+        }
+        // Refuelling
+        printf("Drone0: refuelling\n");
+        fflush(stdout);
+        sleep(3);
+        writeInfoLog(fdlogInfo, "[Drone0] Fuel level ok");
     }
-    n = write(sockfd, position, sizeof(position));
-    if (n < 0) { 
-        perror("ERROR writing to socket");
-        exit(EXIT_FAILURE);
-    }
-    printf("drone0: Landing in (%d, %d)...\n", position[0], position[1]);
+    printf("Drone0: Landing in (%d, %d)...\n", position[0], position[1]);
     fflush(stdout); 
     return 0;
 }
