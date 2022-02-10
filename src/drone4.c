@@ -109,7 +109,6 @@ void nextPosition(int direction) {
         y += 1;
     else if (direction == 3 || direction == 4 || direction == 5)
         y -= 1;
-    
 }
 
 /**
@@ -191,7 +190,7 @@ int main(int argc, char * argv[]) {
     y = coordinatePair[1];
 
     int response;
-    
+
     while (power > 0) {
         // Generate a random direction and a random number of steps 
         int direction = randomNumberInt(0, 7);
@@ -204,7 +203,7 @@ int main(int argc, char * argv[]) {
         for (int i = 0; i < steps && power > 0; i++) {
             // Compute the next position coordinates
             nextPosition(direction);
-
+            
             printf("X: %d\nY: %d\n", coordinatePair[0], coordinatePair[1]);
             fflush(stdout);
 
@@ -251,14 +250,16 @@ int main(int argc, char * argv[]) {
             fflush(stdout);
             writeInfoLog(fdlogInfo, "[DRONE 4] Refueling");
 
-            // Send the current coordinates to the Master 
-            if (send(sockfd, &coordinatePair[0], sizeof(int), 0) < 0)
-		        error("[DRONE 4] ERROR sending the coordinate x to the master");
-            if (send(sockfd, &coordinatePair[1], sizeof(int), 0) < 0)
-		        error("[DRONE 4] ERROR sending the coordinate y to the master");
+            while (power < STEPS) {
+                // Send the current coordinates to the Master 
+                if (send(sockfd, &coordinatePair[0], sizeof(int), 0) < 0)
+                    error("[DRONE 4] ERROR sending the coordinate x to the master");
+                if (send(sockfd, &coordinatePair[1], sizeof(int), 0) < 0)
+                    error("[DRONE 4] ERROR sending the coordinate y to the master");
+                power += 10;
 
-            sleep(5);
-            power = STEPS;
+                usleep(TIMESTEP * 1000); // microseconds
+            }
         }
     }
 
