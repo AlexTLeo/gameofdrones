@@ -220,14 +220,22 @@ void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]) {
           printf(" ");
           break;
         case -2: // occupied, wall
-          printf("#");
+          terminalColor(47, 1);
+          printf(" ");
+          terminalColor(0, 0);
           break;
         case -3: // occupied, refueling
-          printf("R") ;
+          terminalColor(43, 1);
+          terminalColor(30, 1);
+          printf("R");
+          terminalColor(0, 0);
           break;
         default: // occupied, flying
         // NB: only works if no more than 10 drones
+          terminalColor(42, 1);
+          terminalColor(30, 1);
           printf("%d", mapFull[x][y]);
+          terminalColor(0, 0);
           break;
       }
     }

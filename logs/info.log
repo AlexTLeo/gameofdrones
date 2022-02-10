@@ -9246,3 +9246,1351 @@
 [10-2-2022 15:23:54] [Drone0] Master allows motion
 [10-2-2022 15:23:54] [Drone0] Desired position (10,1) 
 [10-2-2022 15:23:54] [Drone0] Master allows motion
+[10-2-2022 15:30:19] [MASTER] Creating sockets
+[10-2-2022 15:30:19] [MASTER] Configuring sockets
+[10-2-2022 15:30:19] [MASTER] Binding sockets
+[10-2-2022 15:30:19] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:30:19] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:30:19] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:30:19] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:30:19] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:30:19] [MASTER] Listening on sockets
+[10-2-2022 15:30:19] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:30:19] [Drone0] Starting...
+[10-2-2022 15:30:19] [Drone0] Successfully connected
+[10-2-2022 15:30:19] [Drone0] Desired position (4,2) 
+[10-2-2022 15:30:20] [drone1] Trajectory set : 7 steps, in the direction 7
+
+[10-2-2022 15:30:20] [DRONE3] Start to fly
+[10-2-2022 15:30:20] [DRONE3] Send coordinates
+[10-2-2022 15:30:20] [DRONE3] Receive master response 
+[10-2-2022 15:30:20] [DRONE 4] Running
+[10-2-2022 15:30:20] [DRONE 4] Connection established
+[10-2-2022 15:30:20] [MASTER] Master program started
+[10-2-2022 15:30:20] [MASTER] Checking drone collision
+[10-2-2022 15:30:20] [Drone0] Master allows motion
+[10-2-2022 15:30:20] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:20] [Drone0] Desired position (5,1) 
+[10-2-2022 15:30:20] [MASTER] A drone is refueling
+[10-2-2022 15:30:20] [DRONE3] Send coordinates
+[10-2-2022 15:30:20] [DRONE3] Receive master response 
+[10-2-2022 15:30:20] [MASTER] Checking drone collision
+[10-2-2022 15:30:20] [Drone0] Master allows motion
+[10-2-2022 15:30:20] [Drone0] Desired position (6,0) 
+[10-2-2022 15:30:20] [DRONE3] Send coordinates
+[10-2-2022 15:30:20] [DRONE3] Receive master response 
+[10-2-2022 15:30:21] [MASTER] Checking drone collision
+[10-2-2022 15:30:21] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:21] [MASTER] A drone is refueling
+[10-2-2022 15:30:21] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:21] [Drone0] Master answered permission denied
+[10-2-2022 15:30:21] [MASTER] A drone is refueling
+[10-2-2022 15:30:21] [Drone0] Desired position (4,2) 
+[10-2-2022 15:30:21] [DRONE3] Send coordinates
+[10-2-2022 15:30:21] [DRONE3] Receive master response 
+[10-2-2022 15:30:21] [MASTER] Checking drone collision
+[10-2-2022 15:30:21] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:21] [MASTER] A drone is refueling
+[10-2-2022 15:30:21] [Drone0] Master allows motion
+[10-2-2022 15:30:21] [Drone0] Desired position (5,1) 
+[10-2-2022 15:30:21] [DRONE3] Send coordinates
+[10-2-2022 15:30:21] [DRONE3] Receive master response 
+[10-2-2022 15:30:21] [MASTER] Checking drone collision
+[10-2-2022 15:30:21] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:21] [MASTER] A drone is refueling
+[10-2-2022 15:30:21] [Drone0] Master allows motion
+[10-2-2022 15:30:21] [drone1] Trajectory set : 8 steps, in the direction 6
+
+[10-2-2022 15:30:21] [DRONE3] Send coordinates
+[10-2-2022 15:30:21] [DRONE3] Receive master response 
+[10-2-2022 15:30:21] [Drone0] Desired position (6,1) 
+[10-2-2022 15:30:21] [MASTER] Checking drone collision
+[10-2-2022 15:30:21] [Drone0] Master allows motion
+[10-2-2022 15:30:21] [Drone0] Desired position (7,1) 
+[10-2-2022 15:30:21] [DRONE3] Send coordinates
+[10-2-2022 15:30:21] [DRONE3] Receive master response 
+[10-2-2022 15:30:21] [MASTER] Checking drone collision
+[10-2-2022 15:30:21] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:21] [MASTER] A drone is refueling
+[10-2-2022 15:30:21] [Drone0] Master allows motion
+[10-2-2022 15:30:21] [Drone0] Desired position (8,1) 
+[10-2-2022 15:30:21] [DRONE3] Send coordinates
+[10-2-2022 15:30:21] [DRONE3] Receive master response 
+[10-2-2022 15:30:22] [MASTER] Checking drone collision
+[10-2-2022 15:30:22] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:22] [MASTER] A drone is refueling
+[10-2-2022 15:30:22] [Drone0] Master allows motion
+[10-2-2022 15:30:22] [Drone0] Desired position (9,1) 
+[10-2-2022 15:30:22] [DRONE3] Send coordinates
+[10-2-2022 15:30:22] [DRONE3] Receive master response 
+[10-2-2022 15:30:22] [MASTER] Checking drone collision
+[10-2-2022 15:30:22] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:22] [MASTER] A drone is refueling
+[10-2-2022 15:30:22] [Drone0] Master allows motion
+[10-2-2022 15:30:22] [drone1] Trajectory set : 7 steps, in the direction 3
+
+[10-2-2022 15:30:22] [Drone0] Desired position (10,1) 
+[10-2-2022 15:30:22] [DRONE3] Send coordinates
+[10-2-2022 15:30:22] [DRONE3] Receive master response 
+[10-2-2022 15:30:22] [MASTER] Checking drone collision
+[10-2-2022 15:30:22] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:22] [MASTER] A drone is refueling
+[10-2-2022 15:30:22] [Drone0] Master allows motion
+[10-2-2022 15:30:22] [DRONE3] Send coordinates
+[10-2-2022 15:30:22] [DRONE3] Receive master response 
+[10-2-2022 15:30:22] [Drone0] Desired position (11,2) 
+[10-2-2022 15:30:22] [MASTER] Checking drone collision
+[10-2-2022 15:30:22] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:22] [MASTER] A drone is refueling
+[10-2-2022 15:30:22] [Drone0] Master allows motion
+[10-2-2022 15:30:22] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:22] [Drone0] Desired position (12,3) 
+[10-2-2022 15:30:22] [MASTER] A drone is refueling
+[10-2-2022 15:30:22] [DRONE3] Send coordinates
+[10-2-2022 15:30:22] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:22] [DRONE3] Receive master response 
+[10-2-2022 15:30:24] [Drone0] Master allows motion
+[10-2-2022 15:30:24] [DRONE3] Send coordinates
+[10-2-2022 15:30:24] [Drone0] Desired position (13,4) 
+[10-2-2022 15:30:24] [Drone0] Master allows motion
+[10-2-2022 15:30:27] [MASTER] Creating sockets
+[10-2-2022 15:30:27] [MASTER] Configuring sockets
+[10-2-2022 15:30:27] [MASTER] Binding sockets
+[10-2-2022 15:30:27] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:30:27] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:30:27] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:30:27] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:30:27] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:30:27] [MASTER] Listening on sockets
+[10-2-2022 15:30:27] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:30:28] [Drone0] Starting...
+[10-2-2022 15:30:28] [Drone0] Successfully connected
+[10-2-2022 15:30:28] [Drone0] Desired position (3,2) 
+[10-2-2022 15:30:28] [drone1] Trajectory set : 9 steps, in the direction 2
+
+[10-2-2022 15:30:28] [DRONE3] Start to fly
+[10-2-2022 15:30:28] [DRONE3] Send coordinates
+[10-2-2022 15:30:28] [DRONE3] Receive master response 
+[10-2-2022 15:30:28] [DRONE 4] Running
+[10-2-2022 15:30:28] [DRONE 4] Connection established
+[10-2-2022 15:30:28] [MASTER] Master program started
+[10-2-2022 15:30:28] [MASTER] Checking drone collision
+[10-2-2022 15:30:28] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:28] [Drone0] Master allows motion
+[10-2-2022 15:30:28] [MASTER] A drone is refueling
+[10-2-2022 15:30:28] [DRONE3] Send coordinates
+[10-2-2022 15:30:28] [Drone0] Desired position (3,1) 
+[10-2-2022 15:30:28] [DRONE3] Receive master response 
+[10-2-2022 15:30:29] [MASTER] Checking drone collision
+[10-2-2022 15:30:29] [Drone0] Master allows motion
+[10-2-2022 15:30:29] [Drone0] Desired position (3,0) 
+[10-2-2022 15:30:29] [DRONE3] Send coordinates
+[10-2-2022 15:30:29] [DRONE3] Receive master response 
+[10-2-2022 15:30:29] [MASTER] Checking drone collision
+[10-2-2022 15:30:29] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:29] [MASTER] A drone is refueling
+[10-2-2022 15:30:29] [Drone0] Master answered permission denied
+[10-2-2022 15:30:29] [Drone0] Desired position (3,2) 
+[10-2-2022 15:30:29] [DRONE3] Send coordinates
+[10-2-2022 15:30:29] [DRONE3] Receive master response 
+[10-2-2022 15:30:29] [MASTER] Checking drone collision
+[10-2-2022 15:30:29] [Drone0] Master allows motion
+[10-2-2022 15:30:29] [Drone0] Desired position (3,1) 
+[10-2-2022 15:30:29] [DRONE3] Send coordinates
+[10-2-2022 15:30:29] [DRONE3] Receive master response 
+[10-2-2022 15:30:29] [MASTER] Checking drone collision
+[10-2-2022 15:30:29] [Drone0] Master allows motion
+[10-2-2022 15:30:29] [DRONE3] Send coordinates
+[10-2-2022 15:30:29] [DRONE3] Receive master response 
+[10-2-2022 15:30:29] [Drone0] Desired position (4,2) 
+[10-2-2022 15:30:29] [MASTER] Checking drone collision
+[10-2-2022 15:30:29] [Drone0] Master allows motion
+[10-2-2022 15:30:29] [DRONE3] Send coordinates
+[10-2-2022 15:30:29] [Drone0] Desired position (5,3) 
+[10-2-2022 15:30:29] [DRONE3] Receive master response 
+[10-2-2022 15:30:30] [MASTER] Checking drone collision
+[10-2-2022 15:30:30] [Drone0] Master allows motion
+[10-2-2022 15:30:30] [DRONE3] Send coordinates
+[10-2-2022 15:30:30] [Drone0] Desired position (6,4) 
+[10-2-2022 15:30:30] [DRONE3] Receive master response 
+[10-2-2022 15:30:30] [MASTER] Checking drone collision
+[10-2-2022 15:30:30] [Drone0] Master allows motion
+[10-2-2022 15:30:30] [Drone0] Desired position (7,5) 
+[10-2-2022 15:30:30] [DRONE3] Send coordinates
+[10-2-2022 15:30:30] [DRONE3] Receive master response 
+[10-2-2022 15:30:30] [MASTER] Checking drone collision
+[10-2-2022 15:30:30] [Drone0] Master allows motion
+[10-2-2022 15:30:30] [drone1] Trajectory set : 8 steps, in the direction 1
+
+[10-2-2022 15:30:30] [DRONE3] Send coordinates
+[10-2-2022 15:30:30] [Drone0] Desired position (8,6) 
+[10-2-2022 15:30:30] [DRONE3] Receive master response 
+[10-2-2022 15:30:30] [MASTER] Checking drone collision
+[10-2-2022 15:30:30] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:30] [Drone0] Master allows motion
+[10-2-2022 15:30:30] [MASTER] A drone is refueling
+[10-2-2022 15:30:30] [DRONE3] Send coordinates
+[10-2-2022 15:30:30] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:30] [DRONE3] Receive master response 
+[10-2-2022 15:30:31] [Drone0] Desired position (7,5) 
+[10-2-2022 15:30:33] [MASTER] Checking drone collision
+[10-2-2022 15:30:33] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:33] [Drone0] Master allows motion
+[10-2-2022 15:30:33] [MASTER] A drone is refueling
+[10-2-2022 15:30:33] [DRONE3] Send coordinates
+[10-2-2022 15:30:33] [Drone0] Desired position (6,4) 
+[10-2-2022 15:30:33] [MASTER] A drone is refueling
+[10-2-2022 15:30:33] [DRONE3] Receive master response 
+[10-2-2022 15:30:34] [MASTER] Checking drone collision
+[10-2-2022 15:30:34] [Drone0] Master allows motion
+[10-2-2022 15:30:34] [DRONE3] Send coordinates
+[10-2-2022 15:30:34] [Drone0] Desired position (5,3) 
+[10-2-2022 15:30:34] [DRONE3] Receive master response 
+[10-2-2022 15:30:34] [MASTER] Checking drone collision
+[10-2-2022 15:30:34] [Drone0] Master allows motion
+[10-2-2022 15:30:34] [DRONE3] Send coordinates
+[10-2-2022 15:30:34] [Drone0] Desired position (4,2) 
+[10-2-2022 15:30:34] [DRONE3] Receive master response 
+[10-2-2022 15:30:34] [MASTER] Checking drone collision
+[10-2-2022 15:30:34] [Drone0] Master allows motion
+[10-2-2022 15:30:34] [DRONE3] Send coordinates
+[10-2-2022 15:30:34] [Drone0] Desired position (3,1) 
+[10-2-2022 15:30:34] [DRONE3] Receive master response 
+[10-2-2022 15:30:34] [MASTER] Checking drone collision
+[10-2-2022 15:30:34] [Drone0] Master allows motion
+[10-2-2022 15:30:34] [DRONE3] Send coordinates
+[10-2-2022 15:30:34] [DRONE3] Receive master response 
+[10-2-2022 15:30:34] [Drone0] Desired position (4,0) 
+[10-2-2022 15:30:34] [MASTER] Checking drone collision
+[10-2-2022 15:30:34] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:34] [MASTER] A drone is refueling
+[10-2-2022 15:30:34] [Drone0] Master answered permission denied
+[10-2-2022 15:30:34] [Drone0] Desired position (4,0) 
+[10-2-2022 15:30:34] [DRONE3] Send coordinates
+[10-2-2022 15:30:34] [DRONE3] Receive master response 
+[10-2-2022 15:30:35] [MASTER] Checking drone collision
+[10-2-2022 15:30:35] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:35] [MASTER] A drone is refueling
+[10-2-2022 15:30:35] [Drone0] Master answered permission denied
+[10-2-2022 15:30:35] [Drone0] Desired position (4,0) 
+[10-2-2022 15:30:35] [drone1] Trajectory set : 8 steps, in the direction 6
+
+[10-2-2022 15:30:35] [DRONE3] Send coordinates
+[10-2-2022 15:30:35] [DRONE3] Receive master response 
+[10-2-2022 15:30:35] [MASTER] Checking drone collision
+[10-2-2022 15:30:35] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:35] [MASTER] A drone is refueling
+[10-2-2022 15:30:35] [Drone0] Master answered permission denied
+[10-2-2022 15:30:35] [DRONE3] Send coordinates
+[10-2-2022 15:30:35] [DRONE3] Receive master response 
+[10-2-2022 15:30:35] [Drone0] Desired position (3,0) 
+[10-2-2022 15:30:35] [MASTER] Checking drone collision
+[10-2-2022 15:30:35] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:35] [MASTER] A drone is refueling
+[10-2-2022 15:30:35] [Drone0] Master answered permission denied
+[10-2-2022 15:30:35] [Drone0] Desired position (3,0) 
+[10-2-2022 15:30:35] [DRONE3] Send coordinates
+[10-2-2022 15:30:35] [DRONE3] Receive master response 
+[10-2-2022 15:30:35] [MASTER] Checking drone collision
+[10-2-2022 15:30:35] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:35] [MASTER] A drone is refueling
+[10-2-2022 15:30:35] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:35] [Drone0] Master answered permission denied
+[10-2-2022 15:30:35] [MASTER] A drone is refueling
+[10-2-2022 15:30:35] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:35] [Drone0] Desired position (3,0) 
+[10-2-2022 15:30:35] [DRONE3] Send coordinates
+[10-2-2022 15:30:35] [DRONE3] Receive master response 
+[10-2-2022 15:30:38] [MASTER] Checking drone collision
+[10-2-2022 15:30:38] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:38] [MASTER] A drone is refueling
+[10-2-2022 15:30:38] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:38] [Drone0] Master answered permission denied
+[10-2-2022 15:30:38] [MASTER] A drone is refueling
+[10-2-2022 15:30:38] [DRONE3] Send coordinates
+[10-2-2022 15:30:38] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:38] [MASTER] A drone is refueling
+[10-2-2022 15:30:38] [DRONE3] Receive master response 
+[10-2-2022 15:30:38] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:39] [Drone0] Desired position (4,1) 
+[10-2-2022 15:30:41] [MASTER] Checking drone collision
+[10-2-2022 15:30:41] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:41] [Drone0] Master allows motion
+[10-2-2022 15:30:41] [MASTER] A drone is refueling
+[10-2-2022 15:30:41] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:41] [Drone0] Desired position (5,1) 
+[10-2-2022 15:30:41] [DRONE3] Send coordinates
+[10-2-2022 15:30:41] [DRONE3] Receive master response 
+[10-2-2022 15:30:44] [MASTER] Checking drone collision
+[10-2-2022 15:30:44] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:44] [Drone0] Master allows motion
+[10-2-2022 15:30:44] [MASTER] A drone is refueling
+[10-2-2022 15:30:44] [Drone0] Desired position (6,1) 
+[10-2-2022 15:30:44] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:44] [DRONE3] Send coordinates
+[10-2-2022 15:30:44] [DRONE3] Receive master response 
+[10-2-2022 15:30:47] [MASTER] Checking drone collision
+[10-2-2022 15:30:47] [Drone0] Master allows motion
+[10-2-2022 15:30:47] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:30:47] [Drone0] Desired position (7,1) 
+[10-2-2022 15:30:47] [MASTER] A drone is refueling
+[10-2-2022 15:30:47] [DRONE3] Send coordinates
+[10-2-2022 15:30:47] [DRONE 4] Movement not allowed
+[10-2-2022 15:30:47] [DRONE3] Receive master response 
+[10-2-2022 15:30:49] [Drone0] Master allows motion
+[10-2-2022 15:30:49] [DRONE3] Send coordinates
+[10-2-2022 15:30:49] [Drone0] Desired position (8,1) 
+[10-2-2022 15:30:49] [Drone0] Master allows motion
+[10-2-2022 15:30:49] [drone1] Trajectory set : 8 steps, in the direction 7
+
+[10-2-2022 15:31:1] [MASTER] Creating sockets
+[10-2-2022 15:31:1] [MASTER] Configuring sockets
+[10-2-2022 15:31:1] [MASTER] Binding sockets
+[10-2-2022 15:31:1] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:31:1] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:31:1] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:31:1] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:31:1] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:31:1] [MASTER] Listening on sockets
+[10-2-2022 15:31:1] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:31:1] [Drone0] Starting...
+[10-2-2022 15:31:1] [Drone0] Successfully connected
+[10-2-2022 15:31:1] [Drone0] Desired position (3,2) 
+[10-2-2022 15:31:1] [drone1] Trajectory set : 6 steps, in the direction 7
+
+[10-2-2022 15:31:1] [DRONE3] Start to fly
+[10-2-2022 15:31:1] [DRONE3] Send coordinates
+[10-2-2022 15:31:1] [DRONE3] Receive master response 
+[10-2-2022 15:31:2] [DRONE 4] Running
+[10-2-2022 15:31:2] [DRONE 4] Connection established
+[10-2-2022 15:31:2] [MASTER] Master program started
+[10-2-2022 15:31:2] [MASTER] Checking drone collision
+[10-2-2022 15:31:2] [Drone0] Master allows motion
+[10-2-2022 15:31:2] [Drone0] Desired position (3,1) 
+[10-2-2022 15:31:2] [DRONE3] Send coordinates
+[10-2-2022 15:31:2] [DRONE3] Receive master response 
+[10-2-2022 15:31:2] [MASTER] Checking drone collision
+[10-2-2022 15:31:2] [Drone0] Master allows motion
+[10-2-2022 15:31:2] [Drone0] Desired position (3,0) 
+[10-2-2022 15:31:2] [DRONE3] Send coordinates
+[10-2-2022 15:31:2] [DRONE3] Receive master response 
+[10-2-2022 15:31:2] [MASTER] Checking drone collision
+[10-2-2022 15:31:2] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:31:2] [MASTER] A drone is refueling
+[10-2-2022 15:31:2] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:31:2] [Drone0] Master answered permission denied
+[10-2-2022 15:31:2] [MASTER] A drone is refueling
+[10-2-2022 15:31:2] [Drone0] Desired position (3,2) 
+[10-2-2022 15:31:2] [DRONE3] Send coordinates
+[10-2-2022 15:31:2] [DRONE3] Receive master response 
+[10-2-2022 15:31:2] [MASTER] Checking drone collision
+[10-2-2022 15:31:2] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:31:2] [Drone0] Master allows motion
+[10-2-2022 15:31:2] [MASTER] A drone is refueling
+[10-2-2022 15:31:2] [Drone0] Desired position (3,1) 
+[10-2-2022 15:31:2] [DRONE3] Send coordinates
+[10-2-2022 15:31:2] [DRONE3] Receive master response 
+[10-2-2022 15:31:3] [MASTER] Checking drone collision
+[10-2-2022 15:31:3] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:31:3] [MASTER] A drone is refueling
+[10-2-2022 15:31:3] [Drone0] Master allows motion
+[10-2-2022 15:31:3] [drone1] Trajectory set : 8 steps, in the direction 0
+
+[10-2-2022 15:31:3] [DRONE3] Send coordinates
+[10-2-2022 15:31:3] [DRONE3] Receive master response 
+[10-2-2022 15:31:3] [Drone0] Desired position (3,2) 
+[10-2-2022 15:31:3] [MASTER] Checking drone collision
+[10-2-2022 15:31:3] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:31:3] [Drone0] Master allows motion
+[10-2-2022 15:31:3] [MASTER] A drone is refueling
+[10-2-2022 15:31:3] [Drone0] Desired position (3,3) 
+[10-2-2022 15:31:3] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:31:3] [MASTER] A drone is refueling
+[10-2-2022 15:31:3] [DRONE 4] Movement not allowed
+[10-2-2022 15:31:3] [DRONE3] Send coordinates
+[10-2-2022 15:31:3] [DRONE3] Receive master response 
+[10-2-2022 15:31:4] [Drone0] Master allows motion
+[10-2-2022 15:31:4] [Drone0] Desired position (3,4) 
+[10-2-2022 15:31:4] [Drone0] Master allows motion
+[10-2-2022 15:31:4] [DRONE3] Send coordinates
+[10-2-2022 15:37:20] [MASTER] Creating sockets
+[10-2-2022 15:37:20] [MASTER] Configuring sockets
+[10-2-2022 15:37:20] [MASTER] Binding sockets
+[10-2-2022 15:37:20] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:37:20] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:37:20] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:37:20] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:37:20] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:37:20] [MASTER] Listening on sockets
+[10-2-2022 15:37:20] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:37:20] [Drone0] Starting...
+[10-2-2022 15:37:20] [Drone0] Successfully connected
+[10-2-2022 15:37:20] [Drone0] Desired position (2,2) 
+[10-2-2022 15:37:20] [drone1] Trajectory set : 10 steps, in the direction 0
+
+[10-2-2022 15:37:21] [DRONE3] Start to fly
+[10-2-2022 15:37:21] [DRONE3] Send coordinates
+[10-2-2022 15:37:21] [DRONE3] Receive master response 
+[10-2-2022 15:37:21] [DRONE 4] Running
+[10-2-2022 15:37:21] [DRONE 4] Connection established
+[10-2-2022 15:37:21] [MASTER] Master program started
+[10-2-2022 15:37:21] [MASTER] Checking drone collision
+[10-2-2022 15:37:21] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:21] [Drone0] Master allows motion
+[10-2-2022 15:37:21] [DRONE3] Send coordinates
+[10-2-2022 15:37:21] [MASTER] A drone is refueling
+[10-2-2022 15:37:21] [Drone0] Desired position (1,1) 
+[10-2-2022 15:37:21] [DRONE3] Receive master response 
+[10-2-2022 15:37:21] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:21] [MASTER] A drone is refueling
+[10-2-2022 15:37:21] [MASTER] Potential collision detected
+[10-2-2022 15:37:21] [MASTER] Sending MASTER_COL to drone
+[10-2-2022 15:37:21] [DRONE 4] Movement not allowed
+[10-2-2022 15:37:24] [DRONE 4] Movement not allowed
+[10-2-2022 15:37:24] [MASTER] Checking drone collision
+[10-2-2022 15:37:24] [Drone0] Master allows motion
+[10-2-2022 15:37:24] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:24] [Drone0] Desired position (0,0) 
+[10-2-2022 15:37:24] [MASTER] A drone is refueling
+[10-2-2022 15:37:24] [DRONE3] Send coordinates
+[10-2-2022 15:37:24] [DRONE3] Receive master response 
+[10-2-2022 15:37:24] [DRONE3] Send coordinates
+[10-2-2022 15:37:24] [Drone0] Master allows motion
+[10-2-2022 15:37:24] [Drone0] Desired position (-1,-1) 
+[10-2-2022 15:37:24] [Drone0] Master allows motion
+[10-2-2022 15:37:32] [MASTER] Creating sockets
+[10-2-2022 15:37:32] [MASTER] Configuring sockets
+[10-2-2022 15:37:32] [MASTER] Binding sockets
+[10-2-2022 15:37:32] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:37:32] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:37:32] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:37:32] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:37:32] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:37:32] [MASTER] Listening on sockets
+[10-2-2022 15:37:32] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:37:32] [Drone0] Starting...
+[10-2-2022 15:37:32] [Drone0] Successfully connected
+[10-2-2022 15:37:32] [Drone0] Desired position (3,4) 
+[10-2-2022 15:37:33] [drone1] Trajectory set : 4 steps, in the direction 3
+
+[10-2-2022 15:37:33] [DRONE3] Start to fly
+[10-2-2022 15:37:33] [DRONE3] Send coordinates
+[10-2-2022 15:37:33] [DRONE3] Receive master response 
+[10-2-2022 15:37:33] [DRONE 4] Running
+[10-2-2022 15:37:33] [DRONE 4] Connection established
+[10-2-2022 15:37:33] [MASTER] Master program started
+[10-2-2022 15:37:33] [MASTER] Checking drone collision
+[10-2-2022 15:37:33] [Drone0] Master allows motion
+[10-2-2022 15:37:33] [Drone0] Desired position (3,5) 
+[10-2-2022 15:37:33] [DRONE3] Send coordinates
+[10-2-2022 15:37:33] [DRONE3] Receive master response 
+[10-2-2022 15:37:33] [MASTER] Checking drone collision
+[10-2-2022 15:37:33] [Drone0] Master allows motion
+[10-2-2022 15:37:33] [Drone0] Desired position (3,6) 
+[10-2-2022 15:37:33] [DRONE3] Send coordinates
+[10-2-2022 15:37:33] [DRONE3] Receive master response 
+[10-2-2022 15:37:34] [MASTER] Checking drone collision
+[10-2-2022 15:37:34] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:34] [MASTER] A drone is refueling
+[10-2-2022 15:37:34] [Drone0] Master allows motion
+[10-2-2022 15:37:34] [Drone0] Desired position (3,7) 
+[10-2-2022 15:37:34] [DRONE3] Send coordinates
+[10-2-2022 15:37:34] [DRONE3] Receive master response 
+[10-2-2022 15:37:34] [MASTER] Checking drone collision
+[10-2-2022 15:37:34] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:34] [Drone0] Master allows motion
+[10-2-2022 15:37:34] [MASTER] A drone is refueling
+[10-2-2022 15:37:34] [Drone0] Desired position (3,8) 
+[10-2-2022 15:37:34] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[10-2-2022 15:37:34] [DRONE3] Send coordinates
+[10-2-2022 15:37:34] [DRONE3] Receive master response 
+[10-2-2022 15:37:34] [MASTER] Checking drone collision
+[10-2-2022 15:37:34] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:34] [MASTER] A drone is refueling
+[10-2-2022 15:37:34] [Drone0] Master allows motion
+[10-2-2022 15:37:34] [DRONE3] Send coordinates
+[10-2-2022 15:37:34] [DRONE3] Receive master response 
+[10-2-2022 15:37:34] [Drone0] Desired position (4,9) 
+[10-2-2022 15:37:34] [MASTER] Checking drone collision
+[10-2-2022 15:37:34] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:34] [MASTER] A drone is refueling
+[10-2-2022 15:37:34] [Drone0] Master allows motion
+[10-2-2022 15:37:34] [Drone0] Desired position (5,10) 
+[10-2-2022 15:37:34] [DRONE3] Send coordinates
+[10-2-2022 15:37:34] [DRONE3] Receive master response 
+[10-2-2022 15:37:34] [MASTER] Checking drone collision
+[10-2-2022 15:37:34] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:34] [MASTER] A drone is refueling
+[10-2-2022 15:37:34] [Drone0] Master allows motion
+[10-2-2022 15:37:34] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:34] [drone1] Trajectory set : 9 steps, in the direction 6
+
+[10-2-2022 15:37:34] [MASTER] A drone is refueling
+[10-2-2022 15:37:34] [Drone0] Desired position (6,11) 
+[10-2-2022 15:37:34] [DRONE3] Send coordinates
+[10-2-2022 15:37:34] [DRONE3] Receive master response 
+[10-2-2022 15:37:35] [MASTER] Checking drone collision
+[10-2-2022 15:37:35] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:35] [MASTER] A drone is refueling
+[10-2-2022 15:37:35] [DRONE3] Send coordinates
+[10-2-2022 15:37:35] [Drone0] Master allows motion
+[10-2-2022 15:37:35] [DRONE3] Receive master response 
+[10-2-2022 15:37:35] [Drone0] Desired position (7,12) 
+[10-2-2022 15:37:35] [MASTER] Checking drone collision
+[10-2-2022 15:37:35] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:37:35] [Drone0] Master allows motion
+[10-2-2022 15:37:35] [MASTER] A drone is refueling
+[10-2-2022 15:37:35] [Drone0] Desired position (8,13) 
+[10-2-2022 15:37:35] [DRONE3] Send coordinates
+[10-2-2022 15:37:35] [DRONE3] Receive master response 
+[10-2-2022 15:37:35] [DRONE3] Send coordinates
+[10-2-2022 15:37:35] [Drone0] Master allows motion
+[10-2-2022 15:37:35] [Drone0] Desired position (9,13) 
+[10-2-2022 15:37:35] [Drone0] Master allows motion
+[10-2-2022 15:40:49] [MASTER] Creating sockets
+[10-2-2022 15:40:49] [MASTER] Configuring sockets
+[10-2-2022 15:40:49] [MASTER] Binding sockets
+[10-2-2022 15:40:49] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:40:49] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:40:49] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:40:49] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:40:49] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:40:49] [MASTER] Listening on sockets
+[10-2-2022 15:40:49] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:40:49] [Drone0] Starting...
+[10-2-2022 15:40:49] [Drone0] Successfully connected
+[10-2-2022 15:40:49] [Drone0] Desired position (4,3) 
+[10-2-2022 15:40:49] [drone1] Trajectory set : 10 steps, in the direction 6
+
+[10-2-2022 15:40:49] [DRONE3] Start to fly
+[10-2-2022 15:40:49] [DRONE3] Send coordinates
+[10-2-2022 15:40:49] [DRONE3] Receive master response 
+[10-2-2022 15:40:50] [DRONE 4] Running
+[10-2-2022 15:40:50] [DRONE 4] Connection established
+[10-2-2022 15:40:50] [MASTER] Master program started
+[10-2-2022 15:40:50] [MASTER] Checking drone collision
+[10-2-2022 15:40:50] [Drone0] Master allows motion
+[10-2-2022 15:40:50] [Drone0] Desired position (5,3) 
+[10-2-2022 15:40:50] [DRONE3] Send coordinates
+[10-2-2022 15:40:50] [DRONE3] Receive master response 
+[10-2-2022 15:40:50] [MASTER] Checking drone collision
+[10-2-2022 15:40:50] [Drone0] Master allows motion
+[10-2-2022 15:40:50] [Drone0] Desired position (6,3) 
+[10-2-2022 15:40:50] [DRONE3] Send coordinates
+[10-2-2022 15:40:50] [DRONE3] Receive master response 
+[10-2-2022 15:40:50] [MASTER] Checking drone collision
+[10-2-2022 15:40:50] [Drone0] Master allows motion
+[10-2-2022 15:40:50] [Drone0] Desired position (7,3) 
+[10-2-2022 15:40:50] [DRONE3] Send coordinates
+[10-2-2022 15:40:50] [DRONE3] Receive master response 
+[10-2-2022 15:40:50] [MASTER] Checking drone collision
+[10-2-2022 15:40:50] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:50] [MASTER] A drone is refueling
+[10-2-2022 15:40:50] [Drone0] Master allows motion
+[10-2-2022 15:40:50] [Drone0] Desired position (8,3) 
+[10-2-2022 15:40:50] [DRONE3] Send coordinates
+[10-2-2022 15:40:50] [DRONE3] Receive master response 
+[10-2-2022 15:40:50] [MASTER] Checking drone collision
+[10-2-2022 15:40:50] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:50] [MASTER] A drone is refueling
+[10-2-2022 15:40:50] [Drone0] Master allows motion
+[10-2-2022 15:40:50] [DRONE3] Send coordinates
+[10-2-2022 15:40:50] [DRONE3] Receive master response 
+[10-2-2022 15:40:51] [Drone0] Desired position (8,4) 
+[10-2-2022 15:40:51] [MASTER] Checking drone collision
+[10-2-2022 15:40:51] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:51] [MASTER] A drone is refueling
+[10-2-2022 15:40:51] [Drone0] Master allows motion
+[10-2-2022 15:40:51] [drone1] Trajectory set : 4 steps, in the direction 4
+
+[10-2-2022 15:40:51] [DRONE3] Send coordinates
+[10-2-2022 15:40:51] [Drone0] Desired position (8,5) 
+[10-2-2022 15:40:51] [DRONE3] Receive master response 
+[10-2-2022 15:40:51] [MASTER] Checking drone collision
+[10-2-2022 15:40:51] [Drone0] Master allows motion
+[10-2-2022 15:40:51] [DRONE3] Send coordinates
+[10-2-2022 15:40:51] [Drone0] Desired position (8,6) 
+[10-2-2022 15:40:51] [DRONE3] Receive master response 
+[10-2-2022 15:40:51] [MASTER] Checking drone collision
+[10-2-2022 15:40:51] [Drone0] Master allows motion
+[10-2-2022 15:40:51] [Drone0] Desired position (8,7) 
+[10-2-2022 15:40:51] [DRONE3] Send coordinates
+[10-2-2022 15:40:51] [DRONE3] Receive master response 
+[10-2-2022 15:40:51] [MASTER] Checking drone collision
+[10-2-2022 15:40:51] [Drone0] Master allows motion
+[10-2-2022 15:40:51] [Drone0] Desired position (8,8) 
+[10-2-2022 15:40:51] [DRONE3] Send coordinates
+[10-2-2022 15:40:51] [DRONE3] Receive master response 
+[10-2-2022 15:40:51] [MASTER] Checking drone collision
+[10-2-2022 15:40:51] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:51] [MASTER] A drone is refueling
+[10-2-2022 15:40:51] [Drone0] Master allows motion
+[10-2-2022 15:40:51] [drone1] Trajectory set : 3 steps, in the direction 5
+
+[10-2-2022 15:40:51] [DRONE3] Send coordinates
+[10-2-2022 15:40:51] [DRONE3] Receive master response 
+[10-2-2022 15:40:52] [Drone0] Desired position (7,9) 
+[10-2-2022 15:40:52] [MASTER] Checking drone collision
+[10-2-2022 15:40:52] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:52] [MASTER] A drone is refueling
+[10-2-2022 15:40:52] [Drone0] Master allows motion
+[10-2-2022 15:40:52] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:52] [Drone0] Desired position (6,10) 
+[10-2-2022 15:40:52] [MASTER] A drone is refueling
+[10-2-2022 15:40:52] [DRONE3] Send coordinates
+[10-2-2022 15:40:52] [DRONE3] Receive master response 
+[10-2-2022 15:40:52] [MASTER] Checking drone collision
+[10-2-2022 15:40:52] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:52] [MASTER] A drone is refueling
+[10-2-2022 15:40:52] [Drone0] Master allows motion
+[10-2-2022 15:40:52] [Drone0] Desired position (5,11) 
+[10-2-2022 15:40:52] [DRONE3] Send coordinates
+[10-2-2022 15:40:52] [DRONE3] Receive master response 
+[10-2-2022 15:40:52] [MASTER] Checking drone collision
+[10-2-2022 15:40:52] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:52] [MASTER] A drone is refueling
+[10-2-2022 15:40:52] [Drone0] Master allows motion
+[10-2-2022 15:40:52] [Drone0] Desired position (4,12) 
+[10-2-2022 15:40:52] [drone1] Trajectory set : 4 steps, in the direction 2
+
+[10-2-2022 15:40:52] [DRONE3] Send coordinates
+[10-2-2022 15:40:52] [DRONE3] Receive master response 
+[10-2-2022 15:40:52] [MASTER] Checking drone collision
+[10-2-2022 15:40:52] [Drone0] Master allows motion
+[10-2-2022 15:40:52] [DRONE3] Send coordinates
+[10-2-2022 15:40:52] [Drone0] Desired position (3,13) 
+[10-2-2022 15:40:52] [DRONE3] Receive master response 
+[10-2-2022 15:40:53] [MASTER] Checking drone collision
+[10-2-2022 15:40:53] [Drone0] Master allows motion
+[10-2-2022 15:40:53] [DRONE3] Send coordinates
+[10-2-2022 15:40:53] [DRONE3] Receive master response 
+[10-2-2022 15:40:53] [Drone0] Desired position (4,14) 
+[10-2-2022 15:40:53] [MASTER] Checking drone collision
+[10-2-2022 15:40:53] [Drone0] Master allows motion
+[10-2-2022 15:40:53] [DRONE3] Send coordinates
+[10-2-2022 15:40:53] [Drone0] Desired position (5,15) 
+[10-2-2022 15:40:53] [DRONE3] Receive master response 
+[10-2-2022 15:40:53] [MASTER] Checking drone collision
+[10-2-2022 15:40:53] [Drone0] Master allows motion
+[10-2-2022 15:40:53] [Drone0] Desired position (6,16) 
+[10-2-2022 15:40:53] [drone1] Trajectory set : 8 steps, in the direction 0
+
+[10-2-2022 15:40:53] [DRONE3] Send coordinates
+[10-2-2022 15:40:53] [DRONE3] Receive master response 
+[10-2-2022 15:40:53] [MASTER] Checking drone collision
+[10-2-2022 15:40:53] [Drone0] Master allows motion
+[10-2-2022 15:40:53] [DRONE3] Send coordinates
+[10-2-2022 15:40:53] [Drone0] Desired position (7,17) 
+[10-2-2022 15:40:53] [DRONE3] Receive master response 
+[10-2-2022 15:40:53] [MASTER] Checking drone collision
+[10-2-2022 15:40:53] [Drone0] Master allows motion
+[10-2-2022 15:40:53] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:40:53] [Drone0] Desired position (8,18) 
+[10-2-2022 15:40:53] [DRONE3] Send coordinates
+[10-2-2022 15:40:53] [MASTER] A drone is refueling
+[10-2-2022 15:40:53] [DRONE3] Receive master response 
+[10-2-2022 15:40:53] [DRONE 4] Movement not allowed
+[10-2-2022 15:40:54] [DRONE3] Send coordinates
+[10-2-2022 15:40:54] [Drone0] Master allows motion
+[10-2-2022 15:40:54] [Drone0] Desired position (7,19) 
+[10-2-2022 15:40:54] [Drone0] Master allows motion
+[10-2-2022 15:41:24] [MASTER] Creating sockets
+[10-2-2022 15:41:24] [MASTER] Configuring sockets
+[10-2-2022 15:41:24] [MASTER] Binding sockets
+[10-2-2022 15:41:24] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:41:24] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:41:24] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:41:24] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:41:24] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:41:24] [MASTER] Listening on sockets
+[10-2-2022 15:41:24] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:41:25] [Drone0] Starting...
+[10-2-2022 15:41:25] [Drone0] Successfully connected
+[10-2-2022 15:41:25] [Drone0] Desired position (4,2) 
+[10-2-2022 15:41:25] [drone1] Trajectory set : 6 steps, in the direction 3
+
+[10-2-2022 15:41:25] [DRONE3] Start to fly
+[10-2-2022 15:41:25] [DRONE3] Send coordinates
+[10-2-2022 15:41:25] [DRONE3] Receive master response 
+[10-2-2022 15:41:25] [DRONE 4] Running
+[10-2-2022 15:41:25] [DRONE 4] Connection established
+[10-2-2022 15:41:25] [MASTER] Master program started
+[10-2-2022 15:41:25] [MASTER] Checking drone collision
+[10-2-2022 15:41:25] [Drone0] Master allows motion
+[10-2-2022 15:41:25] [Drone0] Desired position (5,1) 
+[10-2-2022 15:41:25] [DRONE3] Send coordinates
+[10-2-2022 15:41:25] [DRONE3] Receive master response 
+[10-2-2022 15:41:26] [MASTER] Checking drone collision
+[10-2-2022 15:41:26] [Drone0] Master allows motion
+[10-2-2022 15:41:26] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:26] [DRONE3] Send coordinates
+[10-2-2022 15:41:26] [DRONE3] Receive master response 
+[10-2-2022 15:41:26] [MASTER] Checking drone collision
+[10-2-2022 15:41:26] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:26] [MASTER] A drone is refueling
+[10-2-2022 15:41:26] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:26] [Drone0] Master answered permission denied
+[10-2-2022 15:41:26] [MASTER] A drone is refueling
+[10-2-2022 15:41:26] [Drone0] Desired position (4,2) 
+[10-2-2022 15:41:26] [DRONE3] Send coordinates
+[10-2-2022 15:41:26] [DRONE3] Receive master response 
+[10-2-2022 15:41:26] [MASTER] Checking drone collision
+[10-2-2022 15:41:26] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:26] [Drone0] Master allows motion
+[10-2-2022 15:41:26] [MASTER] A drone is refueling
+[10-2-2022 15:41:26] [Drone0] Desired position (5,1) 
+[10-2-2022 15:41:26] [DRONE3] Send coordinates
+[10-2-2022 15:41:26] [DRONE3] Receive master response 
+[10-2-2022 15:41:26] [MASTER] Checking drone collision
+[10-2-2022 15:41:26] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:26] [Drone0] Master allows motion
+[10-2-2022 15:41:26] [MASTER] A drone is refueling
+[10-2-2022 15:41:26] [drone1] Trajectory set : 8 steps, in the direction 5
+
+[10-2-2022 15:41:26] [DRONE3] Send coordinates
+[10-2-2022 15:41:26] [DRONE3] Receive master response 
+[10-2-2022 15:41:26] [Drone0] Desired position (4,0) 
+[10-2-2022 15:41:26] [MASTER] Checking drone collision
+[10-2-2022 15:41:26] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:26] [MASTER] A drone is refueling
+[10-2-2022 15:41:26] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:26] [Drone0] Master answered permission denied
+[10-2-2022 15:41:26] [MASTER] A drone is refueling
+[10-2-2022 15:41:26] [Drone0] Desired position (4,0) 
+[10-2-2022 15:41:26] [DRONE3] Send coordinates
+[10-2-2022 15:41:26] [DRONE3] Receive master response 
+[10-2-2022 15:41:27] [MASTER] Checking drone collision
+[10-2-2022 15:41:27] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [Drone0] Master answered permission denied
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [Drone0] Desired position (4,0) 
+[10-2-2022 15:41:27] [DRONE3] Send coordinates
+[10-2-2022 15:41:27] [DRONE3] Receive master response 
+[10-2-2022 15:41:27] [MASTER] Checking drone collision
+[10-2-2022 15:41:27] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [Drone0] Master answered permission denied
+[10-2-2022 15:41:27] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[10-2-2022 15:41:27] [DRONE3] Send coordinates
+[10-2-2022 15:41:27] [DRONE3] Receive master response 
+[10-2-2022 15:41:27] [Drone0] Desired position (4,2) 
+[10-2-2022 15:41:27] [MASTER] Checking drone collision
+[10-2-2022 15:41:27] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [Drone0] Master allows motion
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [Drone0] Desired position (3,3) 
+[10-2-2022 15:41:27] [DRONE3] Send coordinates
+[10-2-2022 15:41:27] [DRONE3] Receive master response 
+[10-2-2022 15:41:27] [MASTER] Checking drone collision
+[10-2-2022 15:41:27] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [Drone0] Master allows motion
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [Drone0] Desired position (2,4) 
+[10-2-2022 15:41:27] [DRONE3] Send coordinates
+[10-2-2022 15:41:27] [DRONE3] Receive master response 
+[10-2-2022 15:41:27] [MASTER] Checking drone collision
+[10-2-2022 15:41:27] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:27] [Drone0] Master allows motion
+[10-2-2022 15:41:27] [MASTER] A drone is refueling
+[10-2-2022 15:41:27] [Drone0] Desired position (1,5) 
+[10-2-2022 15:41:27] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[10-2-2022 15:41:27] [DRONE3] Send coordinates
+[10-2-2022 15:41:27] [DRONE3] Receive master response 
+[10-2-2022 15:41:28] [MASTER] Checking drone collision
+[10-2-2022 15:41:28] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:28] [Drone0] Master allows motion
+[10-2-2022 15:41:28] [MASTER] A drone is refueling
+[10-2-2022 15:41:28] [Drone0] Desired position (0,6) 
+[10-2-2022 15:41:28] [DRONE3] Send coordinates
+[10-2-2022 15:41:28] [DRONE3] Receive master response 
+[10-2-2022 15:41:28] [MASTER] Checking drone collision
+[10-2-2022 15:41:28] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:28] [MASTER] A drone is refueling
+[10-2-2022 15:41:28] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:28] [Drone0] Master answered permission denied
+[10-2-2022 15:41:28] [MASTER] A drone is refueling
+[10-2-2022 15:41:28] [DRONE3] Send coordinates
+[10-2-2022 15:41:28] [DRONE3] Receive master response 
+[10-2-2022 15:41:28] [Drone0] Desired position (4,1) 
+[10-2-2022 15:41:28] [MASTER] Checking drone collision
+[10-2-2022 15:41:28] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:28] [MASTER] A drone is refueling
+[10-2-2022 15:41:28] [Drone0] Master allows motion
+[10-2-2022 15:41:28] [Drone0] Desired position (3,1) 
+[10-2-2022 15:41:28] [DRONE3] Send coordinates
+[10-2-2022 15:41:28] [drone1] Trajectory set : 5 steps, in the direction 2
+
+[10-2-2022 15:41:28] [DRONE3] Receive master response 
+[10-2-2022 15:41:28] [MASTER] Checking drone collision
+[10-2-2022 15:41:28] [Drone0] Master allows motion
+[10-2-2022 15:41:28] [Drone0] Desired position (2,1) 
+[10-2-2022 15:41:28] [DRONE3] Send coordinates
+[10-2-2022 15:41:28] [DRONE3] Receive master response 
+[10-2-2022 15:41:28] [MASTER] Checking drone collision
+[10-2-2022 15:41:28] [Drone0] Master allows motion
+[10-2-2022 15:41:28] [Drone0] Desired position (1,1) 
+[10-2-2022 15:41:28] [DRONE3] Send coordinates
+[10-2-2022 15:41:28] [DRONE3] Receive master response 
+[10-2-2022 15:41:29] [MASTER] Checking drone collision
+[10-2-2022 15:41:29] [Drone0] Master allows motion
+[10-2-2022 15:41:29] [Drone0] Desired position (0,1) 
+[10-2-2022 15:41:29] [DRONE3] Send coordinates
+[10-2-2022 15:41:29] [DRONE3] Receive master response 
+[10-2-2022 15:41:29] [MASTER] Checking drone collision
+[10-2-2022 15:41:29] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:29] [MASTER] A drone is refueling
+[10-2-2022 15:41:29] [Drone0] Master answered permission denied
+[10-2-2022 15:41:29] [DRONE3] Send coordinates
+[10-2-2022 15:41:29] [DRONE3] Receive master response 
+[10-2-2022 15:41:29] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:29] [MASTER] Checking drone collision
+[10-2-2022 15:41:29] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:29] [MASTER] A drone is refueling
+[10-2-2022 15:41:29] [Drone0] Master answered permission denied
+[10-2-2022 15:41:29] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:29] [drone1] Trajectory set : 9 steps, in the direction 7
+
+[10-2-2022 15:41:29] [DRONE3] Send coordinates
+[10-2-2022 15:41:29] [DRONE3] Receive master response 
+[10-2-2022 15:41:29] [MASTER] Checking drone collision
+[10-2-2022 15:41:29] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:29] [MASTER] A drone is refueling
+[10-2-2022 15:41:29] [Drone0] Master answered permission denied
+[10-2-2022 15:41:29] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:29] [DRONE3] Send coordinates
+[10-2-2022 15:41:29] [DRONE3] Receive master response 
+[10-2-2022 15:41:30] [MASTER] Checking drone collision
+[10-2-2022 15:41:30] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [Drone0] Master answered permission denied
+[10-2-2022 15:41:30] [DRONE3] Send coordinates
+[10-2-2022 15:41:30] [DRONE3] Receive master response 
+[10-2-2022 15:41:30] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:30] [MASTER] Checking drone collision
+[10-2-2022 15:41:30] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [Drone0] Master answered permission denied
+[10-2-2022 15:41:30] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:30] [DRONE3] Send coordinates
+[10-2-2022 15:41:30] [DRONE3] Receive master response 
+[10-2-2022 15:41:30] [MASTER] Checking drone collision
+[10-2-2022 15:41:30] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [Drone0] Master answered permission denied
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [Drone0] Desired position (6,0) 
+[10-2-2022 15:41:30] [DRONE3] Send coordinates
+[10-2-2022 15:41:30] [DRONE3] Receive master response 
+[10-2-2022 15:41:30] [MASTER] Checking drone collision
+[10-2-2022 15:41:30] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [Drone0] Master answered permission denied
+[10-2-2022 15:41:30] [DRONE3] Send coordinates
+[10-2-2022 15:41:30] [DRONE3] Receive master response 
+[10-2-2022 15:41:30] [Drone0] Desired position (4,2) 
+[10-2-2022 15:41:30] [MASTER] Checking drone collision
+[10-2-2022 15:41:30] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:30] [Drone0] Master allows motion
+[10-2-2022 15:41:30] [MASTER] A drone is refueling
+[10-2-2022 15:41:30] [Drone0] Desired position (3,3) 
+[10-2-2022 15:41:30] [DRONE3] Send coordinates
+[10-2-2022 15:41:30] [DRONE3] Receive master response 
+[10-2-2022 15:41:31] [MASTER] Checking drone collision
+[10-2-2022 15:41:31] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:31] [MASTER] A drone is refueling
+[10-2-2022 15:41:31] [Drone0] Master allows motion
+[10-2-2022 15:41:31] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:31] [Drone0] Desired position (2,4) 
+[10-2-2022 15:41:31] [MASTER] A drone is refueling
+[10-2-2022 15:41:31] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:31] [MASTER] A drone is refueling
+[10-2-2022 15:41:31] [DRONE 4] Movement not allowed
+[10-2-2022 15:41:31] [DRONE3] Send coordinates
+[10-2-2022 15:41:31] [DRONE3] Receive master response 
+[10-2-2022 15:41:34] [MASTER] Checking drone collision
+[10-2-2022 15:41:34] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:34] [MASTER] A drone is refueling
+[10-2-2022 15:41:34] [Drone0] Master allows motion
+[10-2-2022 15:41:34] [drone1] Trajectory set : 10 steps, in the direction 3
+
+[10-2-2022 15:41:34] [Drone0] Desired position (1,5) 
+[10-2-2022 15:41:34] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:34] [DRONE3] Send coordinates
+[10-2-2022 15:41:34] [MASTER] A drone is refueling
+[10-2-2022 15:41:34] [DRONE 4] Movement not allowed
+[10-2-2022 15:41:34] [DRONE3] Receive master response 
+[10-2-2022 15:41:37] [MASTER] Checking drone collision
+[10-2-2022 15:41:37] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:37] [MASTER] A drone is refueling
+[10-2-2022 15:41:37] [Drone0] Master allows motion
+[10-2-2022 15:41:37] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:37] [Drone0] Desired position (0,6) 
+[10-2-2022 15:41:37] [MASTER] A drone is refueling
+[10-2-2022 15:41:37] [DRONE3] Send coordinates
+[10-2-2022 15:41:37] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:37] [DRONE3] Receive master response 
+[10-2-2022 15:41:37] [MASTER] A drone is refueling
+[10-2-2022 15:41:37] [DRONE 4] Movement not allowed
+[10-2-2022 15:41:40] [MASTER] Checking drone collision
+[10-2-2022 15:41:40] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:40] [MASTER] A drone is refueling
+[10-2-2022 15:41:40] [MASTER] Drone 1 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:40] [Drone0] Master answered permission denied
+[10-2-2022 15:41:40] [MASTER] A drone is refueling
+[10-2-2022 15:41:40] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:40] [MASTER] A drone is refueling
+[10-2-2022 15:41:40] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:41:40] [MASTER] A drone is refueling
+[10-2-2022 15:41:40] [DRONE3] Send coordinates
+[10-2-2022 15:41:40] [DRONE 4] Movement not allowed
+[10-2-2022 15:41:40] [DRONE3] Receive master response 
+[10-2-2022 15:41:40] [Drone0] Desired position (5,2) 
+[10-2-2022 15:41:42] [DRONE3] Send coordinates
+[10-2-2022 15:41:42] [Drone0] Master answered permission denied
+[10-2-2022 15:41:42] [Drone0] Desired position (5,2) 
+[10-2-2022 15:41:42] [Drone0] Master answered permission denied
+[10-2-2022 15:43:1] [MASTER] Creating sockets
+[10-2-2022 15:43:1] [MASTER] Configuring sockets
+[10-2-2022 15:43:1] [MASTER] Binding sockets
+[10-2-2022 15:43:1] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:43:1] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:43:1] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:43:1] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:43:1] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:43:1] [MASTER] Listening on sockets
+[10-2-2022 15:43:1] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:43:2] [Drone0] Starting...
+[10-2-2022 15:43:2] [Drone0] Successfully connected
+[10-2-2022 15:43:2] [Drone0] Desired position (2,2) 
+[10-2-2022 15:43:2] [drone1] Trajectory set : 5 steps, in the direction 2
+
+[10-2-2022 15:43:2] [DRONE3] Start to fly
+[10-2-2022 15:43:2] [DRONE3] Send coordinates
+[10-2-2022 15:43:2] [DRONE3] Receive master response 
+[10-2-2022 15:43:2] [DRONE 4] Running
+[10-2-2022 15:43:2] [DRONE 4] Connection established
+[10-2-2022 15:43:2] [MASTER] Master program started
+[10-2-2022 15:43:2] [MASTER] Checking drone collision
+[10-2-2022 15:43:2] [Drone0] Master allows motion
+[10-2-2022 15:43:2] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:2] [Drone0] Desired position (1,1) 
+[10-2-2022 15:43:2] [MASTER] A drone is refueling
+[10-2-2022 15:43:2] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:2] [DRONE3] Send coordinates
+[10-2-2022 15:43:2] [MASTER] A drone is refueling
+[10-2-2022 15:43:2] [MASTER] Potential collision detected
+[10-2-2022 15:43:2] [MASTER] Sending MASTER_COL to drone
+[10-2-2022 15:43:2] [DRONE3] Receive master response 
+[10-2-2022 15:43:2] [DRONE 4] Movement not allowed
+[10-2-2022 15:43:5] [DRONE 4] Movement not allowed
+[10-2-2022 15:43:5] [MASTER] Checking drone collision
+[10-2-2022 15:43:5] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:5] [Drone0] Master allows motion
+[10-2-2022 15:43:5] [MASTER] A drone is refueling
+[10-2-2022 15:43:5] [Drone0] Desired position (0,0) 
+[10-2-2022 15:43:5] [DRONE3] Send coordinates
+[10-2-2022 15:43:5] [DRONE3] Receive master response 
+[10-2-2022 15:43:8] [DRONE 4] Movement not allowed
+[10-2-2022 15:43:8] [MASTER] Checking drone collision
+[10-2-2022 15:43:8] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:8] [MASTER] A drone is refueling
+[10-2-2022 15:43:8] [Drone0] Master answered permission denied
+[10-2-2022 15:43:8] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:8] [Drone0] Desired position (2,2) 
+[10-2-2022 15:43:8] [MASTER] A drone is refueling
+[10-2-2022 15:43:8] [DRONE3] Send coordinates
+[10-2-2022 15:43:8] [DRONE3] Receive master response 
+[10-2-2022 15:43:10] [Drone0] Master answered permission denied
+[10-2-2022 15:43:10] [DRONE3] Send coordinates
+[10-2-2022 15:43:10] [Drone0] Desired position (2,2) 
+[10-2-2022 15:43:10] [Drone0] Master answered permission denied
+[10-2-2022 15:43:10] [drone1] Trajectory set : 8 steps, in the direction 3
+
+[10-2-2022 15:43:15] [MASTER] Creating sockets
+[10-2-2022 15:43:15] [MASTER] Configuring sockets
+[10-2-2022 15:43:15] [MASTER] Binding sockets
+[10-2-2022 15:43:15] [MASTER] Socket bound to DRONE 0
+[10-2-2022 15:43:15] [MASTER] Socket bound to DRONE 1
+[10-2-2022 15:43:15] [MASTER] Socket bound to DRONE 2
+[10-2-2022 15:43:15] [MASTER] Socket bound to DRONE 3
+[10-2-2022 15:43:15] [MASTER] Socket bound to DRONE 4
+[10-2-2022 15:43:15] [MASTER] Listening on sockets
+[10-2-2022 15:43:15] [MASTER] Accepting incoming connections on sockets
+[10-2-2022 15:43:15] [Drone0] Starting...
+[10-2-2022 15:43:15] [Drone0] Successfully connected
+[10-2-2022 15:43:15] [Drone0] Desired position (2,4) 
+[10-2-2022 15:43:16] [drone1] Trajectory set : 8 steps, in the direction 2
+
+[10-2-2022 15:43:16] [DRONE3] Start to fly
+[10-2-2022 15:43:16] [DRONE3] Send coordinates
+[10-2-2022 15:43:16] [DRONE3] Receive master response 
+[10-2-2022 15:43:16] [DRONE 4] Running
+[10-2-2022 15:43:16] [DRONE 4] Connection established
+[10-2-2022 15:43:16] [MASTER] Master program started
+[10-2-2022 15:43:16] [MASTER] Checking drone collision
+[10-2-2022 15:43:16] [Drone0] Master allows motion
+[10-2-2022 15:43:16] [Drone0] Desired position (1,5) 
+[10-2-2022 15:43:16] [DRONE3] Send coordinates
+[10-2-2022 15:43:16] [DRONE3] Receive master response 
+[10-2-2022 15:43:16] [MASTER] Checking drone collision
+[10-2-2022 15:43:16] [Drone0] Master allows motion
+[10-2-2022 15:43:16] [Drone0] Desired position (0,6) 
+[10-2-2022 15:43:16] [DRONE3] Send coordinates
+[10-2-2022 15:43:16] [DRONE3] Receive master response 
+[10-2-2022 15:43:17] [MASTER] Checking drone collision
+[10-2-2022 15:43:17] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:17] [MASTER] A drone is refueling
+[10-2-2022 15:43:17] [Drone0] Master answered permission denied
+[10-2-2022 15:43:17] [Drone0] Desired position (2,4) 
+[10-2-2022 15:43:17] [DRONE3] Send coordinates
+[10-2-2022 15:43:17] [DRONE3] Receive master response 
+[10-2-2022 15:43:17] [MASTER] Checking drone collision
+[10-2-2022 15:43:17] [MASTER] Drone 3 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:17] [Drone0] Master allows motion
+[10-2-2022 15:43:17] [MASTER] A drone is refueling
+[10-2-2022 15:43:17] [DRONE3] Send coordinates
+[10-2-2022 15:43:17] [Drone0] Desired position (1,5) 
+[10-2-2022 15:43:17] [DRONE3] Receive master response 
+[10-2-2022 15:43:17] [MASTER] Checking drone collision
+[10-2-2022 15:43:17] [Drone0] Master allows motion
+[10-2-2022 15:43:17] [DRONE3] Send coordinates
+[10-2-2022 15:43:17] [DRONE3] Receive master response 
+[10-2-2022 15:43:17] [Drone0] Desired position (2,6) 
+[10-2-2022 15:43:17] [MASTER] Checking drone collision
+[10-2-2022 15:43:17] [Drone0] Master allows motion
+[10-2-2022 15:43:17] [Drone0] Desired position (3,7) 
+[10-2-2022 15:43:17] [DRONE3] Send coordinates
+[10-2-2022 15:43:17] [DRONE3] Receive master response 
+[10-2-2022 15:43:17] [MASTER] Checking drone collision
+[10-2-2022 15:43:17] [Drone0] Master allows motion
+[10-2-2022 15:43:17] [Drone0] Desired position (4,8) 
+[10-2-2022 15:43:17] [DRONE3] Send coordinates
+[10-2-2022 15:43:17] [DRONE3] Receive master response 
+[10-2-2022 15:43:18] [MASTER] Checking drone collision
+[10-2-2022 15:43:18] [Drone0] Master allows motion
+[10-2-2022 15:43:18] [Drone0] Desired position (5,9) 
+[10-2-2022 15:43:18] [drone1] Trajectory set : 5 steps, in the direction 4
+
+[10-2-2022 15:43:18] [DRONE3] Send coordinates
+[10-2-2022 15:43:18] [DRONE3] Receive master response 
+[10-2-2022 15:43:18] [MASTER] Checking drone collision
+[10-2-2022 15:43:18] [Drone0] Master allows motion
+[10-2-2022 15:43:18] [Drone0] Desired position (6,10) 
+[10-2-2022 15:43:18] [DRONE3] Send coordinates
+[10-2-2022 15:43:18] [DRONE3] Receive master response 
+[10-2-2022 15:43:18] [MASTER] Checking drone collision
+[10-2-2022 15:43:18] [Drone0] Master allows motion
+[10-2-2022 15:43:18] [DRONE3] Send coordinates
+[10-2-2022 15:43:18] [DRONE3] Receive master response 
+[10-2-2022 15:43:18] [Drone0] Desired position (7,11) 
+[10-2-2022 15:43:18] [MASTER] Checking drone collision
+[10-2-2022 15:43:18] [Drone0] Master allows motion
+[10-2-2022 15:43:18] [Drone0] Desired position (8,12) 
+[10-2-2022 15:43:18] [DRONE3] Send coordinates
+[10-2-2022 15:43:18] [DRONE3] Receive master response 
+[10-2-2022 15:43:18] [MASTER] Checking drone collision
+[10-2-2022 15:43:18] [Drone0] Master allows motion
+[10-2-2022 15:43:18] [Drone0] Desired position (9,13) 
+[10-2-2022 15:43:18] [DRONE3] Send coordinates
+[10-2-2022 15:43:18] [DRONE3] Receive master response 
+[10-2-2022 15:43:19] [MASTER] Checking drone collision
+[10-2-2022 15:43:19] [Drone0] Master allows motion
+[10-2-2022 15:43:19] [Drone0] Desired position (10,14) 
+[10-2-2022 15:43:19] [drone1] Trajectory set : 6 steps, in the direction 4
+
+[10-2-2022 15:43:19] [DRONE3] Send coordinates
+[10-2-2022 15:43:19] [DRONE3] Receive master response 
+[10-2-2022 15:43:19] [MASTER] Checking drone collision
+[10-2-2022 15:43:19] [Drone0] Master allows motion
+[10-2-2022 15:43:19] [Drone0] Desired position (11,15) 
+[10-2-2022 15:43:19] [DRONE3] Send coordinates
+[10-2-2022 15:43:19] [DRONE3] Receive master response 
+[10-2-2022 15:43:19] [MASTER] Checking drone collision
+[10-2-2022 15:43:19] [Drone0] Master allows motion
+[10-2-2022 15:43:19] [DRONE3] Send coordinates
+[10-2-2022 15:43:19] [DRONE3] Receive master response 
+[10-2-2022 15:43:19] [Drone0] Desired position (11,14) 
+[10-2-2022 15:43:19] [MASTER] Checking drone collision
+[10-2-2022 15:43:19] [Drone0] Master allows motion
+[10-2-2022 15:43:19] [Drone0] Desired position (11,13) 
+[10-2-2022 15:43:19] [DRONE3] Send coordinates
+[10-2-2022 15:43:19] [DRONE3] Receive master response 
+[10-2-2022 15:43:20] [MASTER] Checking drone collision
+[10-2-2022 15:43:20] [Drone0] Master allows motion
+[10-2-2022 15:43:20] [Drone0] Desired position (11,12) 
+[10-2-2022 15:43:20] [DRONE3] Send coordinates
+[10-2-2022 15:43:20] [DRONE3] Receive master response 
+[10-2-2022 15:43:20] [MASTER] Checking drone collision
+[10-2-2022 15:43:20] [Drone0] Master allows motion
+[10-2-2022 15:43:20] [Drone0] Desired position (11,11) 
+[10-2-2022 15:43:20] [DRONE3] Send coordinates
+[10-2-2022 15:43:20] [DRONE3] Receive master response 
+[10-2-2022 15:43:20] [MASTER] Checking drone collision
+[10-2-2022 15:43:20] [Drone0] Master allows motion
+[10-2-2022 15:43:20] [Drone0] Desired position (11,10) 
+[10-2-2022 15:43:20] [drone1] Trajectory set : 7 steps, in the direction 4
+
+[10-2-2022 15:43:20] [DRONE3] Send coordinates
+[10-2-2022 15:43:20] [DRONE3] Receive master response 
+[10-2-2022 15:43:20] [MASTER] Checking drone collision
+[10-2-2022 15:43:20] [Drone0] Master allows motion
+[10-2-2022 15:43:20] [DRONE3] Send coordinates
+[10-2-2022 15:43:20] [DRONE3] Receive master response 
+[10-2-2022 15:43:20] [Drone0] Desired position (10,9) 
+[10-2-2022 15:43:20] [MASTER] Checking drone collision
+[10-2-2022 15:43:20] [Drone0] Master allows motion
+[10-2-2022 15:43:20] [Drone0] Desired position (9,8) 
+[10-2-2022 15:43:20] [DRONE3] Send coordinates
+[10-2-2022 15:43:20] [DRONE3] Receive master response 
+[10-2-2022 15:43:21] [MASTER] Checking drone collision
+[10-2-2022 15:43:21] [Drone0] Master allows motion
+[10-2-2022 15:43:21] [Drone0] Desired position (8,7) 
+[10-2-2022 15:43:21] [DRONE3] Send coordinates
+[10-2-2022 15:43:21] [DRONE3] Receive master response 
+[10-2-2022 15:43:21] [MASTER] Checking drone collision
+[10-2-2022 15:43:21] [Drone0] Master allows motion
+[10-2-2022 15:43:21] [Drone0] Desired position (7,6) 
+[10-2-2022 15:43:21] [DRONE3] Send coordinates
+[10-2-2022 15:43:21] [DRONE3] Receive master response 
+[10-2-2022 15:43:21] [MASTER] Checking drone collision
+[10-2-2022 15:43:21] [Drone0] Master allows motion
+[10-2-2022 15:43:21] [DRONE3] Send coordinates
+[10-2-2022 15:43:21] [DRONE3] Receive master response 
+[10-2-2022 15:43:21] [Drone0] Desired position (6,5) 
+[10-2-2022 15:43:21] [MASTER] Checking drone collision
+[10-2-2022 15:43:21] [Drone0] Master allows motion
+[10-2-2022 15:43:21] [DRONE3] Send coordinates
+[10-2-2022 15:43:21] [DRONE3] Receive master response 
+[10-2-2022 15:43:21] [Drone0] Desired position (7,4) 
+[10-2-2022 15:43:22] [MASTER] Checking drone collision
+[10-2-2022 15:43:22] [Drone0] Master allows motion
+[10-2-2022 15:43:22] [DRONE3] Send coordinates
+[10-2-2022 15:43:22] [drone1] Trajectory set : 4 steps, in the direction 7
+
+[10-2-2022 15:43:22] [Drone0] Desired position (8,3) 
+[10-2-2022 15:43:22] [DRONE3] Receive master response 
+[10-2-2022 15:43:22] [MASTER] Checking drone collision
+[10-2-2022 15:43:22] [Drone0] Master allows motion
+[10-2-2022 15:43:22] [Drone0] Desired position (9,2) 
+[10-2-2022 15:43:22] [DRONE3] Send coordinates
+[10-2-2022 15:43:22] [DRONE3] Receive master response 
+[10-2-2022 15:43:22] [MASTER] Checking drone collision
+[10-2-2022 15:43:22] [Drone0] Master allows motion
+[10-2-2022 15:43:22] [Drone0] Desired position (10,1) 
+[10-2-2022 15:43:22] [DRONE3] Send coordinates
+[10-2-2022 15:43:22] [DRONE3] Receive master response 
+[10-2-2022 15:43:22] [MASTER] Checking drone collision
+[10-2-2022 15:43:22] [Drone0] Master allows motion
+[10-2-2022 15:43:22] [Drone0] Desired position (11,0) 
+[10-2-2022 15:43:22] [DRONE3] Send coordinates
+[10-2-2022 15:43:22] [DRONE3] Receive master response 
+[10-2-2022 15:43:22] [MASTER] Checking drone collision
+[10-2-2022 15:43:22] [MASTER] Drone 0 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:22] [MASTER] A drone is refueling
+[10-2-2022 15:43:22] [Drone0] Master answered permission denied
+[10-2-2022 15:43:22] [DRONE3] Send coordinates
+[10-2-2022 15:43:22] [drone1] Trajectory set : 9 steps, in the direction 0
+
+[10-2-2022 15:43:22] [DRONE3] Receive master response 
+[10-2-2022 15:43:23] [Drone0] Desired position (7,6) 
+[10-2-2022 15:43:23] [MASTER] Checking drone collision
+[10-2-2022 15:43:23] [Drone0] Master allows motion
+[10-2-2022 15:43:23] [Drone0] Desired position (8,7) 
+[10-2-2022 15:43:23] [DRONE3] Send coordinates
+[10-2-2022 15:43:23] [DRONE3] Receive master response 
+[10-2-2022 15:43:23] [MASTER] Checking drone collision
+[10-2-2022 15:43:23] [Drone0] Master allows motion
+[10-2-2022 15:43:23] [Drone0] Desired position (9,8) 
+[10-2-2022 15:43:23] [DRONE3] Send coordinates
+[10-2-2022 15:43:23] [DRONE3] Receive master response 
+[10-2-2022 15:43:23] [MASTER] Checking drone collision
+[10-2-2022 15:43:23] [Drone0] Master allows motion
+[10-2-2022 15:43:23] [DRONE3] Send coordinates
+[10-2-2022 15:43:23] [Drone0] Desired position (10,9) 
+[10-2-2022 15:43:23] [DRONE3] Receive master response 
+[10-2-2022 15:43:23] [MASTER] Checking drone collision
+[10-2-2022 15:43:23] [Drone0] Master allows motion
+[10-2-2022 15:43:23] [Drone0] Desired position (11,10) 
+[10-2-2022 15:43:23] [DRONE3] Send coordinates
+[10-2-2022 15:43:23] [DRONE3] Receive master response 
+[10-2-2022 15:43:23] [MASTER] Checking drone collision
+[10-2-2022 15:43:23] [Drone0] Master allows motion
+[10-2-2022 15:43:23] [DRONE3] Send coordinates
+[10-2-2022 15:43:23] [DRONE3] Receive master response 
+[10-2-2022 15:43:24] [Drone0] Desired position (11,11) 
+[10-2-2022 15:43:24] [MASTER] Checking drone collision
+[10-2-2022 15:43:24] [Drone0] Master allows motion
+[10-2-2022 15:43:24] [Drone0] Desired position (11,12) 
+[10-2-2022 15:43:24] [DRONE3] Send coordinates
+[10-2-2022 15:43:24] [DRONE3] Receive master response 
+[10-2-2022 15:43:24] [MASTER] Checking drone collision
+[10-2-2022 15:43:24] [Drone0] Master allows motion
+[10-2-2022 15:43:24] [DRONE3] Send coordinates
+[10-2-2022 15:43:24] [Drone0] Desired position (11,13) 
+[10-2-2022 15:43:24] [DRONE3] Receive master response 
+[10-2-2022 15:43:24] [MASTER] Checking drone collision
+[10-2-2022 15:43:24] [Drone0] Master allows motion
+[10-2-2022 15:43:24] [Drone0] Desired position (11,14) 
+[10-2-2022 15:43:24] [DRONE3] Send coordinates
+[10-2-2022 15:43:24] [DRONE3] Receive master response 
+[10-2-2022 15:43:24] [MASTER] Checking drone collision
+[10-2-2022 15:43:24] [Drone0] Master allows motion
+[10-2-2022 15:43:24] [DRONE3] Send coordinates
+[10-2-2022 15:43:24] [drone1] Trajectory set : 10 steps, in the direction 4
+
+[10-2-2022 15:43:24] [Drone0] Desired position (11,15) 
+[10-2-2022 15:43:24] [DRONE3] Receive master response 
+[10-2-2022 15:43:24] [MASTER] Checking drone collision
+[10-2-2022 15:43:24] [Drone0] Master allows motion
+[10-2-2022 15:43:24] [DRONE3] Send coordinates
+[10-2-2022 15:43:24] [DRONE3] Receive master response 
+[10-2-2022 15:43:25] [Drone0] Desired position (11,16) 
+[10-2-2022 15:43:25] [MASTER] Checking drone collision
+[10-2-2022 15:43:25] [Drone0] Master allows motion
+[10-2-2022 15:43:25] [Drone0] Desired position (11,17) 
+[10-2-2022 15:43:25] [DRONE3] Send coordinates
+[10-2-2022 15:43:25] [DRONE3] Receive master response 
+[10-2-2022 15:43:25] [MASTER] Checking drone collision
+[10-2-2022 15:43:25] [Drone0] Master allows motion
+[10-2-2022 15:43:25] [Drone0] Desired position (11,18) 
+[10-2-2022 15:43:25] [DRONE3] Send coordinates
+[10-2-2022 15:43:25] [DRONE3] Receive master response 
+[10-2-2022 15:43:25] [MASTER] Checking drone collision
+[10-2-2022 15:43:25] [Drone0] Master allows motion
+[10-2-2022 15:43:25] [Drone0] Desired position (11,19) 
+[10-2-2022 15:43:25] [DRONE3] Send coordinates
+[10-2-2022 15:43:25] [DRONE3] Receive master response 
+[10-2-2022 15:43:25] [MASTER] Checking drone collision
+[10-2-2022 15:43:25] [Drone0] Master allows motion
+[10-2-2022 15:43:25] [Drone0] Desired position (11,20) 
+[10-2-2022 15:43:25] [DRONE3] Send coordinates
+[10-2-2022 15:43:25] [DRONE3] Receive master response 
+[10-2-2022 15:43:26] [MASTER] Checking drone collision
+[10-2-2022 15:43:26] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:26] [MASTER] A drone is refueling
+[10-2-2022 15:43:26] [Drone0] Master allows motion
+[10-2-2022 15:43:26] [DRONE3] Send coordinates
+[10-2-2022 15:43:26] [DRONE3] Receive master response 
+[10-2-2022 15:43:26] [Drone0] Desired position (12,20) 
+[10-2-2022 15:43:26] [MASTER] Checking drone collision
+[10-2-2022 15:43:26] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:26] [Drone0] Master allows motion
+[10-2-2022 15:43:26] [MASTER] A drone is refueling
+[10-2-2022 15:43:26] [Drone0] Desired position (13,20) 
+[10-2-2022 15:43:26] [DRONE3] Send coordinates
+[10-2-2022 15:43:26] [DRONE3] Receive master response 
+[10-2-2022 15:43:26] [MASTER] Checking drone collision
+[10-2-2022 15:43:26] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:26] [Drone0] Master allows motion
+[10-2-2022 15:43:26] [MASTER] A drone is refueling
+[10-2-2022 15:43:26] [Drone0] Desired position (14,20) 
+[10-2-2022 15:43:26] [DRONE3] Send coordinates
+[10-2-2022 15:43:26] [DRONE3] Receive master response 
+[10-2-2022 15:43:26] [MASTER] Checking drone collision
+[10-2-2022 15:43:26] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:26] [MASTER] A drone is refueling
+[10-2-2022 15:43:26] [Drone0] Master allows motion
+[10-2-2022 15:43:26] [Drone0] Desired position (15,20) 
+[10-2-2022 15:43:26] [DRONE3] Send coordinates
+[10-2-2022 15:43:26] [DRONE3] Receive master response 
+[10-2-2022 15:43:26] [MASTER] Checking drone collision
+[10-2-2022 15:43:26] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:26] [Drone0] Master allows motion
+[10-2-2022 15:43:26] [MASTER] A drone is refueling
+[10-2-2022 15:43:26] [Drone0] Desired position (16,20) 
+[10-2-2022 15:43:26] [drone1] Trajectory set : 7 steps, in the direction 5
+
+[10-2-2022 15:43:26] [DRONE3] Send coordinates
+[10-2-2022 15:43:26] [DRONE3] Receive master response 
+[10-2-2022 15:43:27] [MASTER] Checking drone collision
+[10-2-2022 15:43:27] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:27] [MASTER] A drone is refueling
+[10-2-2022 15:43:27] [Drone0] Master allows motion
+[10-2-2022 15:43:27] [DRONE3] Send coordinates
+[10-2-2022 15:43:27] [DRONE3] Receive master response 
+[10-2-2022 15:43:27] [Drone0] Desired position (15,20) 
+[10-2-2022 15:43:27] [MASTER] Checking drone collision
+[10-2-2022 15:43:27] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:27] [MASTER] A drone is refueling
+[10-2-2022 15:43:27] [Drone0] Master allows motion
+[10-2-2022 15:43:27] [Drone0] Desired position (14,20) 
+[10-2-2022 15:43:27] [DRONE3] Send coordinates
+[10-2-2022 15:43:27] [DRONE3] Receive master response 
+[10-2-2022 15:43:27] [MASTER] Checking drone collision
+[10-2-2022 15:43:27] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:27] [MASTER] A drone is refueling
+[10-2-2022 15:43:27] [Drone0] Master allows motion
+[10-2-2022 15:43:27] [Drone0] Desired position (13,20) 
+[10-2-2022 15:43:27] [DRONE3] Send coordinates
+[10-2-2022 15:43:27] [DRONE3] Receive master response 
+[10-2-2022 15:43:27] [MASTER] Checking drone collision
+[10-2-2022 15:43:27] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:27] [Drone0] Master allows motion
+[10-2-2022 15:43:27] [MASTER] A drone is refueling
+[10-2-2022 15:43:27] [Drone0] Desired position (12,20) 
+[10-2-2022 15:43:27] [DRONE3] Send coordinates
+[10-2-2022 15:43:27] [DRONE3] Receive master response 
+[10-2-2022 15:43:28] [MASTER] Checking drone collision
+[10-2-2022 15:43:28] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:28] [Drone0] Master allows motion
+[10-2-2022 15:43:28] [MASTER] A drone is refueling
+[10-2-2022 15:43:28] [Drone0] Desired position (11,20) 
+[10-2-2022 15:43:28] [DRONE3] Send coordinates
+[10-2-2022 15:43:28] [DRONE3] Receive master response 
+[10-2-2022 15:43:28] [MASTER] Checking drone collision
+[10-2-2022 15:43:28] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:28] [Drone0] Master allows motion
+[10-2-2022 15:43:28] [MASTER] A drone is refueling
+[10-2-2022 15:43:28] [DRONE3] Send coordinates
+[10-2-2022 15:43:28] [DRONE3] Receive master response 
+[10-2-2022 15:43:28] [Drone0] Desired position (12,20) 
+[10-2-2022 15:43:28] [MASTER] Checking drone collision
+[10-2-2022 15:43:28] [MASTER] Drone 2 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:28] [MASTER] A drone is refueling
+[10-2-2022 15:43:28] [Drone0] Master allows motion
+[10-2-2022 15:43:28] [drone1] Trajectory set : 3 steps, in the direction 0
+
+[10-2-2022 15:43:28] [Drone0] Desired position (13,20) 
+[10-2-2022 15:43:28] [DRONE3] Send coordinates
+[10-2-2022 15:43:28] [DRONE3] Receive master response 
+[10-2-2022 15:43:28] [MASTER] Checking drone collision
+[10-2-2022 15:43:28] [Drone0] Master allows motion
+[10-2-2022 15:43:28] [Drone0] Desired position (14,20) 
+[10-2-2022 15:43:28] [DRONE3] Send coordinates
+[10-2-2022 15:43:28] [DRONE3] Receive master response 
+[10-2-2022 15:43:28] [MASTER] Checking drone collision
+[10-2-2022 15:43:28] [Drone0] Master allows motion
+[10-2-2022 15:43:28] [Drone0] Desired position (15,20) 
+[10-2-2022 15:43:28] [DRONE3] Send coordinates
+[10-2-2022 15:43:28] [DRONE3] Receive master response 
+[10-2-2022 15:43:29] [MASTER] Checking drone collision
+[10-2-2022 15:43:29] [Drone0] Master allows motion
+[10-2-2022 15:43:29] [Drone0] Desired position (16,20) 
+[10-2-2022 15:43:29] [DRONE3] Send coordinates
+[10-2-2022 15:43:29] [drone1] Trajectory set : 6 steps, in the direction 2
+
+[10-2-2022 15:43:29] [DRONE3] Receive master response 
+[10-2-2022 15:43:29] [MASTER] Checking drone collision
+[10-2-2022 15:43:29] [MASTER] Drone 4 trying to move out of map: sending MASTER_COL
+[10-2-2022 15:43:29] [Drone0] Master allows motion
+[10-2-2022 15:43:29] [MASTER] A drone is refueling
+[10-2-2022 15:43:29] [DRONE3] Send coordinates
+[10-2-2022 15:43:29] [DRONE 4] Movement not allowed
+[10-2-2022 15:43:29] [DRONE3] Receive master response 
+[10-2-2022 15:43:29] [Drone0] Desired position (17,21) 
+[10-2-2022 15:43:30] [Drone0] Master allows motion
+[10-2-2022 15:43:30] [DRONE3] Send coordinates
+[10-2-2022 15:43:30] [Drone0] Desired position (18,22) 
+[10-2-2022 15:43:30] [Drone0] Master allows motion
