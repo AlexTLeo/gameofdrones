@@ -146,6 +146,8 @@ void socketConnection(const int portno, const char * hostname) {
     // Start socket connection to the Server
     if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) 
         error("[DRONE 4] ERROR connecting to the server");
+    else 
+        writeInfoLog(fdlogInfo, "[DRONE 4] Connection established");
 }
 
 /**
@@ -166,11 +168,8 @@ int main(int argc, char * argv[]) {
     // Take data from includes/values.h file
 	coordinatePair[0] = START4[0];
 	coordinatePair[1] = START4[1];
-    //coordinatePair[0] = atoi(argv[2]); 
-	//coordinatePair[1] = atoi(argv[3]); 
 
     const int portno = PORTNO + 4; // Port number
-    //const int portno = atoi(argv[1]); // Port number
     printf("[DRONE 4] Port: %i\n", portno);
     fflush(stdout);
 
@@ -192,33 +191,33 @@ int main(int argc, char * argv[]) {
         int direction = randomNumberInt(0, 7);
         int steps = randomNumberInt(5, 10);
 
-        //printf("\nDirection: %d\nSteps: %d\n", direction, steps);
-        //fflush(stdout);
-
+        printf("\nDirection: %d\nSteps: %d\n", direction, steps);
+        fflush(stdout);
+        
         // Move the drone 
         for (int i = 0; i < steps && power > 0; i++) {
             // Compute the next position coordinates
             nextPosition(direction);
 
-            //printf("X: %d\nY: %d\n", coordinatePair[0], coordinatePair[1]);
-            //fflush(stdout);
+            printf("X: %d\nY: %d\n", coordinatePair[0], coordinatePair[1]);
+            fflush(stdout);
 
             // Send the coordinates to the Master 
-            if (send(sockfd, &coordinatePair[0], sizeof(int), 0) < 0)
+            if (send(sockfd, &coordinatePair[0], sizeof(coordinatePair[0]), 0) < 0)
 		        error("[DRONE 4] ERROR sending the coordinate x to the master");
-            if (send(sockfd, &coordinatePair[1], sizeof(int), 0) < 0)
+            if (send(sockfd, &coordinatePair[1], sizeof(coordinatePair[1]), 0) < 0)
 		        error("[DRONE 4] ERROR sending the coordinate y to the master");
 
             // Read Master response and manage it
-            if (recv(sockfd, &response, sizeof(int), 0) < 0) 
+            if (recv(sockfd, &response, sizeof(response), MSG_WAITALL) < 0) 
                 error("[DRONE 4] ERROR reading the master response");
-            //printf("Master response: %d\n", response);
-            //fflush(stdout);
-
+            printf("Master response: %d\n", response);
+            fflush(stdout);
+ 
             if (response == MASTER_OK) { // Success
                 power--;
-                //printf("Movement allowed.\nPower remained: %d\n", power);
-                //fflush(stdout);
+                printf("Movement allowed.\nPower remained: %d\n", power);
+                fflush(stdout);
             }
             else if (response == MASTER_COL) { // Fail
                 i--;
@@ -236,7 +235,7 @@ int main(int argc, char * argv[]) {
 
             usleep(TIMESTEP * 1000); // microseconds
         }
-
+        
         // Refueling
         if (power == 0) {
             printf("[DRONE 4] Refueling\n");
