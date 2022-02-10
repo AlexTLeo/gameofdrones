@@ -29,6 +29,7 @@
 int sockfd; // Socket file descriptor
 int fdlogErr; // Error logs
 int fdlogInfo; // Info logs
+int x, y; // Coordinates
 
 /**
  * @brief Return an error message and exit.
@@ -97,17 +98,17 @@ void nextPosition(int direction) {
      * Update x 
      */
     if (direction == 5 || direction == 6 || direction == 7)
-        coordinatePair[0] += 1;
+        x += 1;
     else if (direction == 1 || direction == 2 || direction == 3)
-        coordinatePair[0] -= 1;
+        x -= 1;
 
     /**
      * Update y 
      */
     if (direction == 0 || direction == 1 || direction == 7)
-        coordinatePair[1] += 1;
+        y += 1;
     else if (direction == 3 || direction == 4 || direction == 5)
-        coordinatePair[1] -= 1;
+        y -= 1;
     
 }
 
@@ -184,8 +185,13 @@ int main(int argc, char * argv[]) {
     /**
      * Move the drones until the battery is not discharge
      */
-    int response;
+    
+    // Set coordinates to current position
+    x = coordinatePair[0];
+    y = coordinatePair[1];
 
+    int response;
+    
     while (power > 0) {
         // Generate a random direction and a random number of steps 
         int direction = randomNumberInt(0, 7);
@@ -203,9 +209,9 @@ int main(int argc, char * argv[]) {
             fflush(stdout);
 
             // Send the coordinates to the Master 
-            if (send(sockfd, &coordinatePair[0], sizeof(coordinatePair[0]), 0) < 0)
+            if (send(sockfd, &x, sizeof(x), 0) < 0)
 		        error("[DRONE 4] ERROR sending the coordinate x to the master");
-            if (send(sockfd, &coordinatePair[1], sizeof(coordinatePair[1]), 0) < 0)
+            if (send(sockfd, &y, sizeof(y), 0) < 0)
 		        error("[DRONE 4] ERROR sending the coordinate y to the master");
 
             // Read Master response and manage it
@@ -216,15 +222,18 @@ int main(int argc, char * argv[]) {
  
             if (response == MASTER_OK) { // Success
                 power--;
+                coordinatePair[0] = x;
+                coordinatePair[1] = y;
                 printf("Movement allowed.\nPower remained: %d\n", power);
                 fflush(stdout);
             }
             else if (response == MASTER_COL) { // Fail
                 i--;
+                x = coordinatePair[0];
+                y = coordinatePair[1];
                 printf("[DRONE 4] Movement not allowed.\nPower remained: %d\n", power);
                 fflush(stdout);
                 writeInfoLog(fdlogInfo, "[DRONE 4] Movement not allowed");
-                sleep(DRONE_TIMEOUT);
                 break;
             }
             else {
