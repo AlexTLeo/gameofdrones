@@ -98,7 +98,7 @@ int main(int argc, char *argv[]){
     
 
     //updates every 200ms (TIMESTEP)
-    struct timespec remaining, request = {1, TIMESTEP}; //A MODIFIER
+    struct timespec remaining, request = {0, TIMESTEP}; 
 
     //Socket connection
     int sock;
