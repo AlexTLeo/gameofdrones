@@ -25,7 +25,6 @@
  #define MAP_WALL -3
  #define MAP_REFUEL -4
 
-
 /**
  * Draws a map to terminal with drones and map borders visible
  * @param map - array of map tiles 40x80, where each value has a meaning:
@@ -37,6 +36,12 @@
  */
 void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]);
 
+void drawPlaneArt();
+
+// For ASCII art
+ int numSpaces = 1;
+ bool isAltitudeIncreasing = true;
+ int counter = 0;
 
 int main (int argc, char *argv[]) {
   int mapFull[MAP_WIDTH][MAP_HEIGHT]; // Map of everything (walls, drones, etc.)
@@ -228,6 +233,7 @@ void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]) {
 
   for (int y = 0; y < MAP_HEIGHT; y++) {
     // For each row
+    printf(" ");
     for (int x = 0; x < MAP_WIDTH; x++) {
       // For each column
       // Draw the appropriate symbol
@@ -264,5 +270,36 @@ void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]) {
     printf("\n");
   }
 
+  drawPlaneArt();
+  printf("\n");
   fflush(stdout);
+}
+
+void drawPlaneArt() {
+  int planeWidth = 41;
+
+  if (isAltitudeIncreasing) {
+    printf("\n");
+    counter++;
+  } else {
+    counter--;
+  }
+
+  if (counter == 5) {
+    isAltitudeIncreasing = false;
+  } else if (counter == 0) {
+    isAltitudeIncreasing = true;
+  }
+
+  terminalColor(1, 1);
+  printf("\n%*s\  ___", numSpaces, "");
+  printf("\n%*s|   \\", numSpaces, "");
+  printf("\n%*s|    \\                   ___", numSpaces, "");
+  printf("\n%*s|_____\\______________.-'`   `'-.,___", numSpaces, "");
+  printf("\n%*s/| _____     _________            ___>---", numSpaces, "");
+  printf("\n%*s\\|___________________________,.-'`", numSpaces, "");
+  printf("\n%*s        `'-.,__________)", numSpaces, "");
+  printf("\n%*s", numSpaces, "");
+
+  numSpaces = (numSpaces + 2) % (MAP_WIDTH - planeWidth) + 1;
 }

@@ -136,7 +136,7 @@ void clearTerminal() {
   terminalColor(31, true);
   // Needs to center a map 80 characters long
   printf("                                  DRONE OVERLORD\n");
-  printf("                                       MAP\n");
+  printf("\n");
   terminalColor(37, true);
   fflush(stdout);
 }

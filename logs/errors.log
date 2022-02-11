@@ -245,3 +245,392 @@ src/master.c:183:32: warning: format ‘%d’ expects a matching ‘int’ argum
 [11-2-2022 19:8:26] (code: 2) [drone 1] unkown response message from master
 [11-2-2022 19:11:2] (code: 2) [drone 1] Client: recv failed
 [11-2-2022 19:11:2] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:16:3] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:16:3] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawMap’:
+src/master.c:228:3: warning: implicit declaration of function ‘drawPlaneArt’ [-Wimplicit-function-declaration]
+  228 |   drawPlaneArt();
+      |   ^~~~~~~~~~~~
+src/master.c: At top level:
+src/master.c:271:6: warning: conflicting types for ‘drawPlaneArt’
+  271 | void drawPlaneArt() {
+      |      ^~~~~~~~~~~~
+src/master.c:228:3: note: previous implicit declaration of ‘drawPlaneArt’ was here
+  228 |   drawPlaneArt();
+      |   ^~~~~~~~~~~~
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:272:10: warning: missing terminating " character
+  272 |   printf("
+      |          ^
+src/master.c:272:10: error: missing terminating " character
+src/master.c:273:5: error: stray ‘\’ in program
+  273 |     \n  ___
+      |     ^
+src/master.c:273:6: error: ‘n’ undeclared (first use in this function); did you mean ‘yn’?
+  273 |     \n  ___
+      |      ^
+      |      yn
+src/master.c:273:6: note: each undeclared identifier is reported only once for each function it appears in
+src/master.c:273:7: error: expected ‘)’ before ‘___’
+  273 |     \n  ___
+      |       ^ ~~~
+      |       )
+src/master.c:274:5: error: stray ‘\’ in program
+  274 |     \n|   \\
+      |     ^
+src/master.c:274:11: error: stray ‘\’ in program
+  274 |     \n|   \\
+      |           ^~
+  275 |     \n|    \\                   ___
+      |            
+src/master.c:275:5: error: stray ‘\’ in program
+  275 |     \n|    \\                   ___
+      |     ^
+src/master.c:275:12: error: stray ‘\’ in program
+  275 |     \n|    \\                   ___
+      |            ^
+src/master.c:275:13: error: stray ‘\’ in program
+  275 |     \n|    \\                   ___
+      |             ^
+src/master.c:276:5: error: stray ‘\’ in program
+  276 |     \n|_____\\______________.-'`   `'-.,___
+      |     ^
+src/master.c:276:13: error: stray ‘\’ in program
+  276 |     \n|_____\\______________.-'`   `'-.,___
+      |             ^
+src/master.c:276:14: error: stray ‘\’ in program
+  276 |     \n|_____\\______________.-'`   `'-.,___
+      |              ^
+src/master.c:276:31: warning: character constant too long for its type
+  276 |     \n|_____\\______________.-'`   `'-.,___
+      |                               ^~~~~~~
+src/master.c:277:5: error: stray ‘\’ in program
+  277 |     \n/| _____     _________            ___>---
+      |     ^
+src/master.c:278:5: error: stray ‘\’ in program
+  278 |     \n\\|___________________________,.-'`
+      |     ^
+src/master.c:278:7: error: stray ‘\’ in program
+  278 |     \n\\|___________________________,.-'`
+      |       ^
+src/master.c:278:8: error: stray ‘\’ in program
+  278 |     \n\\|___________________________,.-'`
+      |        ^
+src/master.c:278:40: warning: missing terminating ' character
+  278 |     \n\\|___________________________,.-'`
+      |                                        ^
+src/master.c:278:40: error: missing terminating ' character
+  278 |     \n\\|___________________________,.-'`
+      |                                        ^~
+src/master.c:279:5: error: stray ‘\’ in program
+  279 |     \n        `'-.,__________)
+      |     ^
+src/master.c:279:15: error: stray ‘`’ in program
+  279 |     \n        `'-.,__________)
+      |               ^
+src/master.c:279:16: warning: missing terminating ' character
+  279 |     \n        `'-.,__________)
+      |                ^
+src/master.c:279:16: error: missing terminating ' character
+  279 |     \n        `'-.,__________)
+      |                ^~~~~~~~~~~~~~~
+src/master.c:280:5: error: stray ‘\’ in program
+  280 |     \n
+      |     ^
+src/master.c:281:3: warning: missing terminating " character
+  281 |   ");
+      |   ^
+src/master.c:281:3: error: missing terminating " character
+  281 |   ");
+      |   ^~~
+src/master.c:280:7: error: expected ‘;’ before ‘}’ token
+  280 |     \n
+      |       ^
+      |       ;
+  281 |   ");
+  282 | }
+      | ~      
+[11-2-2022 19:19:59] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:19:59] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawMap’:
+src/master.c:228:3: warning: implicit declaration of function ‘drawPlaneArt’ [-Wimplicit-function-declaration]
+  228 |   drawPlaneArt();
+      |   ^~~~~~~~~~~~
+src/master.c: At top level:
+src/master.c:271:6: warning: conflicting types for ‘drawPlaneArt’
+  271 | void drawPlaneArt() {
+      |      ^~~~~~~~~~~~
+src/master.c:228:3: note: previous implicit declaration of ‘drawPlaneArt’ was here
+  228 |   drawPlaneArt();
+      |   ^~~~~~~~~~~~
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:272:10: warning: missing terminating " character
+  272 |   printf("\n  ___
+      |          ^
+src/master.c:272:10: error: missing terminating " character
+  272 |   printf("\n  ___
+      |          ^~~~~~~~
+src/master.c:273:5: error: stray ‘\’ in program
+  273 |     \n|   \\
+      |     ^
+src/master.c:273:6: error: ‘n’ undeclared (first use in this function); did you mean ‘yn’?
+  273 |     \n|   \\
+      |      ^
+      |      yn
+src/master.c:273:6: note: each undeclared identifier is reported only once for each function it appears in
+src/master.c:273:11: error: stray ‘\’ in program
+  273 |     \n|   \\
+      |           ^~
+  274 |     \n|    \\                   ___
+      |            
+src/master.c:274:5: error: stray ‘\’ in program
+  274 |     \n|    \\                   ___
+      |     ^
+src/master.c:274:12: error: stray ‘\’ in program
+  274 |     \n|    \\                   ___
+      |            ^
+src/master.c:274:13: error: stray ‘\’ in program
+  274 |     \n|    \\                   ___
+      |             ^
+src/master.c:275:5: error: stray ‘\’ in program
+  275 |     \n|_____\\______________.-'`   `'-.,___
+      |     ^
+src/master.c:274:33: error: ‘___’ undeclared (first use in this function)
+  274 |     \n|    \\                   ___
+      |                                 ^~~
+src/master.c:274:36: error: expected ‘)’ before ‘n’
+  274 |     \n|    \\                   ___
+      |                                    ^
+      |                                    )
+  275 |     \n|_____\\______________.-'`   `'-.,___
+      |      ~                              
+src/master.c:275:13: error: stray ‘\’ in program
+  275 |     \n|_____\\______________.-'`   `'-.,___
+      |             ^
+src/master.c:275:14: error: stray ‘\’ in program
+  275 |     \n|_____\\______________.-'`   `'-.,___
+      |              ^
+src/master.c:275:31: warning: character constant too long for its type
+  275 |     \n|_____\\______________.-'`   `'-.,___
+      |                               ^~~~~~~
+src/master.c:276:5: error: stray ‘\’ in program
+  276 |     \n/| _____     _________            ___>---
+      |     ^
+src/master.c:277:5: error: stray ‘\’ in program
+  277 |     \n\\|___________________________,.-'`
+      |     ^
+src/master.c:277:7: error: stray ‘\’ in program
+  277 |     \n\\|___________________________,.-'`
+      |       ^
+src/master.c:277:8: error: stray ‘\’ in program
+  277 |     \n\\|___________________________,.-'`
+      |        ^
+src/master.c:277:40: warning: missing terminating ' character
+  277 |     \n\\|___________________________,.-'`
+      |                                        ^
+src/master.c:277:40: error: missing terminating ' character
+  277 |     \n\\|___________________________,.-'`
+      |                                        ^~
+src/master.c:278:5: error: stray ‘\’ in program
+  278 |     \n        `'-.,__________)
+      |     ^
+src/master.c:278:15: error: stray ‘`’ in program
+  278 |     \n        `'-.,__________)
+      |               ^
+src/master.c:278:16: warning: missing terminating ' character
+  278 |     \n        `'-.,__________)
+      |                ^
+src/master.c:278:16: error: missing terminating ' character
+  278 |     \n        `'-.,__________)
+      |                ^~~~~~~~~~~~~~~
+src/master.c:279:5: error: stray ‘\’ in program
+  279 |     \n
+      |     ^
+src/master.c:280:3: warning: missing terminating " character
+  280 |   ");
+      |   ^
+src/master.c:280:3: error: missing terminating " character
+  280 |   ");
+      |   ^~~
+src/master.c:279:7: error: expected ‘;’ before ‘}’ token
+  279 |     \n
+      |       ^
+      |       ;
+  280 |   ");
+  281 | }
+      | ~      
+[11-2-2022 19:21:3] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawMap’:
+src/master.c:228:3: warning: implicit declaration of function ‘drawPlaneArt’ [-Wimplicit-function-declaration]
+  228 |   drawPlaneArt();
+      |   ^~~~~~~~~~~~
+src/master.c: At top level:
+src/master.c:271:6: warning: conflicting types for ‘drawPlaneArt’
+  271 | void drawPlaneArt() {
+      |      ^~~~~~~~~~~~
+src/master.c:228:3: note: previous implicit declaration of ‘drawPlaneArt’ was here
+  228 |   drawPlaneArt();
+      |   ^~~~~~~~~~~~
+[11-2-2022 19:22:16] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:22:16] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:22:33] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:22:33] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:23:33] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:23:33] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:24:12] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:24:12] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:24:35] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:24:35] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:276:10: warning: unknown escape sequence: '\040'
+  276 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:26:52] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:26:52] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:276:10: warning: unknown escape sequence: '\040'
+  276 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:28:34] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:28:34] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:276:10: warning: unknown escape sequence: '\040'
+  276 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:28:46] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:28:46] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:278:10: warning: unknown escape sequence: '\040'
+  278 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:29:37] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:29:37] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:278:10: warning: unknown escape sequence: '\040'
+  278 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:30:39] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:30:39] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:278:10: warning: unknown escape sequence: '\040'
+  278 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:31:3] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:279:10: warning: unknown escape sequence: '\040'
+  279 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:31:23] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:31:23] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:283:10: warning: unknown escape sequence: '\040'
+  283 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:31:56] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:31:56] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:288:10: warning: unknown escape sequence: '\040'
+  288 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:33:0] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:33:0] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:36:52] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:37:6] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:37:19] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:37:19] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:37:51] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:37:51] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:38:18] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:38:18] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:293:10: warning: unknown escape sequence: '\040'
+  293 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:39:22] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:39:22] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:293:10: warning: unknown escape sequence: '\040'
+  293 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:40:10] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:40:10] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:41:13] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:41:13] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:41:32] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:41:32] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:41:46] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:41:46] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:42:3] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:42:3] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:43:25] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:43:25] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:43:54] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:43:54] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:44:12] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:44:12] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:294:10: warning: unknown escape sequence: '\040'
+  294 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:44:34] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:44:34] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:44:54] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:44:54] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:45:27] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:45:27] (code: 2) [drone 1] unkown response message from master
