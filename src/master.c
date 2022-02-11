@@ -20,13 +20,20 @@
  #define MAP_WIDTH 82
  #define MAP_HEIGHT 42
 
+ #define MAP_FOG -1
+ #define MAP_EMPTY -2
+ #define MAP_WALL -3
+ #define MAP_REFUEL -4
+
+
 /**
  * Draws a map to terminal with drones and map borders visible
  * @param map - array of map tiles 40x80, where each value has a meaning:
- * -1 is "empty"
- * -2 is "occupied, wall",
- * positive integers is "occupied by drone number n, flying",
- * -3 is "occupied, refueling"
+ *  positive integers is "occupied by drone number n, flying",
+ * -1 is "empty, unexplored"
+ * -2 is "empty, explored"
+ * -3 is "occupied, wall",
+ * -4 is "occupied, refueling"
  */
 void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]);
 
@@ -99,7 +106,7 @@ int main (int argc, char *argv[]) {
   // Initially, fill map with walls
   for (int i = 0; i < MAP_HEIGHT; i++) {
     for (int j = 0; j < MAP_WIDTH; j++) {
-      mapFull[j][i] = -2;
+      mapFull[j][i] = MAP_WALL;
     }
   }
 
@@ -183,7 +190,7 @@ int main (int argc, char *argv[]) {
           if (droneCoordsNext[k][0] == x && droneCoordsNext[k][1] == y) {
             // CASE: Drone on cell
             if (droneIsRefueling[k]) {
-              mapFull[x][y] = -3;
+              mapFull[x][y] = MAP_REFUEL;
             } else {
               mapFull[x][y] = k;
             }
@@ -194,7 +201,14 @@ int main (int argc, char *argv[]) {
             isOccupied = true;
           } else if (!isOccupied) {
             // CASE: No drone on cell
-            mapFull[x][y] = -1;
+            // Check if area was already explored
+            if (mapFull[x][y] >= 0 || mapFull[x][y] == -2) {
+              // CASE: empty, explored
+              mapFull[x][y] = MAP_EMPTY;
+            } else {
+              // CASE: empty, unexplored
+              mapFull[x][y] = MAP_FOG;
+            }
           }
         }
       }
@@ -218,15 +232,20 @@ void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]) {
       // For each column
       // Draw the appropriate symbol
       switch (mapFull[x][y]) {
-        case -1: // empty
+        case -1: // empty, unexplored
+          terminalColor(40, 1);
+          printf(" ");
+          terminalColor(0, 0);
+          break;
+        case -2: // empty, explored
           printf(" ");
           break;
-        case -2: // occupied, wall
+        case -3: // occupied, wall
           terminalColor(47, 1);
           printf(" ");
           terminalColor(0, 0);
           break;
-        case -3: // occupied, refueling
+        case -4: // occupied, refueling
           terminalColor(43, 1);
           terminalColor(30, 1);
           printf("R");

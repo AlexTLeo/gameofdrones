@@ -127,7 +127,6 @@ void terminalColor(int colorCode, bool isBold) {
   }
 
   printf("\033[%s%dm", specialCode, colorCode);
-  fflush(stdout);
 }
 
 // Resets the terminal to initial state with title
