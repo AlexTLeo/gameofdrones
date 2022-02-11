@@ -202,6 +202,8 @@ int main (int argc, char *argv[]) {
 
     // Draw map to terminal
     drawMap(mapFull);
+    // Minimal wait time just in case the program gets too fast
+    usleep(100000); // 100 ms
   }
 
   return 0;
