@@ -1,0 +1,35 @@
+#############################drone3##############################
+The code and the executables contained in these folders make up
+our supergroup project aimed at creating a system of autonomous
+drones moving in the same map while avoiding collisions thanks
+to the supervision of a singular central master. Our task was to
+create the third drone of the system, contained in drone3.c.
+
+Specifics: Our drone starts from an initial position included
+in the values.h file shared between all members of the supergroup
+and moves in a randomly choosen direction 3 times before changing
+its orientation. Each movement is notified to the master through 
+sockets, that must be in agreement with it for it to take place
+(otherwise the drone will be forced to change direction). Our
+drone also simulates expending fuel each time it takes action, 
+and handles refueling after landing according to our assignment
+specifications. Other than refueling after landing, we also 
+implemented 3 different additional features:
+- visualization of the already explored area (the drone will
+  print the whole last followed path each time it lands)
+- coverage algorithm (keeps into account the percentage of the
+  map covered by the drone during its motion by comparing each
+  new position with the coverage matrix)
+- vertical motion (3D movement done with the addition of
+  the z axis but not set to work in the current state due to the
+  fact that we would need all drones and master to be able to
+  handle 3D motion for the whole system to work -> we left it
+  commented)
+
+Instructions: to use our program, you must run all processes 
+developed by the supergroup concurrently. Since we only have the
+executables of the processes of the other groups, this can only
+be done by: 
+- running
+-
+
