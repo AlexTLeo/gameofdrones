@@ -200,10 +200,30 @@ int main(int argc, char * argv[]) {
         fflush(stdout);
         
         // Move the drone 
-        for (int i = 0; i < steps && power > 0; i++) {
+        for (int i = 0; i < steps & power > 0; i++) {
             // Compute the next position coordinates
             nextPosition(direction);
             
+            // Check bug on x
+            if (x > 80) {
+                x = 80;
+                break;
+            }
+            else if (x < 0) {
+                x = 0;
+                break;
+            }
+            
+            // Check bug on y
+            if (y > 40) {
+                y = 40;
+                break;
+            }
+            else if (y < 0) {
+                y = 0;
+                break;
+            }
+
             printf("X: %d\nY: %d\n", coordinatePair[0], coordinatePair[1]);
             fflush(stdout);
 
