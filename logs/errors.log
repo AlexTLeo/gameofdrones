@@ -634,3 +634,33 @@ src/master.c:295:10: warning: unknown escape sequence: '\040'
       |          ^~~~~~~~~~~~~
 [11-2-2022 19:45:27] (code: 2) [drone 1] unkown response message from master
 [11-2-2022 19:45:27] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:46:22] (code: 2) [drone 1] unkown response message from master
+[11-2-2022 19:46:22] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[11-2-2022 19:47:28] (code: 2) [drone 1] Client: recv failed
+[11-2-2022 19:47:28] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[12-2-2022 15:38:25] (code: 2) [drone 1] Client: recv failed
+[12-2-2022 15:38:25] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[12-2-2022 15:40:14] (code: 2) [drone 1] Client: recv failed
+[12-2-2022 15:40:14] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[12-2-2022 15:40:23] (code: 2) [drone 1] Client: recv failed
+[12-2-2022 15:40:23] (code: 2) [drone 1] unkown response message from master

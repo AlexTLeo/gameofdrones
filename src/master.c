@@ -270,8 +270,8 @@ void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]) {
     printf("\n");
   }
 
-  drawPlaneArt();
-  printf("\n");
+  // drawPlaneArt();
+  // printf("\n");
   fflush(stdout);
 }
 
