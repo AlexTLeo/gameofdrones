@@ -127,7 +127,6 @@ void terminalColor(int colorCode, bool isBold) {
   }
 
   printf("\033[%s%dm", specialCode, colorCode);
-  fflush(stdout);
 }
 
 // Resets the terminal to initial state with title
@@ -137,7 +136,7 @@ void clearTerminal() {
   terminalColor(31, true);
   // Needs to center a map 80 characters long
   printf("                                  DRONE OVERLORD\n");
-  printf("                                       MAP\n");
+  printf("\n");
   terminalColor(37, true);
   fflush(stdout);
 }
