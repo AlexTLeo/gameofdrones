@@ -10,8 +10,8 @@
 Remember to set sockopt to reuse address port
 
 Drones should generate trajectory in the form of:
-1) number of total steps to take 
-2) random direction 
+1) number of total steps to take
+2) random direction
 Directions: 0 (up), 1 (top-right), 2 (right), ... , 7 (top-left)
 
 See values.h for communication messages specifications
