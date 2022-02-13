@@ -1,4 +1,4 @@
-[GENERAL DESCRIPTION]
+[DRONE 1][GENERAL DESCRIPTION]
 
 authors:
   - Paul Raingeard de la Bletiere
@@ -6,35 +6,13 @@ authors:
   If there is any problem while running this code, we can be contacted with the email adresses p.raingeard.37@gmail.com and elea.papin@eleves.ec-nantes.fr
 
 usage: 
-
-  prerequisites : 
-    - gcc compiler 
-
-  to run the programs : 
-    - first use install by giving it the path to extract your files : . install.sh WANTED_PATH
-    - if no path is specified, everything is unzipped in the ./archive folder
-    BE CAREFUL : no slash in the call to the scripts
-    - then run using . run.sh
-    - to uninstall use . uninstall.sh
-    - once installed, you can call help.sh to get more information about the different processes
-
-  scripts :
-
-    - install.sh : unzip the archive and compile the executables.
-    - run.sh : run the executables once they have been installed.
-    - cleanup.sh : remove the executables. You need to run install.sh again to recompile. Also clean logs.
-    - uninstall.sh : delete the added files and the unziped archive.
-    - help.sh : shows this document and the description of the other processes if they have been installed
-
-  processes : 
-
     - master : used as server to manage all the other drones.
-    - drone1 : simuulation of a drone giving random path to master.
+    - drone1 : simulation of a drone giving random path to master.
     
-  description:
+description:
     
-  Implements a communication between a server and a drone, that checks for collision between several drones.
-    
-  commands:
+The drone1 program implements one drone that moves within a map. The drone does not know of the limits of the maps nor of the presence of other drones. Therfore, it must communicate with a master to get this information. The communication is done through sockets : the master is the server and the drone1 is a client. At every pass in the loop, the drone asks the master if he can move to a certain position. The master checks feasability and returns an answer. If no collision (with the walls or other drones) would result in the movement, the drone changes position. If not, it stays in place.
 
-  The user just has to run the program to get a simulation.
+The drone chooses randomly the direction in which it is going to move. It can move in straight lines or diagonally. In order to dorce the drone to explore the map, one direction is set for several consecutive loops. If a movement is rejected by the master 3 consecutive times, the direction is changed since it can be interpreted as a collision with a wall and not with a drone. The drone also have a certain amount of fuel alloted at the beginning. Each pass in the loop results in the loss of one unit of fuel. When the tank is empty, the drone no longer tries to move; it sends its current position to the master and starts refueling. Once refueled, it goes back to normal operations.
+    
+ 
