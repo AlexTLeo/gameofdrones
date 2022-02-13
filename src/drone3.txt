@@ -26,10 +26,4 @@ implemented 3 different additional features:
   handle 3D motion for the whole system to work -> we left it
   commented)
 
-Instructions: to use our program, you must run all processes 
-developed by the supergroup concurrently. Since we only have the
-executables of the processes of the other groups, this can only
-be done by: 
-- running
--
 
