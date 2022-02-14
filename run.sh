@@ -1,5 +1,5 @@
 #!/bin/bash
-gcc src/master.c -o bin/master -lrt -pthread -lm &>> logs/errors.log
+gcc src/drone2.c -o bin/drone2 -lrt -pthread -lm &>> logs/errors.log
 
 gnome-terminal -- sh -c "./bin/master; bash"
 gnome-terminal -- sh -c "./bin/drone0"
