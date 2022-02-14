@@ -19,6 +19,7 @@ char* string3;
 char string4[30];
 char* string5;
 int fdlogInfo;
+int fdlogError;
 
 void log_desired_position(int x, int y){
     string1 = "[Drone0] Desired position (";
@@ -72,8 +73,9 @@ int msleep(long msec) {
 int main(int argc, char *argv[]) {
     // Get starting position
     int position[2] = {START0[0], START0[1]};
-    //printf("Drone0: Initial position (%d, %d) \n", position[0], position[1]);
+    // Open log files
     fdlogInfo = openInfoLog();
+    fdlogError = openErrorLog();
     writeInfoLog(fdlogInfo, "[Drone0] Starting...");
     // Socket connection
     // Initialize socket file descriptor and variable to check writing to socket
@@ -85,6 +87,7 @@ int main(int argc, char *argv[]) {
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0) {
         perror("ERROR opening socket");
+        writeErrorLog(fdlogError, "[Drone0] Error in opening socket", errno);
         exit(EXIT_FAILURE);
     }
     // Set sockopt to reuse the address
@@ -95,17 +98,19 @@ int main(int argc, char *argv[]) {
     // Check server address
     if (server == NULL) {
         fprintf(stderr, "ERROR, no such host\n");
+        writeErrorLog(fdlogError, "[Drone0] No such server address", errno);
         exit(EXIT_FAILURE);
     }
     // Set to 0 struct for server address
     bzero((char *) &serv_addr, sizeof(serv_addr));
-    // Set struct fields
+    // Set struct fieldsprintf
     serv_addr.sin_family = AF_INET;
     bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
     serv_addr.sin_port = htons(PORTNO);
     // Connect to server and check for succesful connection
     if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
         perror("ERROR connecting");
+        writeErrorLog(fdlogError, "[Drone0] Error during connection to master", errno);
         exit(EXIT_FAILURE);
     }
     // Socket connection done
@@ -119,13 +124,12 @@ int main(int argc, char *argv[]) {
     int response = 1;
     // Store old position in case of collisions
     int old_position[2];
+    old_position[0] = position[0];
+    old_position[1] = position[1];
     // Intializes random number generator
     srand(mix(clock(), time(NULL), getpid()));
     while (1) {
         for (int i = 0; i < STEPS; i++) {
-            // Store old posiiton
-            old_position[0] = position[0];
-            old_position[1] = position[1];
             // Reset timeout counter
             timeout = 0;
             // Choose new direction
@@ -134,38 +138,30 @@ int main(int argc, char *argv[]) {
                 // Update position
                 if (direction == 0) {
                     // Up 
-                    //printf("Up ");
                     position[1]++;
                 } else if (direction == 1) {
                     // Up - right
-                    //printf("Up - right ");
                     position[0]++;
                     position[1]++;
                 } else if (direction == 2) {
                     // Right
-                    //printf("Right ");
                     position[0]++;
                 } else if (direction == 3) {
                     // Down -right
-                    //printf("Down - right ");
                     position[0]++;
                     position[1]--;
                 } else if (direction == 4) {
                     // Down
-                    //printf("Down ");
                     position[1]--;
                 } else if (direction == 5) {
                     // Down - left
-                    //printf("Down - left ");
                     position[0]--;
                     position[1]--;
                 } else if (direction == 6) {
-                   // printf("Left ");
                     // Left
                     position[0]--;
                 } else if (direction == 7) {
                     // Up - left
-                    //printf("Up - left ");
                     position[0]--;
                     position[1]++;
                 }
@@ -173,21 +169,23 @@ int main(int argc, char *argv[]) {
                 n = write(sockfd, position, sizeof(position));
                 if (n < 0) { 
                     perror("ERROR writing to socket");
+                    writeErrorLog(fdlogError, "[Drone0] Error in writing to socket", errno);
                     exit(EXIT_FAILURE);
                 }
 
                 log_desired_position(position[0], position[1]);
                 
                 
-                //printf("Drone0: Writing (%d, %d) to server...\n", position[0], position[1]);
-                //fflush(stdout);
+                printf("[Drone0] Writing (%d, %d) to server...\n", position[0], position[1]);
+                fflush(stdout);
                 // Wait for response 
                 n = recv(sockfd, &response, sizeof(response), MSG_WAITALL);
                 if (n < 0) {
                     perror("ERROR reading response from socket\n");
+                    writeErrorLog(fdlogError, "[Drone0] Error in receiving from socket", errno);
                     exit(EXIT_FAILURE);
                 }
-                //printf("Drone0: response %d from server\n", response);
+                printf("[Drone0] Response %d from server\n", response);
                     
                 // If response is collision, then update timeout and check condition on it
                 if (response == MASTER_COL) {
@@ -216,34 +214,28 @@ int main(int argc, char *argv[]) {
                 }
             } 
         }
-        /*
-        REFUELLING WITH MICROSLEEPS
+        // REFUELLING WITH MICROSLEEPS
         for (int k = 0; k < 30; k++) {
             // Landing for refuelling
             n = write(sockfd, position, sizeof(position));
             if (n < 0) { 
                 perror("ERROR writing to socket");
+                writeErrorLog(fdlogError, "[Drone0] Error in writing to socket", errno);
+                exit(EXIT_FAILURE);
+            }
+            // Waist responses from server while refuelling
+            n = recv(sockfd, &response, sizeof(response), MSG_WAITALL);
+            if (n < 0) {
+                perror("ERROR reading response from socket\n");
+                writeErrorLog(fdlogError, "[Drone0] Error in reading from socket", errno);
                 exit(EXIT_FAILURE);
             }
             // Refuelling
-            printf("Drone1: refuelling");
+            printf("[Drone0] refuelling\n");
             fflush(stdout);
             msleep(TIMESTEP);
-        }*/
-        // Landing for refuelling
-        writeInfoLog(fdlogInfo, "[Drone0] Landing for refuelling...");
-        n = write(sockfd, position, sizeof(position));
-        if (n < 0) { 
-            perror("ERROR writing to socket");
-            exit(EXIT_FAILURE);
         }
-        // Refuelling
-        //printf("Drone0: refuelling\n");
-        //fflush(stdout);
-        sleep(3);
         writeInfoLog(fdlogInfo, "[Drone0] Fuel level ok");
     }
-    //printf("Drone0: Landing in (%d, %d)...\n", position[0], position[1]);
-    //fflush(stdout); 
     return 0;
 }
