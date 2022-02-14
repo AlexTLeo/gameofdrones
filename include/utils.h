@@ -127,7 +127,6 @@ void terminalColor(int colorCode, bool isBold) {
   }
 
   printf("\033[%s%dm", specialCode, colorCode);
-  fflush(stdout);
 }
 
 // Resets the terminal to initial state with title
@@ -137,7 +136,7 @@ void clearTerminal() {
   terminalColor(31, true);
   // Needs to center a map 80 characters long
   printf("                                  DRONE OVERLORD\n");
-  printf("                                       MAP\n");
+  printf("\n");
   terminalColor(37, true);
   fflush(stdout);
 }
@@ -261,6 +260,28 @@ int socketRead(int fd, int messageLength, int fdlog_err) {
   }
 
   return message;
+}
+
+// Select read on socket (specific to assignment 3)
+int socketSelectDrones(int fdDrone[], const int NUM_DRONES, int nfds,
+    fd_set *restrict readfds, fd_set *restrict writefds, fd_set *restrict exceptfds,
+    struct timeval *restrict timeout, int fdlog_err) {
+
+  int message;
+
+  if (select(nfds, readfds, writefds, exceptfds, timeout) < 0) {
+    printf("Error %d in ", errno);
+    fflush(stdout);
+    perror("common.h socketSelect");
+    writeErrorLog(fdlog_err, "common.h: socketSelect failed", errno);
+    exit(-1);
+  }
+
+  for (int i = 0; i < NUM_DRONES; i++) {
+    if (FD_ISSET(fdDrone[i], readfds)) {
+      socketRead(fdDrone[i], sizeof(int), fdlog_err);
+    }
+  }
 }
 
 // Wrapper for bind()
