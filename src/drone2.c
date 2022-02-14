@@ -1,16 +1,3 @@
-/*
-  -log file write in same files as master -> Yusuke | [Drone2]: xxxxxxxxxxxxxxxxxxxxxxx log("XXXXXXXXXXXXXXXX")
-  -create path planning -> Ebru rand (0, 80) for x and y  (greedy search, A* star)
-  -Print/visulize our drone status -> Tachadol
-   ^
- < D >
-   v  [----Battery-----]
-
-  Update Fri. 10PM
-
-  Sun. night 13/02/22
-  *-.sh file + put some comments
-*/
 #include "../include/values.h"
 #include "../include/utils.h"
 #include <netdb.h>
@@ -29,8 +16,6 @@
 
 #define GROUPNUM 2
 #define SA struct sockaddr
-#define MINSTEP 3
-#define MAXSTEP 3 //The real maxstep is maxstep + minstep
 
 
 int x, y, n, coord[2], coord2[2], nCost, finalPath[20], dir[20], newCoord[20], finalPosition[40];
