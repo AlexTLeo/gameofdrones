@@ -185,7 +185,6 @@ int main(int argc, char *argv[]) {
             old_position[1] = position[1];
 
             // Calculate all possible cells to reach
-            
             // Up
             x_values[0] = position[0];
             y_values[0] = position[1] + 1;
@@ -226,9 +225,9 @@ int main(int argc, char *argv[]) {
             }
             bubblesort(distance_ordered, 8);
 
-            // Look for the index in distance with distance_ordered[n_attempt]
+            // Look for the index in distance with distance_ordered[0]
             for(int j = 0; j < 8; j++){
-                if(distance[j] == distance_ordered[0]){ // Not 0 here but n_attempt = 1 for 2nd minimal distance entry
+                if(distance[j] == distance_ordered[0]){
                     position[0] = x_values[j];
                     position[1] = y_values[j];
                 }
