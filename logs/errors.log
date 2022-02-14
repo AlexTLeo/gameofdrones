@@ -664,3 +664,142 @@ src/master.c:295:10: warning: unknown escape sequence: '\040'
       |          ^~~~~~~~~~~~~
 [12-2-2022 15:40:23] (code: 2) [drone 1] Client: recv failed
 [12-2-2022 15:40:23] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[12-2-2022 15:43:1] (code: 2) [drone 1] unkown response message from master
+[12-2-2022 15:43:1] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+[12-2-2022 15:44:31] (code: 2) [drone 1] unkown response message from master
+In file included from src/master.c:9:
+src/../include/utils.h: In function ‘socketSelect’:
+src/../include/utils.h:269:93: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  269 | void socketBind (int sockfd, const struct sockaddr* addr, socklen_t addrlen, int fdlog_err) {
+      |                                                                                             ^
+src/../include/utils.h:280:60: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  280 | void socketListen (int sockfd, int backlog, int fdlog_err) {
+      |                                                            ^
+src/../include/utils.h:291:92: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  291 | int socketAccept (int sockfd, struct sockaddr* cliAddr, socklen_t* addrlen, int fdlog_err) {
+      |                                                                                            ^
+src/../include/utils.h:303:58: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  303 |     const void* optval, socklen_t optlen, int fdlog_err) {
+      |                                                          ^
+src/../include/utils.h:314:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  314 | void socketClose(int fd, int fdlog_err) {
+      |                                         ^
+In file included from src/master.c:10:
+src/../include/values.h:1:1: error: parameter ‘PORTNO’ is initialized
+    1 | const int PORTNO = 4000; // example: group 1 has portno = (PORTNO+1)
+      | ^~~~~
+src/../include/values.h:2:1: error: parameter ‘HOSTNAME’ is initialized
+    2 | const char* HOSTNAME = "localhost";
+      | ^~~~~
+src/../include/values.h:9:1: error: parameter ‘MASTER_OK’ is initialized
+    9 | const int MASTER_OK = 1; // OK to move!
+      | ^~~~~
+src/../include/values.h:10:1: error: parameter ‘MASTER_COL’ is initialized
+   10 | const int MASTER_COL = 0; // potential collision, movement NOT allowed!
+      | ^~~~~
+src/../include/values.h:12:1: error: parameter ‘DRONE_TIMEOUT’ is initialized
+   12 | const int DRONE_TIMEOUT = 3;
+      | ^~~~~
+src/../include/values.h:13:1: error: parameter ‘TIMESTEP’ is initialized
+   13 | const int TIMESTEP = 200; // milliseconds
+      | ^~~~~
+src/../include/values.h:14:1: error: parameter ‘STEPS’ is initialized
+   14 | const int STEPS = 300;
+      | ^~~~~
+src/../include/values.h:20:1: error: parameter ‘START0’ is initialized
+   20 | const int START0[2] = {3, 3};
+      | ^~~~~
+src/../include/values.h:20:24: warning: initialization of ‘const int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   20 | const int START0[2] = {3, 3};
+      |                        ^
+src/../include/values.h:20:24: note: (near initialization for ‘START0’)
+src/../include/values.h:20:27: warning: excess elements in scalar initializer
+   20 | const int START0[2] = {3, 3};
+      |                           ^
+src/../include/values.h:20:27: note: (near initialization for ‘START0’)
+src/../include/values.h:21:1: error: parameter ‘START1’ is initialized
+   21 | const int START1[2] = {77, 3};
+      | ^~~~~
+src/../include/values.h:21:24: warning: initialization of ‘const int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   21 | const int START1[2] = {77, 3};
+      |                        ^~
+src/../include/values.h:21:24: note: (near initialization for ‘START1’)
+src/../include/values.h:21:28: warning: excess elements in scalar initializer
+   21 | const int START1[2] = {77, 3};
+      |                            ^
+src/../include/values.h:21:28: note: (near initialization for ‘START1’)
+src/../include/values.h:22:1: error: parameter ‘START2’ is initialized
+   22 | const int START2[2] = {3, 37};
+      | ^~~~~
+src/../include/values.h:22:24: warning: initialization of ‘const int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   22 | const int START2[2] = {3, 37};
+      |                        ^
+src/../include/values.h:22:24: note: (near initialization for ‘START2’)
+src/../include/values.h:22:27: warning: excess elements in scalar initializer
+   22 | const int START2[2] = {3, 37};
+      |                           ^~
+src/../include/values.h:22:27: note: (near initialization for ‘START2’)
+src/../include/values.h:23:1: error: parameter ‘START3’ is initialized
+   23 | const int START3[2] = {77, 37};
+      | ^~~~~
+src/../include/values.h:23:24: warning: initialization of ‘const int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   23 | const int START3[2] = {77, 37};
+      |                        ^~
+src/../include/values.h:23:24: note: (near initialization for ‘START3’)
+src/../include/values.h:23:28: warning: excess elements in scalar initializer
+   23 | const int START3[2] = {77, 37};
+      |                            ^~
+src/../include/values.h:23:28: note: (near initialization for ‘START3’)
+src/../include/values.h:24:1: error: parameter ‘START4’ is initialized
+   24 | const int START4[2] = {40, 20};
+      | ^~~~~
+src/../include/values.h:24:24: warning: initialization of ‘const int *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   24 | const int START4[2] = {40, 20};
+      |                        ^~
+src/../include/values.h:24:24: note: (near initialization for ‘START4’)
+src/../include/values.h:24:28: warning: excess elements in scalar initializer
+   24 | const int START4[2] = {40, 20};
+      |                            ^~
+src/../include/values.h:24:28: note: (near initialization for ‘START4’)
+src/master.c:42:2: error: parameter ‘numSpaces’ is initialized
+   42 |  int numSpaces = 1;
+      |  ^~~
+src/master.c:43:2: error: parameter ‘isAltitudeIncreasing’ is initialized
+   43 |  bool isAltitudeIncreasing = true;
+      |  ^~~~
+src/master.c:44:2: error: parameter ‘counter’ is initialized
+   44 |  int counter = 0;
+      |  ^~~
+src/master.c:46:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   46 | int main (int argc, char *argv[]) {
+      |                                   ^
+src/master.c:231:50: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  231 | void drawMap(int mapFull[MAP_WIDTH][MAP_HEIGHT]) {
+      |                                                  ^
+src/master.c:278:21: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  278 | void drawPlaneArt() {
+      |                     ^
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
+In file included from src/master.c:9:
+src/../include/utils.h:266:5: error: old-style parameter declarations in prototyped function definition
+  266 | int socketSelect(int fdlog_err)
+      |     ^~~~~~~~~~~~
+src/master.c:305: error: expected ‘{’ at end of input
+  305 | }
+      | 
+[13-2-2022 17:1:58] (code: 2) [drone 1] Client: recv failed
+[13-2-2022 17:1:58] (code: 2) [drone 1] unkown response message from master
+src/master.c: In function ‘drawPlaneArt’:
+src/master.c:295:10: warning: unknown escape sequence: '\040'
+  295 |   printf("\n%*s\  ___", numSpaces, "");
+      |          ^~~~~~~~~~~~~
