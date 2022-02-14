@@ -42,7 +42,7 @@ void log_dr2(int mode, char* string, int errno){
   int fd_log;
 
   //char exp_dr2[] = string;
-  char con_dr2[80] = "[DRONE2] หกดหกดหกด";
+  char con_dr2[80] = "[DRONE2] ";
   strcat(con_dr2, string);
 
   switch(mode)
@@ -535,7 +535,7 @@ void print_drone(int batt_per, int goal_x, int goal_y, int cur_x, int cur_y, int
     //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
     printf ("                                                     |==================\n"
             "     @@@@@@@@@                      @@@@@@@@@        |       Battery\n");
-    printf ("    @@        @@(                 @@       .@@       |      [  %d  }\n", batt_per);
+    printf ("    @@        @@(                 @@       .@@       |      [  %d%%  }\n", batt_per);
     printf ("  @&         #& .@.             #@  @(         @@    |==================\n"
             " @&     #@@@&    ,@             @     @@@@      @@   |   Goal corodinate\n");
     printf (" @(     @@@@@#   .@            ,@    @@@@@@     @@   |     [ %d, %d ] \n", goal_x, goal_y);
@@ -572,12 +572,12 @@ void print_drone_reach_goal(int batt_per, int cur_x, int cur_y, float timestep){
             "Tachadol + Ebru + + Yusuke = TEY!!!!!!!!!!!\n");
     fflush(stdout);
     //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
-    printf ("                                                    |==================\n"
+    printf ("                                                     |==================\n"
             "     @@@@@@@@@                      @@@@@@@@@        |       Battery\n");
-    printf ("    @@        @@(                 @@       .@@       |      [  %d  }\n", batt_per);
+    printf ("    @@        @@(                 @@       .@@       |      [  %d%%  }\n", batt_per);
     printf ("  @&         #& .@.             #@  @(         @@    |==================\n"
             " @&     #@@@&    ,@             @     @@@@      @@   |   Goal corodinate\n");
-    printf (" @(     @@@@@#   .@            ,@    @@@@@@     @@   |     Random a new goal!\n");
+    printf (" @(     @@@@@#   .@            ,@    @@@@@@     @@   |  Random a new goal!\n");
     printf (" .@   @#   @@@@@@@#             @@@@@@@&   @@  /@    |==================\n"
             "   @@*       @@@@@@@(         &@@@@@@@       /@(     |   Current position\n"
             "      ,@@@@@@/.@@@@@@@@@@@@@@@@@@@@@ #@@@@@@.        |     [ %d, %d ] \n", cur_x, cur_y);
@@ -747,7 +747,7 @@ int main()
         break;
       }
     }
-    xInit = newCoord[0], yInit = newCoord[1];
+    xInit = moving_to[0], yInit = moving_to[1];
 
 
 
