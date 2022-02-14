@@ -42,7 +42,7 @@ void log_dr2(int mode, char* string, int errno){
   int fd_log;
 
   //char exp_dr2[] = string;
-  char con_dr2[80] = "[Drone 2]:";
+  char con_dr2[80] = "[DRONE2] หกดหกดหกด";
   strcat(con_dr2, string);
 
   switch(mode)
@@ -385,10 +385,10 @@ int eburu_pos(int xInit, int yInit){
         sprintf(str1, "%d", (int)rand_direction[2 * i]);
         sprintf(str2, "%d", (int)rand_direction[2 * i + 1]);
         strcat(str1, str2);
-        direction[i] = atoi(str1) % 1;
+        direction[i] = atoi(str1) % 2;
     }
 
-    if (direction[0] == 0){
+    if (direction[0] == 0){ //+
       if (xInit + coord2[0] > xLim){
           signX = -1;
           if (xInit - coord2[0] >= 0)
@@ -405,57 +405,44 @@ int eburu_pos(int xInit, int yInit){
       }
       else xGoal = xInit + coord2[0];
     }
-  else {
-    if (xInit - coord2[0] < 0){
-        signX = 1;
-        if (xInit - coord2[0] >= 0)
-            xGoal = xInit - coord2[0];
-        else if (abs(xInit - coord2[0])>=3){
-            xGoal = abs(xInit - coord2[0]);
-            coord2[0] = xInit - xGoal;
-        }
-        else
-        {
-            xGoal = xInit - 3;
-            coord2[0] = 3;
-        }
+    else { //-
+      if (xInit - coord2[0] < 0){
+          signX = 1;
+          xGoal = xInit + coord2[0];
+      }
+      else {
+        signX = -1;
+        xGoal = xInit - coord2[0];
+      }
     }
-    else xGoal = xInit - coord2[0];
-  }
-  if (direction[1] == 0){
-    if (yInit + coord2[1] > yLim){
-        signY = -1;
-        if (yInit - coord2[1] >= 0)
-            yGoal = yInit - coord2[1];
-        else if (abs(yInit - coord2[1])>=3){
-            yGoal = abs(yInit - coord2[1]);
-            coord2[1] = yInit - yGoal;
-        }
-        else
-        {
-            yGoal = yInit - 3;
-            coord2[1] = 3;
-        }
+    // For YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY
+    if (direction[1] == 0){
+      if (yInit + coord2[1] > yLim){
+          signY = -1;
+          if (yInit - coord2[1] >= 0)
+              yGoal = yInit - coord2[1];
+          else if (abs(yInit - coord2[1])>=3){
+              yGoal = abs(yInit - coord2[1]);
+              coord2[1] = yInit - yGoal;
+          }
+          else
+          {
+              yGoal = yInit - 3;
+              coord2[1] = 3;
+          }
+      }
+      else yGoal = yInit + coord2[1];
     }
-    else yGoal = yInit + coord2[1];
-  }
-  else{
-    if (yInit - coord2[1] < 0){
+    else{
+      if (yInit - coord2[1] < 0){
         signY = 1;
-        if (yInit - coord2[1] >= 0)
-            yGoal = yInit - coord2[1];
-        else if (abs(yInit - coord2[1])>=3){
-            yGoal = abs(yInit - coord2[1]);
-            coord2[1] = yInit - yGoal;
-        }
-        else
-        {
-            yGoal = yInit - 3;
-            coord2[1] = 3;
-        }
+        yGoal = yInit + coord2[1];
+      }
+      else{
+        signY = -1;
+        yGoal = yInit - coord2[1];
+      }
     }
-    else yGoal = yInit - coord2[1];
-  }
 
     // for finalPath planning function, global variables x and y are defined as well as node number.
     x = coord2[0], y = coord2[1], n = (x + 1) * (y + 1);
@@ -463,8 +450,9 @@ int eburu_pos(int xInit, int yInit){
     // shortest path is obtained with node numbers inside finalPath global array
     pathPlanning();
 
-    printf("Current =  (%d, %d)\n", xInit, yInit);
-    printf("Goal    =  (%d, %d)\n\n", xGoal, yGoal);
+    // this for debug
+    // printf("Current =  (%d, %d)\n", xInit, yInit);
+    // printf("Goal    =  (%d, %d)\n\n", xGoal, yGoal);
 
     // obtain directions, 0 for up, 1 for upper right, 2 is for right... like in our original code.
     obtainDirections();
@@ -472,16 +460,19 @@ int eburu_pos(int xInit, int yInit){
     // the required positions are obtained in for loop
     xCurr = xInit, yCurr = yInit;
     newCoord[0] = xInit, newCoord[1] = yInit;
-    printf("Start\t(%d, %d)\n", xCurr,yCurr);
+    // this for debug
+    // printf("Start\t(%d, %d)\n", xCurr,yCurr);
     for (i = 1; i < nCost+1; i++)
     {
         newPos(xCurr,yCurr, dir[i]);
         xCurr = newCoord[0], yCurr = newCoord[1];
-        printf("Pos %d \t(%d, %d)\n", i, xCurr,yCurr);
+        // this for debug
+        // printf("Pos %d \t(%d, %d)\n", i, xCurr,yCurr);
         finalPosition[2*(i-1)] = xCurr;
         finalPosition[2*(i-1)+1] = yCurr;
     }
-    printf("\nGoal was(%d, %d)\n\n", xGoal, yGoal);
+    // this for debug
+    // printf("\nGoal was(%d, %d)\n\n", xGoal, yGoal);
 
 }
 
@@ -499,32 +490,176 @@ int sendAndReceive(int sockfd, int goTo [])
 {
   int returnMSG;
   //msg2server = "Hello world from group 2";
-  printf("Sending msg...... goTo %d, %d", goTo[0], goTo[1]);
+  // printf("Sending msg...... goTo %d, %d", goTo[0], goTo[1]);
   //write how many bytes that server should recieve -------
   // Sending co-ordiante to master
   if (write(sockfd, goTo, sizeof(int)*2) < 0 ){
     perror("sending failed...");
     exit(0);
   }
-  printf("Send successfully\n");
+  // printf("Send successfully\n");
   // Recieve the permission
   if (read(sockfd, &returnMSG, sizeof(int)*1) < 0 ){
     perror("reading failed...");
     exit(0);
   }
-  printf("From Server : %d\n", returnMSG);
+  // printf("From Server : %d\n", returnMSG);
 
   if(returnMSG == MASTER_COL){
-    printf("Rejected by Master (rejected code: %d), unable to move to %d, %d", returnMSG, goTo[0], goTo[0]);
+    // printf("Rejected by Master (rejected code: %d), unable to move to %d, %d", returnMSG, goTo[0], goTo[0]);
     return 0;
   }
   else if (returnMSG == MASTER_OK){
-      printf("Approved by Master (code: %d), moving to %d, %d", returnMSG, goTo[0], goTo[0]);
+      // printf("Approved by Master (code: %d), moving to %d, %d", returnMSG, goTo[0], goTo[0]);
       return 1;
   }
 }
 
 // fuction to log the status of the drone (mode 0 for normal event and mode 1 for error)
+
+
+void print_drone(int batt_per, int goal_x, int goal_y, int cur_x, int cur_y, int move_x, int move_y, float timestep){
+    char text[80];
+    sprintf(text, "goto [%d %d], goal [%d, %d], Battery_percentage = %d", move_x, move_y, goal_x, goal_y, batt_per);
+    log_dr2(0, text, 0);
+    system("clear");
+    printf(" _____                         ___  \n"
+            "|  __ \\                       |__ \\ \n"
+            "| |  | |_ __ ___  _ __   ___     ) |\n"
+            "| |  | | '__/ _ \\| '_ \\ / _ \\   / / \n"
+            "| |__| | | | (_) | | | |  __/  / /_ \n"
+            "|_____/|_|  \\___/|_| |_|\\___| |____|\n"
+            "                                    \n \n "
+            "Tachadol + Ebru + + Yusuke = TEY!!!!!!!!!!!\n");
+    fflush(stdout);
+    //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
+    printf ("                                                     |==================\n"
+            "     @@@@@@@@@                      @@@@@@@@@        |       Battery\n");
+    printf ("    @@        @@(                 @@       .@@       |      [  %d  }\n", batt_per);
+    printf ("  @&         #& .@.             #@  @(         @@    |==================\n"
+            " @&     #@@@&    ,@             @     @@@@      @@   |   Goal corodinate\n");
+    printf (" @(     @@@@@#   .@            ,@    @@@@@@     @@   |     [ %d, %d ] \n", goal_x, goal_y);
+    printf (" .@   @#   @@@@@@@#             @@@@@@@&   @@  /@    |==================\n"
+            "   @@*       @@@@@@@(         &@@@@@@@       /@(     |   Current position\n"
+            "      ,@@@@@@/.@@@@@@@@@@@@@@@@@@@@@ #@@@@@@.        |     [ %d, %d ] \n", cur_x, cur_y);
+    printf ("                #@@@@@@@@@@@@@@@@@                   |==================\n"
+            "                 @@@@@@@@@@@@@@@@@                   |      Moving to\n"
+            "                 @@@@@@@@@@@@@@@@@                   |      [ %d, %d ] \n", move_x, move_y);
+    printf ("                 @@@@@@@@@@@@@@@@@                   |==================\n"
+            "               /@@@@@@@@@@@@@@@@@@@                  |      Time step\n"
+            "    &@@.     @@@@@@@@@@@@@@@@@@@@@@@@&     /@@*      |        %.2f \n", timestep);
+    printf ("  @@ ,      @@@@@@(             @@@@@@@     .  @&    |==================\n"
+            " @@    @@@@@@@@  (@             @.  @@@@@@@@    @#\n"
+            " @/     @@@@.     @            /@     #@@@@     @@\n"
+            " (@         @@   @@             @#   @@         @.\n"
+            "   @@          #@*               3@.          @@  \n"
+            "     ,@@@@@@@@#                     @@@@@@@@@     \n");
+    fflush(stdout);
+}
+
+void print_drone_reach_goal(int batt_per, int cur_x, int cur_y, float timestep){
+    char text[80];
+    sprintf(text, "Reach the goal [%d %d], Battery_percentage = %d", cur_x, cur_y, batt_per);
+    log_dr2(0, text, 0);
+    system("clear");
+    printf(" _____                         ___  \n"
+            "|  __ \\                       |__ \\ \n"
+            "| |  | |_ __ ___  _ __   ___     ) |\n"
+            "| |  | | '__/ _ \\| '_ \\ / _ \\   / / \n"
+            "| |__| | | | (_) | | | |  __/  / /_ \n"
+            "|_____/|_|  \\___/|_| |_|\\___| |____|\n"
+            "                                    \n \n "
+            "Tachadol + Ebru + + Yusuke = TEY!!!!!!!!!!!\n");
+    fflush(stdout);
+    //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
+    printf ("                                                    |==================\n"
+            "     @@@@@@@@@                      @@@@@@@@@        |       Battery\n");
+    printf ("    @@        @@(                 @@       .@@       |      [  %d  }\n", batt_per);
+    printf ("  @&         #& .@.             #@  @(         @@    |==================\n"
+            " @&     #@@@&    ,@             @     @@@@      @@   |   Goal corodinate\n");
+    printf (" @(     @@@@@#   .@            ,@    @@@@@@     @@   |     Random a new goal!\n");
+    printf (" .@   @#   @@@@@@@#             @@@@@@@&   @@  /@    |==================\n"
+            "   @@*       @@@@@@@(         &@@@@@@@       /@(     |   Current position\n"
+            "      ,@@@@@@/.@@@@@@@@@@@@@@@@@@@@@ #@@@@@@.        |     [ %d, %d ] \n", cur_x, cur_y);
+    printf ("                #@@@@@@@@@@@@@@@@@                   |==================\n"
+            "                 @@@@@@@@@@@@@@@@@                   |      Moving to\n"
+            "                 @@@@@@@@@@@@@@@@@                   |      [ -, - ] \n");
+    printf ("                 @@@@@@@@@@@@@@@@@                   |==================\n"
+            "               /@@@@@@@@@@@@@@@@@@@                  |      Time step\n"
+            "    &@@.     @@@@@@@@@@@@@@@@@@@@@@@@&     /@@*      |        %.2f \n", timestep);
+    printf ("  @@ ,      @@@@@@(             @@@@@@@     .  @&    |==================\n"
+            " @@    @@@@@@@@  (@             @.  @@@@@@@@    @#\n"
+            " @/     @@@@.     @            /@     #@@@@     @@\n"
+            " (@         @@   @@             @#   @@         @.\n"
+            "   @@          #@*               3@.          @@  \n"
+            "     ,@@@@@@@@#                     @@@@@@@@@     \n");
+    fflush(stdout);
+}
+
+
+int print_drone_charge(){
+    int child_pid;
+    child_pid = fork();
+    if (child_pid == 0){
+      // parent process because return value non-zero.
+      system("clear");
+      while(1){
+        char symbol[22] = {60, 45, 45, 45, 60, 45, 45, 45, 60, 45, 45, 45, 60, 45, 45, 45, 60, 45, 45, 45, 60, 45};
+        for (int i = 1; i < 5; i++){
+          usleep(80000);
+          for (int j = 0; j < 21; j++){
+            symbol[j] = symbol[j+1];
+          }
+          if (i == 4){
+            symbol[21] = 60;
+          }
+          else {
+            symbol[21] = 45;
+          }
+          system("clear");
+          printf(" _____                         ___  \n"
+          "|  __ \\                       |__ \\ \n"
+          "| |  | |_ __ ___  _ __   ___     ) |\n"
+          "| |  | | '__/ _ \\| '_ \\ / _ \\   / / \n"
+          "| |__| | | | (_) | | | |  __/  / /_ \n"
+          "|_____/|_|  \\___/|_| |_|\\___| |____|\n"
+          "                                    \n \n "
+          "Tachadol + Ebru + + Yusuke = TEY!!!!!!!!!!!");
+
+          printf ("                                                  \n"
+          "     @@@@@@@@@                      @@@@@@@@@              \n");
+          printf ("    @@        @@(                 @@       .@@        \n");
+          printf ("  @&         #& .@.             #@  @(         @@ \n"
+          " @&     #@@@&    ,@             @     @@@@      @@\n"
+          " @(     @@@@@#   .@            ,@    @@@@@@     @@              @@      @@ \n"
+          " .@   @#   @@@@@@@#             @@@@@@@&   @@  /@              @@@@    @@@@\n"
+          "   @@*       @@@@@@@(         &@@@@@@@       /@(               @@@@    @@@@ \n"
+          "      ,@@@@@@/.@@@@@@@@@@@@@@@@@@@@@ #@@@@@@.               @@@@@@@@@@@@@@@@@ \n"
+          "                #@@@@@@@@@@@@@@@@@                            #@@@@@@@@@@@@@  \n"
+          "                 @@@@@@@@@@@@@@@@@                             @@@@@@@@@@@@  \n"
+          "                 @@@@@@@@@@@@@@@@@                              @@@@@@@@@@  \n");
+          printf("                 @@@@@@@@@@@@@@@@@%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c@@@@@*        @@@@    \n", symbol[0], symbol[1], symbol[2], symbol[3], symbol[4], symbol[5], symbol[6], symbol[7], symbol[8], symbol[9], symbol[10], symbol[11], symbol[12], symbol[13], symbol[14], symbol[15], symbol[16], symbol[17], symbol[18], symbol[19]);
+          printf("               /@@@@@@@@@@@@@@@@@@@                   #@@@@        @@@@\n"
+          "    &@@.     @@@@@@@@@@@@@@@@@@@@@@@@&     /@@*         @@@@       @@@@ \n"
+          "  @@ ,      @@@@@@(             @@@@@@@     .  @&       #@@@@     @@@@# \n"
+          " @@    @@@@@@@@  (@             @.  @@@@@@@@    @#        @@@@@@@@@@@ \n"
+          " @/     @@@@.     @            /@     #@@@@     @@\n"
+          " (@         @@   @@             @#   @@         @.           [ Charging ]\n"
+          "   @@          #@*               3@.          @@  \n"
+          "     ,@@@@@@@@#                     @@@@@@@@@     \n");
+          fflush(stdout);
+
+      }
+      //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
+
+
+    }
+  }
+    else{
+      log_dr2(0, "Charging!!!", 0);
+      return child_pid;
+    }
+}
 
 
 int main()
@@ -559,42 +694,56 @@ int main()
   tv.tv_usec = TIMESTEP*1000;
 
   // init the start of drone
-  int xInit = START2[1], yInit = START2[0], i,j;
+  int xInit = START2[0], yInit = START2[1], i,j;
 
-  int fuel = 500;
+  int fuel = 400;
+  float timestep = 0;
 
   errorPrompt(connect(sockfd, (SA*)&servaddr, sizeof(servaddr)), "connection with the server failed...");
   log_dr2(0, "Connected to the server", 0);
   printf("connected to the server..\n");
   int moving_to[2];
   while(1){
+
     if (fuel < 20){
+      int ui_pid;
+      ui_pid = print_drone_charge();
       for(int rest = 0; rest < 20; rest++){
         sendAndReceive(sockfd, moving_to);
         errorPrompt(select(1, NULL, NULL, NULL, &tv), "select failed...");
+        timestep = timestep + 0.2;
       }
-      fuel = 500;
+      fuel = 400;
+      log_dr2(0, "Finisco charging! Parlo italiano bene!", 0);
+      kill(ui_pid, SIGKILL);
       //Send the same positon to master
     }
     //Generate the goal and find the path the reach that
     eburu_pos(xInit, yInit);
-    for (j = 0; j<nCost ; j++)
+    for (j = 0; j < nCost ; j++)
     {
+
       int res_from_master =0, timeout_counter = 0;
       while (timeout_counter < DRONE_TIMEOUT && res_from_master == 0){
           errorPrompt(select(1, NULL, NULL, NULL, &tv), "select failed...");
-
+          timestep = timestep + 0.2;
           moving_to[0] = finalPosition[2*j];
           moving_to[1] = finalPosition[2*j+1];
           res_from_master = sendAndReceive(sockfd, moving_to);
           timeout_counter++;
       }
       if(res_from_master == 1){
-        printf("\tgoTo: (%d, %d)\n", finalPosition[2*j], finalPosition[2*j+1]);
+        if (j + 1 == nCost){
+          print_drone_reach_goal(fuel/4, finalPosition[2*(j+1)], finalPosition[2*(j+1)+1], timestep);
+        }
+        else{
+          print_drone(fuel/4, finalPosition[2*nCost-2], finalPosition[2*nCost-1], finalPosition[2*(j+1)], finalPosition[2*(j+1)+1], finalPosition[2*j+4], finalPosition[2*j+5], timestep);
+
+        }
         fuel--;
       }
       else{
-        printf("Unable to reach, going to find a new goal\n");
+        // printf("Unable to reach, going to find a new goal\n");
         break;
       }
     }
@@ -608,103 +757,3 @@ int main()
   printf("Close successfully..\n");
   return 0;
 }
-
-
-//
-// void print_drone(int batt_per, int goal_x, int goal_y, int cur_x, int cur_y, int move_x, int move_y, float timestep){
-//     system("clear");
-//     printf(" _____                         ___  \n"
-//             "|  __ \\                       |__ \\ \n"
-//             "| |  | |_ __ ___  _ __   ___     ) |\n"
-//             "| |  | | '__/ _ \\| '_ \\ / _ \\   / / \n"
-//             "| |__| | | | (_) | | | |  __/  / /_ \n"
-//             "|_____/|_|  \\___/|_| |_|\\___| |____|\n"
-//             "                                    \n \n ");
-//     fflush(stdout);
-//     //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
-//     printf ("                                                    |==================\n"
-//             "     @@@@@@@@@                      @@@@@@@@@        |       Battery\n");
-//     printf ("    @@        @@(                 @@       .@@       |      [  %d  }\n", batt_per);
-//     printf ("  @&         #& .@.             #@  @(         @@    |==================\n"
-//             " @&     #@@@&    ,@             @     @@@@      @@   |   Goal corodinate\n");
-//     printf (" @(     @@@@@#   .@            ,@    @@@@@@     @@   |     [ %d, %d ] \n", goal_x, goal_y);
-//     printf (" .@   @#   @@@@@@@#             @@@@@@@&   @@  /@    |==================\n"
-//             "   @@*       @@@@@@@(         &@@@@@@@       /@(     |   Current position\n"
-//             "      ,@@@@@@/.@@@@@@@@@@@@@@@@@@@@@ #@@@@@@.        |     [ %d, %d ] \n", cur_x, cur_y);
-//     printf ("                #@@@@@@@@@@@@@@@@@                   |==================\n"
-//             "                 @@@@@@@@@@@@@@@@@                   |      Moving to\n"
-//             "                 @@@@@@@@@@@@@@@@@                   |     [ %d, %d ] \n", move_x, move_y);
-//     printf ("                 @@@@@@@@@@@@@@@@@                   |==================\n"
-//             "               /@@@@@@@@@@@@@@@@@@@                  |      Time step\n"
-//             "    &@@.     @@@@@@@@@@@@@@@@@@@@@@@@&     /@@*      |        %.2f \n", timestep);
-//     printf ("  @@ ,      @@@@@@(             @@@@@@@     .  @&    |==================\n"
-//             " @@    @@@@@@@@  (@             @.  @@@@@@@@    @#\n"
-//             " @/     @@@@.     @            /@     #@@@@     @@\n"
-//             " (@         @@   @@             @#   @@         @.\n"
-//             "   @@          #@*               3@.          @@  \n"
-//             "     ,@@@@@@@@#                     @@@@@@@@@     \n");
-//     fflush(stdout);
-// }
-//
-//
-// int print_drone_charge(){
-//     int child_pid;
-//     child_pid = fork();
-//     if (child_pid == 0){
-//       // parent process because return value non-zero.
-//       system("clear");
-//       while(1){
-//         char symbol[22] = {60, 45, 45, 45, 60, 45, 45, 45, 60, 45, 45, 45, 60, 45, 45, 45, 60, 45, 45, 45, 60, 45};
-//         for (int i = 1; i < 5; i++){
-//           usleep(80000);
-//           for (int j = 0; j < 21; j++){
-//             symbol[j] = symbol[j+1];
-//           }
-//           if (i == 4){
-//             symbol[21] = 60;
-//           }
-//           else {
-//             symbol[21] = 45;
-//           }
-//           system("clear");
-//           printf(" _____                         ___  \n"
-//           "|  __ \\                       |__ \\ \n"
-//           "| |  | |_ __ ___  _ __   ___     ) |\n"
-//           "| |  | | '__/ _ \\| '_ \\ / _ \\   / / \n"
-//           "| |__| | | | (_) | | | |  __/  / /_ \n"
-//           "|_____/|_|  \\___/|_| |_|\\___| |____|\n"
-//           "                                    \n \n ");
-//
-//           printf ("                                                  \n"
-//           "     @@@@@@@@@                      @@@@@@@@@              \n");
-//           printf ("    @@        @@(                 @@       .@@        \n");
-//           printf ("  @&         #& .@.             #@  @(         @@ \n"
-//           " @&     #@@@&    ,@             @     @@@@      @@\n"
-//           " @(     @@@@@#   .@            ,@    @@@@@@     @@              @@      @@ \n"
-//           " .@   @#   @@@@@@@#             @@@@@@@&   @@  /@              @@@@    @@@@\n"
-//           "   @@*       @@@@@@@(         &@@@@@@@       /@(               @@@@    @@@@ \n"
-//           "      ,@@@@@@/.@@@@@@@@@@@@@@@@@@@@@ #@@@@@@.               @@@@@@@@@@@@@@@@@ \n"
-//           "                #@@@@@@@@@@@@@@@@@                            #@@@@@@@@@@@@@  \n"
-//           "                 @@@@@@@@@@@@@@@@@                             @@@@@@@@@@@@  \n"
-//           "                 @@@@@@@@@@@@@@@@@                              @@@@@@@@@@  \n");
-//           printf("                 @@@@@@@@@@@@@@@@@%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c@@@@@*        @@@@    \n", symbol[0], symbol[1], symbol[2], symbol[3], symbol[4], symbol[5], symbol[6], symbol[7], symbol[8], symbol[9], symbol[10], symbol[11], symbol[12], symbol[13], symbol[14], symbol[15], symbol[16], symbol[17], symbol[18], symbol[19]);
-//           printf("               /@@@@@@@@@@@@@@@@@@@                   %@@@@        @@@@\n"
-//           "    &@@.     @@@@@@@@@@@@@@@@@@@@@@@@&     /@@*         @@@@       @@@@ \n"
-//           "  @@ ,      @@@@@@(             @@@@@@@     .  @&       #@@@@     @@@@# \n"
-//           " @@    @@@@@@@@  (@             @.  @@@@@@@@    @#        @@@@@@@@@@@ \n"
-//           " @/     @@@@.     @            /@     #@@@@     @@\n"
-//           " (@         @@   @@             @#   @@         @.           [ Charging ]\n"
-//           "   @@          #@*               3@.          @@  \n"
-//           "     ,@@@@@@@@#                     @@@@@@@@@     \n");
-//           fflush(stdout);
-//
-//       }
-//       //https://manytools.org/hacker-tools/convert-images-to-ascii-art/go/ ascii art
-//
-//
-//     }
-//   }
-//     else{
-//       return child_pid;
-//     }
-// }
