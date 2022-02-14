@@ -176,6 +176,8 @@ int main(int argc, char *argv[]) {
     int goal_y = getRandomY();
     int x_values[8];
     int y_values[8];
+    double distance[8];
+    double distance_ordered[8];
     while (1) {
         for (int i = 0; i < STEPS; i++) {
             printf("[Drone0] Goal position: (%d, %d)\n", goal_x, goal_y);
@@ -210,7 +212,6 @@ int main(int argc, char *argv[]) {
             x_values[7] = position[0] - 1;
             y_values[7] = position[1] + 1;
 
-            double distance[] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
             for(int i = 0; i < 8; i++){
                 // Out of bound case
                 if (x_values[i] <= 0 || y_values[i] <= 0 || x_values[i] >= MAP_WIDTH - 1 || y_values[i] >= MAP_HEIGHT - 1)
@@ -219,7 +220,6 @@ int main(int argc, char *argv[]) {
                     distance[i] = sqrt( (x_values[i] - goal_x) * (x_values[i] - goal_x) + (y_values[i] - goal_y) * (y_values[i] - goal_y));
             }
             // Ordering and extracting here
-            double distance_ordered[8];
             for(int i = 0; i < 8; i++){
                 distance_ordered[i] = distance[i];
             }
