@@ -1,0 +1,10 @@
+-- Project description --
+Drone0, made by group FeMi (Michele Pestarino S4672032, Federico Sacco S4672010).
+The goal of our drone is to move randomly in the map without knowing anything about it, accordingly to the responses given by the master process.
+
+-- Driving Idea --
+Our drone after having established a socket connection with the master, will move for a certain number of STEPS, by choosing every 5 steps a new direction.
+If the drone gets 3 "detected collisions" in a row from the master, then it will choose randomly another direction.
+When the drone runs out of fuel, it will signal to the master that it is refuelling by sending to the main process its current position.
+Every step is done at a rate of 5 steps/second, every refuelling lasts 3 seconds.
+This is done, possibly, forever.
